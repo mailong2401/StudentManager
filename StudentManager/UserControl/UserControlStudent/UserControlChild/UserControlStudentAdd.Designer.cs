@@ -139,7 +139,7 @@
             cyberGroupBox3.Lighting = false;
             cyberGroupBox3.LinearGradient_Background = false;
             cyberGroupBox3.LinearGradientPen = false;
-            cyberGroupBox3.Location = new Point(301, 440);
+            cyberGroupBox3.Location = new Point(310, 440);
             cyberGroupBox3.Name = "cyberGroupBox3";
             cyberGroupBox3.PenWidth = 15;
             cyberGroupBox3.RGB = false;
@@ -241,7 +241,7 @@
             cyberGroupBox6.Lighting = false;
             cyberGroupBox6.LinearGradient_Background = false;
             cyberGroupBox6.LinearGradientPen = false;
-            cyberGroupBox6.Location = new Point(301, 706);
+            cyberGroupBox6.Location = new Point(310, 706);
             cyberGroupBox6.Name = "cyberGroupBox6";
             cyberGroupBox6.PenWidth = 15;
             cyberGroupBox6.RGB = false;
@@ -439,7 +439,7 @@
             cyberGroupBox1.Lighting = false;
             cyberGroupBox1.LinearGradient_Background = false;
             cyberGroupBox1.LinearGradientPen = false;
-            cyberGroupBox1.Location = new Point(301, 176);
+            cyberGroupBox1.Location = new Point(310, 176);
             cyberGroupBox1.Name = "cyberGroupBox1";
             cyberGroupBox1.PenWidth = 15;
             cyberGroupBox1.RGB = false;
