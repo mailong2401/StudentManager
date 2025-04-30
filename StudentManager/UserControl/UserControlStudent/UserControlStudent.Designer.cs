@@ -47,6 +47,7 @@
             panelUserControlChild.Name = "panelUserControlChild";
             panelUserControlChild.Size = new Size(1500, 900);
             panelUserControlChild.TabIndex = 2;
+            panelUserControlChild.Paint += panelUserControlChild_Paint;
             // 
             // panel1
             // 

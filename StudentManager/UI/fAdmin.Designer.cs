@@ -59,7 +59,7 @@
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(343, 767);
+            panel1.Size = new Size(343, 829);
             panel1.TabIndex = 0;
             // 
             // btnKhoa
@@ -232,14 +232,14 @@
             panelUserControlDad.Dock = DockStyle.Fill;
             panelUserControlDad.Location = new Point(343, 0);
             panelUserControlDad.Name = "panelUserControlDad";
-            panelUserControlDad.Size = new Size(584, 767);
+            panelUserControlDad.Size = new Size(584, 829);
             panelUserControlDad.TabIndex = 1;
             // 
             // fAdmin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(927, 767);
+            ClientSize = new Size(927, 829);
             Controls.Add(panelUserControlDad);
             Controls.Add(panel1);
             Name = "fAdmin";

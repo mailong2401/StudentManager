@@ -74,7 +74,7 @@
             Controls.Add(btnBackOfClassShow);
             Controls.Add(label1);
             Name = "UserControlClassShow";
-            Size = new Size(1390, 525);
+            Size = new Size(1390, 803);
             ResumeLayout(false);
             PerformLayout();
         }

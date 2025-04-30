@@ -36,7 +36,7 @@
             panel1.BackColor = SystemColors.ActiveCaption;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(575, 85);
+            panel1.Size = new Size(1011, 85);
             panel1.TabIndex = 2;
             // 
             // UserControlDefault
@@ -46,7 +46,7 @@
             BackColor = SystemColors.Control;
             Controls.Add(panel1);
             Name = "UserControlDefault";
-            Size = new Size(575, 435);
+            Size = new Size(1011, 659);
             ResumeLayout(false);
         }
 

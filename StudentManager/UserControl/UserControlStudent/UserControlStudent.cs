@@ -40,5 +40,10 @@ namespace StudentManager
             ucSSr.Dock = DockStyle.Fill;
             panelUserControlChild.Controls.Add(ucSSr);
         }
+
+        private void panelUserControlChild_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
