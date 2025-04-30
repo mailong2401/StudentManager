@@ -121,7 +121,7 @@
   <data name="btnStudentSearch.ButtonImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
-        0QAADdEBwivf4wAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAIbRSURBVHhe7d0F
+        0AAADdABEGw9BwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAIbRSURBVHhe7d0F
         tBXV9wfw7+M94NHdjXRKSYe0NNIgnYJSdv4VO7AwEBUD7E4sftiCHQjY3R2oGJz/2peLyt4DvHfPmbkz
         c/de68OCA9x75vS7d+YcGGOgVBwBKAqgGoBmALoBGApgCoBFAJYAWAZgNYD7ATwDYDOALwB8C+BLAJ8A
         +ADAOwC2AHgdwMsAnk/++ycA/A/Aw8nXuBvA7QBuSr72Mcn365vMQ1meR6WUSheRoFQUAMgCUCs5uR6S
@@ -1081,7 +1081,7 @@
   <data name="btnStudentAdd.ButtonImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
-        0QAADdEBwivf4wAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAHY7SURBVHhe7d13
+        0AAADdABEGw9BwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAHY7SURBVHhe7d13
         uBPV1gbw9/RDOfTee++9994ElCKIYkNREaSICAJiAUSpgki112uv4LU3LIiiKDbsgB3pyvXu79nx8F3Z
         a8yZSWYyk+T94/c8PkuSTGZm77VOZhcopUBE9gAoB6ArgHMATAVwJYDFANYCuAfAEwBeAvAOgE8B7AVw
         CIB+cZDoY9LH9hmAbbnHrI/9XgDrACwBMA/ANADnAegBoCKAFPOcEFF8EgGiZAcgP4AmAEYAmA3gTgBv

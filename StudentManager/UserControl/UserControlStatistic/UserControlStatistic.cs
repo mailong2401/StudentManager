@@ -16,5 +16,10 @@ namespace StudentManager
         {
             InitializeComponent();
         }
+
+        private void btnStatisticAdd_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

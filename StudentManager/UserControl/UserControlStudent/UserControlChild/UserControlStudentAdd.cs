@@ -36,5 +36,27 @@ namespace StudentManager
         {
 
         }
+
+        private void UserControlStudentAdd_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBackOfStudentAdd_Click(object sender, EventArgs e)
+        {
+            inputdiachi.Text = string.Empty;
+            inputid.Text = string.Empty;
+            inputname.Text = string.Empty;
+            inputphone.Text = string.Empty;
+            inputngaysinh.Text = string.Empty;
+            inputlop.SelectedIndex = -1;
+
+
+        }
+
+        private void btnConfirmOfStudentAdd_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

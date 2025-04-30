@@ -45,13 +45,12 @@
             panelUserControlChild.Dock = DockStyle.Fill;
             panelUserControlChild.Location = new Point(0, 0);
             panelUserControlChild.Name = "panelUserControlChild";
-            panelUserControlChild.Size = new Size(1390, 751);
+            panelUserControlChild.Size = new Size(1575, 751);
             panelUserControlChild.TabIndex = 1;
-          
             // 
             // panel1
             // 
-            panel1.BackColor = SystemColors.ActiveCaption;
+            panel1.BackColor = Color.FromArgb(5, 25, 30);
             panel1.Controls.Add(btnBranchSearch);
             panel1.Controls.Add(btnBranchShow);
             panel1.Controls.Add(btnBranchAdd);
@@ -59,12 +58,12 @@
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.RightToLeft = RightToLeft.No;
-            panel1.Size = new Size(1390, 226);
+            panel1.Size = new Size(1575, 87);
             panel1.TabIndex = 1;
             // 
             // btnBranchSearch
             // 
-            btnBranchSearch.BackgroundColor = Color.FromArgb(255, 255, 255);
+            btnBranchSearch.BackgroundColor = Color.FromArgb(37, 52, 68);
             btnBranchSearch.ButtonImage = (Image)resources.GetObject("btnBranchSearch.ButtonImage");
             btnBranchSearch.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
             btnBranchSearch.ButtonText = "Lọc";
@@ -76,19 +75,19 @@
             btnBranchSearch.HoverBackgroundColor = Color.FromArgb(225, 225, 225);
             btnBranchSearch.HoverTextColor = Color.DodgerBlue;
             btnBranchSearch.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            btnBranchSearch.Location = new Point(1100, 60);
+            btnBranchSearch.Location = new Point(1083, 4);
             btnBranchSearch.Name = "btnBranchSearch";
             btnBranchSearch.Size = new Size(303, 79);
             btnBranchSearch.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             btnBranchSearch.TabIndex = 5;
-            btnBranchSearch.TextColor = Color.Black;
+            btnBranchSearch.TextColor = Color.White;
             btnBranchSearch.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             btnBranchSearch.Vertical_Alignment = StringAlignment.Center;
             btnBranchSearch.Click += btnBranchSearch_Click;
             // 
             // btnBranchShow
             // 
-            btnBranchShow.BackgroundColor = Color.FromArgb(255, 255, 255);
+            btnBranchShow.BackgroundColor = Color.FromArgb(37, 52, 68);
             btnBranchShow.ButtonImage = (Image)resources.GetObject("btnBranchShow.ButtonImage");
             btnBranchShow.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
             btnBranchShow.ButtonText = "Xem";
@@ -100,19 +99,19 @@
             btnBranchShow.HoverBackgroundColor = Color.FromArgb(225, 225, 225);
             btnBranchShow.HoverTextColor = Color.DodgerBlue;
             btnBranchShow.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            btnBranchShow.Location = new Point(650, 60);
+            btnBranchShow.Location = new Point(623, 4);
             btnBranchShow.Name = "btnBranchShow";
             btnBranchShow.Size = new Size(303, 79);
             btnBranchShow.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             btnBranchShow.TabIndex = 4;
-            btnBranchShow.TextColor = Color.Black;
+            btnBranchShow.TextColor = Color.White;
             btnBranchShow.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             btnBranchShow.Vertical_Alignment = StringAlignment.Center;
             btnBranchShow.Click += btnBrandShow_Click;
             // 
             // btnBranchAdd
             // 
-            btnBranchAdd.BackgroundColor = Color.FromArgb(255, 255, 255);
+            btnBranchAdd.BackgroundColor = Color.FromArgb(37, 52, 68);
             btnBranchAdd.ButtonImage = (Image)resources.GetObject("btnBranchAdd.ButtonImage");
             btnBranchAdd.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
             btnBranchAdd.ButtonText = "Thêm";
@@ -124,13 +123,13 @@
             btnBranchAdd.HoverBackgroundColor = Color.FromArgb(225, 225, 225);
             btnBranchAdd.HoverTextColor = Color.DodgerBlue;
             btnBranchAdd.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            btnBranchAdd.Location = new Point(200, 60);
+            btnBranchAdd.Location = new Point(183, 4);
             btnBranchAdd.Name = "btnBranchAdd";
             btnBranchAdd.RightToLeft = RightToLeft.No;
             btnBranchAdd.Size = new Size(303, 79);
             btnBranchAdd.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             btnBranchAdd.TabIndex = 3;
-            btnBranchAdd.TextColor = Color.Black;
+            btnBranchAdd.TextColor = Color.White;
             btnBranchAdd.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             btnBranchAdd.Vertical_Alignment = StringAlignment.Center;
             btnBranchAdd.Click += btnBranchAdd_Click;
@@ -142,7 +141,7 @@
             BackColor = Color.White;
             Controls.Add(panelUserControlChild);
             Name = "UserControlBranch";
-            Size = new Size(1390, 751);
+            Size = new Size(1575, 751);
             panelUserControlChild.ResumeLayout(false);
             panel1.ResumeLayout(false);
             ResumeLayout(false);

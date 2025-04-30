@@ -19,10 +19,10 @@ namespace StudentManager
 
         private void btnClassAdd_Click(object sender, EventArgs e)
         {
-            panelUserControlChild.Controls.Clear();
+            mainClass.Controls.Clear();
             UserControlClassAdd ucCA = new UserControlClassAdd();
             ucCA.Dock = DockStyle.Fill;
-            panelUserControlChild.Controls.Add(ucCA);
+            mainClass.Controls.Add(ucCA);
         }
 
         private void btnClassShow_Click(object sender, EventArgs e)

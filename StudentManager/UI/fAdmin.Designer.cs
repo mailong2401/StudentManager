@@ -39,8 +39,7 @@
             label2 = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
-            BarPanel = new Panel();
-            panelMain = new Panel();
+            panelUserControlDad = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -227,30 +226,20 @@
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
-            // BarPanel
+            // panelUserControlDad
             // 
-            BarPanel.BackColor = Color.FromArgb(5, 25, 30);
-            BarPanel.Dock = DockStyle.Top;
-            BarPanel.Location = new Point(343, 0);
-            BarPanel.Name = "BarPanel";
-            BarPanel.Size = new Size(584, 98);
-            BarPanel.TabIndex = 1;
-            // 
-            // panelMain
-            // 
-            panelMain.Dock = DockStyle.Fill;
-            panelMain.Location = new Point(343, 98);
-            panelMain.Name = "panelMain";
-            panelMain.Size = new Size(584, 731);
-            panelMain.TabIndex = 2;
+            panelUserControlDad.Dock = DockStyle.Fill;
+            panelUserControlDad.Location = new Point(343, 0);
+            panelUserControlDad.Name = "panelUserControlDad";
+            panelUserControlDad.Size = new Size(584, 829);
+            panelUserControlDad.TabIndex = 2;
             // 
             // fAdmin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(927, 829);
-            Controls.Add(panelMain);
-            Controls.Add(BarPanel);
+            Controls.Add(panelUserControlDad);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "fAdmin";
@@ -275,7 +264,6 @@
         private ReaLTaiizor.Controls.ParrotButton btnSinhVien;
         private ReaLTaiizor.Controls.ParrotButton btnLop;
         private ReaLTaiizor.Controls.ParrotButton btnKhoa;
-        private Panel BarPanel;
-        private Panel panelMain;
+        private Panel panelUserControlDad;
     }
 }
