@@ -1,3 +1,5 @@
+﻿using StudentManager.UI;
+
 namespace StudentManager
 {
     public partial class fAdmin : Form
@@ -7,40 +9,36 @@ namespace StudentManager
             InitializeComponent();
         }
 
+        public static void ControlPanel(Panel tempPanel,Form f)
+        {
+
+                tempPanel.Controls.Clear();  // Xóa các điều khiển cũ
+                f.Dock = DockStyle.Fill;       // Đảm bảo form này chiếm toàn bộ panel
+                f.TopLevel = false;            // Đặt TopLevel là false để nó trở thành con của panel
+                tempPanel.Controls.Add(f);   // Thêm form vào panel
+                f.Show();                      // Hiển thị form
+        }
+
         private void btnKhoa_Click(object sender, EventArgs e)
         {
-            panelUserControlDad.Controls.Clear();
-            UserControlUD ucU = new UserControlUD();
-            ucU.Dock = DockStyle.Fill;
-            panelUserControlDad.Controls.Add(ucU);
+
+            ControlPanel(BarPanel,new fControlUniversityDepartmentBar());
         }
         private void btnNganh_Click(object sender, EventArgs e)
         {
-            panelUserControlDad.Controls.Clear();
-            UserControlBranch ucB = new UserControlBranch();
-            ucB.Dock = DockStyle.Fill;
-            panelUserControlDad.Controls.Add(ucB);
+            ControlPanel(BarPanel, new fBranchBar());
         }
         private void btnLop_Click(object sender, EventArgs e)
         {
-            panelUserControlDad.Controls.Clear();
-            UserControlClass ucC = new UserControlClass();
-            ucC.Dock = DockStyle.Fill;
-            panelUserControlDad.Controls.Add(ucC);
+            ControlPanel(BarPanel, new fClassBar());
         }
         private void btnSinhVien_Click(object sender, EventArgs e)
         {
-            panelUserControlDad.Controls.Clear();
-            UserControlStudent ucS = new UserControlStudent();
-            ucS.Dock = DockStyle.Fill;
-            panelUserControlDad.Controls.Add(ucS);
+            ControlPanel(BarPanel,new fStudentBar(panelMain));
         }
         private void btnThongKe_Click(object sender, EventArgs e)
         {
-            panelUserControlDad.Controls.Clear();
-            UserControlStatistic ucSS = new UserControlStatistic();
-            ucSS.Dock = DockStyle.Fill;
-            panelUserControlDad.Controls.Add(ucSS);
+            ControlPanel(BarPanel,new fStatisticBar());
         }
        
     }

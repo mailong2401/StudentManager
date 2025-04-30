@@ -28,4 +28,11 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="UI\MainForms\Branch\" />
+    <Folder Include="UI\MainForms\Statistic\" />
+    <Folder Include="UI\MainForms\ControlUniversityDepartmentBar\" />
+    <Folder Include="UI\MainForms\Class\" />
+  </ItemGroup>
+
 </Project>

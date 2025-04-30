@@ -34,6 +34,7 @@
             btnClassSearch = new ReaLTaiizor.Controls.ParrotButton();
             btnClassShow = new ReaLTaiizor.Controls.ParrotButton();
             btnClassAdd = new ReaLTaiizor.Controls.ParrotButton();
+            panel2 = new Panel();
             panelUserControlChild.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -41,6 +42,7 @@
             // panelUserControlChild
             // 
             panelUserControlChild.BackColor = Color.White;
+            panelUserControlChild.Controls.Add(panel2);
             panelUserControlChild.Controls.Add(panel1);
             panelUserControlChild.Dock = DockStyle.Fill;
             panelUserControlChild.Location = new Point(0, 0);
@@ -134,6 +136,14 @@
             btnClassAdd.Vertical_Alignment = StringAlignment.Center;
             btnClassAdd.Click += btnClassAdd_Click;
             // 
+            // panel2
+            // 
+            panel2.Dock = DockStyle.Bottom;
+            panel2.Location = new Point(0, 224);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1500, 676);
+            panel2.TabIndex = 2;
+            // 
             // UserControlClass
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -153,5 +163,6 @@
         private ReaLTaiizor.Controls.ParrotButton btnClassSearch;
         private ReaLTaiizor.Controls.ParrotButton btnClassShow;
         private ReaLTaiizor.Controls.ParrotButton btnClassAdd;
+        private Panel panel2;
     }
 }
