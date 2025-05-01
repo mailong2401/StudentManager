@@ -15,6 +15,11 @@ namespace StudentManager
         public UserControlStudent()
         {
             InitializeComponent();
+
+            mainStudent.Controls.Clear();
+            UserControlStudentShow ucSS = new UserControlStudentShow();
+            ucSS.Dock = DockStyle.Fill;
+            mainStudent.Controls.Add(ucSS);
         }
 
         private void btnStudentAdd_Click(object sender, EventArgs e)
