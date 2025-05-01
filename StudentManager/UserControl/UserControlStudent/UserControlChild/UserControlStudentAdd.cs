@@ -42,7 +42,7 @@ namespace StudentManager
 
         }
 
-        private void btnBackOfStudentAdd_Click(object sender, EventArgs e)
+        private void btnDeleteOfStudentAdd_Click(object sender, EventArgs e)
         {
             inputdiachi.Text = string.Empty;
             inputid.Text = string.Empty;

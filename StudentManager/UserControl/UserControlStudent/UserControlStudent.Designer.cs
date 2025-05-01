@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlStudent));
             panelUserControlChild = new Panel();
+            mainStudent = new Panel();
             panel1 = new Panel();
             btnStudentSearch = new ReaLTaiizor.Controls.ParrotButton();
             btnStudentShow = new ReaLTaiizor.Controls.ParrotButton();
             btnStudentAdd = new ReaLTaiizor.Controls.ParrotButton();
-            mainStudent = new Panel();
             panelUserControlChild.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -49,7 +49,14 @@
             panelUserControlChild.Name = "panelUserControlChild";
             panelUserControlChild.Size = new Size(1575, 900);
             panelUserControlChild.TabIndex = 2;
-            panelUserControlChild.Paint += panelUserControlChild_Paint;
+            // 
+            // mainStudent
+            // 
+            mainStudent.Dock = DockStyle.Fill;
+            mainStudent.Location = new Point(0, 87);
+            mainStudent.Name = "mainStudent";
+            mainStudent.Size = new Size(1575, 813);
+            mainStudent.TabIndex = 2;
             // 
             // panel1
             // 
@@ -136,14 +143,6 @@
             btnStudentAdd.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             btnStudentAdd.Vertical_Alignment = StringAlignment.Center;
             btnStudentAdd.Click += btnStudentAdd_Click;
-            // 
-            // mainStudent
-            // 
-            mainStudent.Dock = DockStyle.Fill;
-            mainStudent.Location = new Point(0, 87);
-            mainStudent.Name = "mainStudent";
-            mainStudent.Size = new Size(1575, 813);
-            mainStudent.TabIndex = 2;
             // 
             // UserControlStudent
             // 

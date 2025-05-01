@@ -29,24 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlBranch));
-            panelUserControlChild = new Panel();
             panel1 = new Panel();
             btnBranchSearch = new ReaLTaiizor.Controls.ParrotButton();
             btnBranchShow = new ReaLTaiizor.Controls.ParrotButton();
             btnBranchAdd = new ReaLTaiizor.Controls.ParrotButton();
-            panelUserControlChild.SuspendLayout();
+            mainBranch = new Panel();
             panel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // panelUserControlChild
-            // 
-            panelUserControlChild.BackColor = Color.White;
-            panelUserControlChild.Controls.Add(panel1);
-            panelUserControlChild.Dock = DockStyle.Fill;
-            panelUserControlChild.Location = new Point(0, 0);
-            panelUserControlChild.Name = "panelUserControlChild";
-            panelUserControlChild.Size = new Size(1575, 751);
-            panelUserControlChild.TabIndex = 1;
             // 
             // panel1
             // 
@@ -59,7 +48,7 @@
             panel1.Name = "panel1";
             panel1.RightToLeft = RightToLeft.No;
             panel1.Size = new Size(1575, 87);
-            panel1.TabIndex = 1;
+            panel1.TabIndex = 3;
             // 
             // btnBranchSearch
             // 
@@ -134,25 +123,33 @@
             btnBranchAdd.Vertical_Alignment = StringAlignment.Center;
             btnBranchAdd.Click += btnBranchAdd_Click;
             // 
+            // mainBranch
+            // 
+            mainBranch.Dock = DockStyle.Fill;
+            mainBranch.Location = new Point(0, 87);
+            mainBranch.Name = "mainBranch";
+            mainBranch.Size = new Size(1575, 813);
+            mainBranch.TabIndex = 4;
+            // 
             // UserControlBranch
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            Controls.Add(panelUserControlChild);
+            Controls.Add(mainBranch);
+            Controls.Add(panel1);
             Name = "UserControlBranch";
-            Size = new Size(1575, 751);
-            panelUserControlChild.ResumeLayout(false);
+            Size = new Size(1575, 900);
             panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel panelUserControlChild;
         private Panel panel1;
         private ReaLTaiizor.Controls.ParrotButton btnBranchSearch;
         private ReaLTaiizor.Controls.ParrotButton btnBranchShow;
         private ReaLTaiizor.Controls.ParrotButton btnBranchAdd;
+        private Panel mainBranch;
     }
 }

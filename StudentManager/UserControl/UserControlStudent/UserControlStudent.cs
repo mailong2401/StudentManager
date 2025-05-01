@@ -46,9 +46,6 @@ namespace StudentManager
             mainStudent.Controls.Add(ucSSr);
         }
 
-        private void panelUserControlChild_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
     }
 }
