@@ -29,19 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlStudentSearch));
-            label1 = new Label();
             btnBackOfStudentSearch = new ReaLTaiizor.Controls.ParrotButton();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            cyberGroupBox1 = new ReaLTaiizor.Controls.CyberGroupBox();
+            tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 30F);
-            label1.Location = new Point(500, 233);
-            label1.Name = "label1";
-            label1.Size = new Size(552, 67);
-            label1.TabIndex = 0;
-            label1.Text = "Chưa biết làm gì hết =))";
             // 
             // btnBackOfStudentSearch
             // 
@@ -67,21 +59,76 @@
             btnBackOfStudentSearch.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             btnBackOfStudentSearch.Vertical_Alignment = StringAlignment.Center;
             // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.ColumnCount = 1;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.Controls.Add(cyberGroupBox1, 0, 0);
+            tableLayoutPanel1.Location = new Point(70, 128);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 10;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            tableLayoutPanel1.Size = new Size(1429, 597);
+            tableLayoutPanel1.TabIndex = 19;
+            // 
+            // cyberGroupBox1
+            // 
+            cyberGroupBox1.Alpha = 20;
+            cyberGroupBox1.BackColor = Color.Transparent;
+            cyberGroupBox1.Background = true;
+            cyberGroupBox1.Background_WidthPen = 3F;
+            cyberGroupBox1.BackgroundPen = true;
+            cyberGroupBox1.ColorBackground = Color.FromArgb(37, 52, 68);
+            cyberGroupBox1.ColorBackground_1 = Color.FromArgb(37, 52, 68);
+            cyberGroupBox1.ColorBackground_2 = Color.FromArgb(41, 63, 86);
+            cyberGroupBox1.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
+            cyberGroupBox1.ColorLighting = Color.FromArgb(29, 200, 238);
+            cyberGroupBox1.ColorPen_1 = Color.FromArgb(37, 52, 68);
+            cyberGroupBox1.ColorPen_2 = Color.FromArgb(41, 63, 86);
+            cyberGroupBox1.CyberGroupBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
+            cyberGroupBox1.Dock = DockStyle.Fill;
+            cyberGroupBox1.ForeColor = Color.FromArgb(245, 245, 245);
+            cyberGroupBox1.Lighting = false;
+            cyberGroupBox1.LinearGradient_Background = false;
+            cyberGroupBox1.LinearGradientPen = false;
+            cyberGroupBox1.Location = new Point(3, 3);
+            cyberGroupBox1.Name = "cyberGroupBox1";
+            cyberGroupBox1.PenWidth = 15;
+            cyberGroupBox1.RGB = false;
+            cyberGroupBox1.Rounding = true;
+            cyberGroupBox1.RoundingInt = 60;
+            cyberGroupBox1.Size = new Size(1423, 53);
+            cyberGroupBox1.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            cyberGroupBox1.TabIndex = 20;
+            cyberGroupBox1.Tag = "Cyber";
+            cyberGroupBox1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            cyberGroupBox1.Timer_RGB = 300;
+            // 
             // UserControlStudentSearch
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(41, 44, 61);
+            Controls.Add(tableLayoutPanel1);
             Controls.Add(btnBackOfStudentSearch);
-            Controls.Add(label1);
             Name = "UserControlStudentSearch";
-            Size = new Size(1500, 525);
+            Size = new Size(1575, 813);
+            tableLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private Label label1;
         private ReaLTaiizor.Controls.ParrotButton btnBackOfStudentSearch;
+        private TableLayoutPanel tableLayoutPanel1;
+        private ReaLTaiizor.Controls.CyberGroupBox cyberGroupBox1;
     }
 }
