@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlClass));
             panelUserControlChild = new Panel();
-            mainClass = new Panel();
             panel1 = new Panel();
             btnClassSearch = new ReaLTaiizor.Controls.ParrotButton();
             btnClassShow = new ReaLTaiizor.Controls.ParrotButton();
             btnClassAdd = new ReaLTaiizor.Controls.ParrotButton();
+            mainclass = new Panel();
             panelUserControlChild.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -42,21 +42,13 @@
             // panelUserControlChild
             // 
             panelUserControlChild.BackColor = Color.White;
-            panelUserControlChild.Controls.Add(mainClass);
+            panelUserControlChild.Controls.Add(mainclass);
             panelUserControlChild.Controls.Add(panel1);
             panelUserControlChild.Dock = DockStyle.Fill;
             panelUserControlChild.Location = new Point(0, 0);
             panelUserControlChild.Name = "panelUserControlChild";
             panelUserControlChild.Size = new Size(1575, 900);
             panelUserControlChild.TabIndex = 2;
-            // 
-            // mainClass
-            // 
-            mainClass.Dock = DockStyle.Fill;
-            mainClass.Location = new Point(0, 87);
-            mainClass.Name = "mainClass";
-            mainClass.Size = new Size(1575, 813);
-            mainClass.TabIndex = 2;
             // 
             // panel1
             // 
@@ -69,7 +61,7 @@
             panel1.Name = "panel1";
             panel1.RightToLeft = RightToLeft.No;
             panel1.Size = new Size(1575, 87);
-            panel1.TabIndex = 1;
+            panel1.TabIndex = 2;
             // 
             // btnClassSearch
             // 
@@ -144,6 +136,14 @@
             btnClassAdd.Vertical_Alignment = StringAlignment.Center;
             btnClassAdd.Click += btnClassAdd_Click;
             // 
+            // mainclass
+            // 
+            mainclass.Dock = DockStyle.Fill;
+            mainclass.Location = new Point(0, 87);
+            mainclass.Name = "mainclass";
+            mainclass.Size = new Size(1575, 813);
+            mainclass.TabIndex = 3;
+            // 
             // UserControlClass
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -158,10 +158,10 @@
 
         #endregion
         private Panel panelUserControlChild;
+        private Panel mainclass;
         private Panel panel1;
         private ReaLTaiizor.Controls.ParrotButton btnClassSearch;
         private ReaLTaiizor.Controls.ParrotButton btnClassShow;
         private ReaLTaiizor.Controls.ParrotButton btnClassAdd;
-        private Panel mainClass;
     }
 }

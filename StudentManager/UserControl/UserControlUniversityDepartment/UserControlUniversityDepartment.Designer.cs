@@ -29,23 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlUD));
-            panelUserControlChild = new Panel();
             panel2 = new Panel();
             btnUDSearch = new ReaLTaiizor.Controls.ParrotButton();
             btnUDShow = new ReaLTaiizor.Controls.ParrotButton();
             btnUDAdd = new ReaLTaiizor.Controls.ParrotButton();
-            panelUserControlChild.SuspendLayout();
+            mainUD = new Panel();
             panel2.SuspendLayout();
             SuspendLayout();
-            // 
-            // panelUserControlChild
-            // 
-            panelUserControlChild.Controls.Add(panel2);
-            panelUserControlChild.Dock = DockStyle.Fill;
-            panelUserControlChild.Location = new Point(0, 0);
-            panelUserControlChild.Name = "panelUserControlChild";
-            panelUserControlChild.Size = new Size(1575, 900);
-            panelUserControlChild.TabIndex = 0;
             // 
             // panel2
             // 
@@ -58,7 +48,7 @@
             panel2.Name = "panel2";
             panel2.RightToLeft = RightToLeft.No;
             panel2.Size = new Size(1575, 87);
-            panel2.TabIndex = 3;
+            panel2.TabIndex = 7;
             // 
             // btnUDSearch
             // 
@@ -133,25 +123,33 @@
             btnUDAdd.Vertical_Alignment = StringAlignment.Center;
             btnUDAdd.Click += btnUDAdd_Click;
             // 
+            // mainUD
+            // 
+            mainUD.Dock = DockStyle.Fill;
+            mainUD.Location = new Point(0, 87);
+            mainUD.Name = "mainUD";
+            mainUD.Size = new Size(1575, 813);
+            mainUD.TabIndex = 8;
+            // 
             // UserControlUD
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            Controls.Add(panelUserControlChild);
+            Controls.Add(mainUD);
+            Controls.Add(panel2);
             Name = "UserControlUD";
             Size = new Size(1575, 900);
-            panelUserControlChild.ResumeLayout(false);
             panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel panelUserControlChild;
         private Panel panel2;
         private ReaLTaiizor.Controls.ParrotButton btnUDSearch;
         private ReaLTaiizor.Controls.ParrotButton btnUDShow;
         private ReaLTaiizor.Controls.ParrotButton btnUDAdd;
+        private Panel mainUD;
     }
 }

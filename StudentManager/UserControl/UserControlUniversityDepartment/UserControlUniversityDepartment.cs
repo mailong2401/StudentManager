@@ -19,26 +19,26 @@ namespace StudentManager
 
         private void btnUDAdd_Click(object sender, EventArgs e)
         {
-            panelUserControlChild.Controls.Clear();
+            mainUD.Controls.Clear();
             UserControlUDAdd ucUDA = new UserControlUDAdd();
             ucUDA.Dock = DockStyle.Fill;
-            panelUserControlChild.Controls.Add(ucUDA);
+            mainUD.Controls.Add(ucUDA);
         }
 
         private void btnUDShow_Click(object sender, EventArgs e)
         {
-            panelUserControlChild.Controls.Clear();
+            mainUD.Controls.Clear();
             UserControlUDShow ucUDS = new UserControlUDShow();
             ucUDS.Dock = DockStyle.Fill;
-            panelUserControlChild.Controls.Add(ucUDS);
+            mainUD.Controls.Add(ucUDS);
         }
 
         private void btnUDSearch_Click(object sender, EventArgs e)
         {
-            panelUserControlChild.Controls.Clear();
+            mainUD.Controls.Clear();
             UserControlUDSearch ucUDSr = new UserControlUDSearch();
             ucUDSr.Dock = DockStyle.Fill;
-            panelUserControlChild.Controls.Add(ucUDSr);
+            mainUD.Controls.Add(ucUDSr);
         }
     }
 }
