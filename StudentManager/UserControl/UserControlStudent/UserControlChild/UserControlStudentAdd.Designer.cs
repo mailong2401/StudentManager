@@ -98,7 +98,7 @@
             nightPanel1.Name = "nightPanel1";
             nightPanel1.RightSideColor = Color.FromArgb(41, 44, 61);
             nightPanel1.Side = ReaLTaiizor.Controls.NightPanel.PanelSide.Left;
-            nightPanel1.Size = new Size(1575, 813);
+            nightPanel1.Size = new Size(1575, 915);
             nightPanel1.TabIndex = 1;
             // 
             // label8
@@ -617,7 +617,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(nightPanel1);
             Name = "UserControlStudentAdd";
-            Size = new Size(1575, 813);
+            Size = new Size(1575, 915);
             Load += UserControlStudentAdd_Load;
             nightPanel1.ResumeLayout(false);
             nightPanel1.PerformLayout();
