@@ -1,6 +1,6 @@
 ﻿namespace StudentManager
 {
-    partial class UIitemStudent
+    partial class UIItemBranch
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,12 +29,11 @@
         private void InitializeComponent()
         {
             exampleBox = new ReaLTaiizor.Controls.CyberGroupBox();
-            lbclass = new Label();
-            lbphone = new Label();
-            lbdress = new Label();
-            lbrender = new Label();
             lbdate = new Label();
             lbname = new Label();
+            lbmsgv = new Label();
+            lbkhoa = new Label();
+            lbnamenganh = new Label();
             lbid = new Label();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
@@ -57,12 +56,11 @@
             exampleBox.ColorLighting = Color.FromArgb(29, 200, 238);
             exampleBox.ColorPen_1 = Color.FromArgb(37, 52, 68);
             exampleBox.ColorPen_2 = Color.FromArgb(41, 63, 86);
-            exampleBox.Controls.Add(lbclass);
-            exampleBox.Controls.Add(lbphone);
-            exampleBox.Controls.Add(lbdress);
-            exampleBox.Controls.Add(lbrender);
             exampleBox.Controls.Add(lbdate);
             exampleBox.Controls.Add(lbname);
+            exampleBox.Controls.Add(lbmsgv);
+            exampleBox.Controls.Add(lbkhoa);
+            exampleBox.Controls.Add(lbnamenganh);
             exampleBox.Controls.Add(lbid);
             exampleBox.CyberGroupBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
             exampleBox.Dock = DockStyle.Left;
@@ -83,65 +81,55 @@
             exampleBox.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             exampleBox.Timer_RGB = 300;
             // 
-            // lbclass
-            // 
-            lbclass.AutoSize = true;
-            lbclass.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            lbclass.Location = new Point(1250, 5);
-            lbclass.Name = "lbclass";
-            lbclass.Size = new Size(145, 30);
-            lbclass.TabIndex = 6;
-            lbclass.Text = "D21MARK01";
-            // 
-            // lbphone
-            // 
-            lbphone.AutoSize = true;
-            lbphone.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            lbphone.Location = new Point(1072, 5);
-            lbphone.Name = "lbphone";
-            lbphone.Size = new Size(143, 30);
-            lbphone.TabIndex = 5;
-            lbphone.Text = "0901234567";
-            // 
-            // lbdress
-            // 
-            lbdress.AutoSize = true;
-            lbdress.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            lbdress.Location = new Point(872, 5);
-            lbdress.Name = "lbdress";
-            lbdress.Size = new Size(141, 30);
-            lbdress.TabIndex = 4;
-            lbdress.Text = "Hồ Chí Minh";
-            // 
-            // lbrender
-            // 
-            lbrender.AutoSize = true;
-            lbrender.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            lbrender.Location = new Point(749, 5);
-            lbrender.Name = "lbrender";
-            lbrender.Size = new Size(62, 30);
-            lbrender.TabIndex = 3;
-            lbrender.Text = "Nam";
-            // 
             // lbdate
             // 
             lbdate.AutoSize = true;
             lbdate.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            lbdate.Location = new Point(551, 5);
+            lbdate.Location = new Point(1250, 5);
             lbdate.Name = "lbdate";
             lbdate.Size = new Size(137, 30);
-            lbdate.TabIndex = 2;
-            lbdate.Text = "24/01/2005";
+            lbdate.TabIndex = 6;
+            lbdate.Text = "24/09/2000";
             // 
             // lbname
             // 
             lbname.AutoSize = true;
             lbname.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            lbname.Location = new Point(185, 5);
+            lbname.Location = new Point(980, 5);
             lbname.Name = "lbname";
-            lbname.Size = new Size(313, 30);
-            lbname.TabIndex = 1;
-            lbname.Text = "Pham nguyen Minh Tri neskd";
+            lbname.Size = new Size(250, 30);
+            lbname.TabIndex = 5;
+            lbname.Text = "Phạm Nguyễn Minh Trí";
+            // 
+            // lbmsgv
+            // 
+            lbmsgv.AutoSize = true;
+            lbmsgv.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            lbmsgv.Location = new Point(790, 5);
+            lbmsgv.Name = "lbmsgv";
+            lbmsgv.Size = new Size(117, 30);
+            lbmsgv.TabIndex = 4;
+            lbmsgv.Text = "12398124";
+            // 
+            // lbkhoa
+            // 
+            lbkhoa.AutoSize = true;
+            lbkhoa.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            lbkhoa.Location = new Point(450, 5);
+            lbkhoa.Name = "lbkhoa";
+            lbkhoa.Size = new Size(282, 30);
+            lbkhoa.TabIndex = 2;
+            lbkhoa.Text = "Khoa công nghệ thông tin";
+            // 
+            // lbnamenganh
+            // 
+            lbnamenganh.AutoSize = true;
+            lbnamenganh.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            lbnamenganh.Location = new Point(155, 5);
+            lbnamenganh.Name = "lbnamenganh";
+            lbnamenganh.Size = new Size(227, 30);
+            lbnamenganh.TabIndex = 1;
+            lbnamenganh.Text = "Công nghệ thông tin";
             // 
             // lbid
             // 
@@ -149,9 +137,9 @@
             lbid.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
             lbid.Location = new Point(10, 5);
             lbid.Name = "lbid";
-            lbid.Size = new Size(143, 30);
+            lbid.Size = new Size(83, 30);
             lbid.TabIndex = 0;
-            lbid.Text = "2380601236";
+            lbid.Text = "CNTT1";
             // 
             // pictureBox2
             // 
@@ -172,9 +160,8 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 30;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             // 
-            // UIitemStudent
+            // UIItemBranch
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -182,7 +169,7 @@
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Controls.Add(exampleBox);
-            Name = "UIitemStudent";
+            Name = "UIItemBranch";
             Size = new Size(1477, 41);
             exampleBox.ResumeLayout(false);
             exampleBox.PerformLayout();
@@ -201,14 +188,13 @@
         private Label label33;
         private Label label34;
         private Label label35;
-        private Label lbphone;
-        private Label lbdress;
-        private Label lbrender;
-        private Label lbdate;
         private Label lbname;
+        private Label lbmsgv;
+        private Label lbkhoa;
+        private Label lbnamenganh;
         private Label lbid;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
-        private Label lbclass;
+        private Label lbdate;
     }
 }

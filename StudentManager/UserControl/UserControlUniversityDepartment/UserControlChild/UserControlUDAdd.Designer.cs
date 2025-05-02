@@ -31,7 +31,6 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlUDAdd));
             errorProvider1 = new ErrorProvider(components);
-            inputdiachi = new TextBox();
             cyberGroupBox4 = new ReaLTaiizor.Controls.CyberGroupBox();
             textBox1 = new TextBox();
             label7 = new Label();
@@ -39,13 +38,11 @@
             inputid = new TextBox();
             inputname = new TextBox();
             label1 = new Label();
-            label5 = new Label();
             inputphone = new TextBox();
             label3 = new Label();
             label2 = new Label();
             cyberGroupBox7 = new ReaLTaiizor.Controls.CyberGroupBox();
             btnDeleteOfUDAdd = new ReaLTaiizor.Controls.ParrotButton();
-            cyberGroupBox2 = new ReaLTaiizor.Controls.CyberGroupBox();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             cyberGroupBox3 = new ReaLTaiizor.Controls.CyberGroupBox();
             btnConfirmOfUDAdd = new ReaLTaiizor.Controls.ParrotButton();
@@ -57,7 +54,6 @@
             cyberGroupBox4.SuspendLayout();
             cyberGroupBox1.SuspendLayout();
             cyberGroupBox7.SuspendLayout();
-            cyberGroupBox2.SuspendLayout();
             cyberGroupBox3.SuspendLayout();
             nightPanel1.SuspendLayout();
             cyberGroupBox5.SuspendLayout();
@@ -66,19 +62,6 @@
             // errorProvider1
             // 
             errorProvider1.ContainerControl = this;
-            // 
-            // inputdiachi
-            // 
-            inputdiachi.BackColor = Color.FromArgb(37, 52, 68);
-            inputdiachi.BorderStyle = BorderStyle.None;
-            inputdiachi.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
-            inputdiachi.ForeColor = Color.White;
-            inputdiachi.Location = new Point(13, 14);
-            inputdiachi.Margin = new Padding(3, 0, 3, 0);
-            inputdiachi.Name = "inputdiachi";
-            inputdiachi.PlaceholderText = "Nhập địa chỉ";
-            inputdiachi.Size = new Size(309, 45);
-            inputdiachi.TabIndex = 3;
             // 
             // cyberGroupBox4
             // 
@@ -205,16 +188,6 @@
             label1.TabIndex = 24;
             label1.Text = "MSGV";
             // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 24F, FontStyle.Bold);
-            label5.Location = new Point(15, 720);
-            label5.Name = "label5";
-            label5.Size = new Size(151, 54);
-            label5.TabIndex = 26;
-            label5.Text = "Địa chỉ";
-            // 
             // inputphone
             // 
             inputphone.BackColor = Color.FromArgb(37, 52, 68);
@@ -305,39 +278,6 @@
             btnDeleteOfUDAdd.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             btnDeleteOfUDAdd.Vertical_Alignment = StringAlignment.Center;
             // 
-            // cyberGroupBox2
-            // 
-            cyberGroupBox2.Alpha = 20;
-            cyberGroupBox2.BackColor = Color.Transparent;
-            cyberGroupBox2.Background = true;
-            cyberGroupBox2.Background_WidthPen = 3F;
-            cyberGroupBox2.BackgroundPen = true;
-            cyberGroupBox2.ColorBackground = Color.FromArgb(37, 52, 68);
-            cyberGroupBox2.ColorBackground_1 = Color.FromArgb(37, 52, 68);
-            cyberGroupBox2.ColorBackground_2 = Color.FromArgb(41, 63, 86);
-            cyberGroupBox2.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
-            cyberGroupBox2.ColorLighting = Color.FromArgb(29, 200, 238);
-            cyberGroupBox2.ColorPen_1 = Color.FromArgb(37, 52, 68);
-            cyberGroupBox2.ColorPen_2 = Color.FromArgb(41, 63, 86);
-            cyberGroupBox2.Controls.Add(inputdiachi);
-            cyberGroupBox2.CyberGroupBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
-            cyberGroupBox2.ForeColor = Color.FromArgb(245, 245, 245);
-            cyberGroupBox2.Lighting = false;
-            cyberGroupBox2.LinearGradient_Background = false;
-            cyberGroupBox2.LinearGradientPen = false;
-            cyberGroupBox2.Location = new Point(402, 703);
-            cyberGroupBox2.Name = "cyberGroupBox2";
-            cyberGroupBox2.PenWidth = 15;
-            cyberGroupBox2.RGB = false;
-            cyberGroupBox2.Rounding = true;
-            cyberGroupBox2.RoundingInt = 60;
-            cyberGroupBox2.Size = new Size(337, 75);
-            cyberGroupBox2.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            cyberGroupBox2.TabIndex = 4;
-            cyberGroupBox2.Tag = "Cyber";
-            cyberGroupBox2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            cyberGroupBox2.Timer_RGB = 300;
-            // 
             // cyberGroupBox3
             // 
             cyberGroupBox3.Alpha = 20;
@@ -403,12 +343,10 @@
             nightPanel1.Controls.Add(label7);
             nightPanel1.Controls.Add(cyberGroupBox1);
             nightPanel1.Controls.Add(label1);
-            nightPanel1.Controls.Add(label5);
             nightPanel1.Controls.Add(label3);
             nightPanel1.Controls.Add(cyberGroupBox3);
             nightPanel1.Controls.Add(label2);
             nightPanel1.Controls.Add(cyberGroupBox7);
-            nightPanel1.Controls.Add(cyberGroupBox2);
             nightPanel1.Controls.Add(btnConfirmOfUDAdd);
             nightPanel1.Controls.Add(btnDeleteOfUDAdd);
             nightPanel1.Dock = DockStyle.Fill;
@@ -427,9 +365,9 @@
             label4.Font = new Font("Segoe UI", 24F, FontStyle.Bold);
             label4.Location = new Point(874, 270);
             label4.Name = "label4";
-            label4.Size = new Size(234, 54);
+            label4.Size = new Size(300, 54);
             label4.TabIndex = 30;
-            label4.Text = "Ngày thêm";
+            label4.Text = "Ngày mở khoa";
             // 
             // cyberGroupBox5
             // 
@@ -490,8 +428,6 @@
             cyberGroupBox1.PerformLayout();
             cyberGroupBox7.ResumeLayout(false);
             cyberGroupBox7.PerformLayout();
-            cyberGroupBox2.ResumeLayout(false);
-            cyberGroupBox2.PerformLayout();
             cyberGroupBox3.ResumeLayout(false);
             cyberGroupBox3.PerformLayout();
             nightPanel1.ResumeLayout(false);
@@ -509,15 +445,12 @@
         private ReaLTaiizor.Controls.CyberGroupBox cyberGroupBox1;
         private TextBox inputid;
         private Label label1;
-        private Label label5;
         private Label label3;
         private ReaLTaiizor.Controls.CyberGroupBox cyberGroupBox3;
         private TextBox inputphone;
         private Label label2;
         private ReaLTaiizor.Controls.CyberGroupBox cyberGroupBox7;
         private TextBox inputname;
-        private ReaLTaiizor.Controls.CyberGroupBox cyberGroupBox2;
-        private TextBox inputdiachi;
         private ReaLTaiizor.Controls.ParrotButton btnConfirmOfUDAdd;
         private ReaLTaiizor.Controls.ParrotButton btnDeleteOfUDAdd;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;

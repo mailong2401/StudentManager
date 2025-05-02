@@ -145,7 +145,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 24F, FontStyle.Bold);
-            label7.Location = new Point(874, 45);
+            label7.Location = new Point(830, 45);
             label7.Name = "label7";
             label7.Size = new Size(216, 54);
             label7.TabIndex = 28;
@@ -155,11 +155,11 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 24F, FontStyle.Bold);
-            label6.Location = new Point(874, 270);
+            label6.Location = new Point(830, 270);
             label6.Name = "label6";
-            label6.Size = new Size(234, 54);
+            label6.Size = new Size(327, 54);
             label6.TabIndex = 27;
-            label6.Text = "Ngày thêm";
+            label6.Text = "Ngày mở ngành";
             // 
             // cyberGroupBox1
             // 
@@ -234,7 +234,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 24F, FontStyle.Bold);
-            label5.Location = new Point(874, 495);
+            label5.Location = new Point(830, 495);
             label5.Name = "label5";
             label5.Size = new Size(290, 54);
             label5.TabIndex = 26;

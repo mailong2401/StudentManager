@@ -28,60 +28,115 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlUDShow));
-            btnBackOfBranchShow = new ReaLTaiizor.Controls.ParrotButton();
+            label8 = new Label();
+            label6 = new Label();
+            label3 = new Label();
+            label2 = new Label();
             label1 = new Label();
+            tableLayoutPanel1 = new TableLayoutPanel();
             SuspendLayout();
             // 
-            // btnBackOfBranchShow
+            // label8
             // 
-            btnBackOfBranchShow.BackgroundColor = Color.Silver;
-            btnBackOfBranchShow.ButtonImage = (Image)resources.GetObject("btnBackOfBranchShow.ButtonImage");
-            btnBackOfBranchShow.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
-            btnBackOfBranchShow.ButtonText = "Trở về";
-            btnBackOfBranchShow.ClickBackColor = Color.Transparent;
-            btnBackOfBranchShow.ClickTextColor = Color.White;
-            btnBackOfBranchShow.CornerRadius = 40;
-            btnBackOfBranchShow.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBackOfBranchShow.Horizontal_Alignment = StringAlignment.Center;
-            btnBackOfBranchShow.HoverBackgroundColor = Color.Red;
-            btnBackOfBranchShow.HoverTextColor = Color.White;
-            btnBackOfBranchShow.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            btnBackOfBranchShow.Location = new Point(37, 8);
-            btnBackOfBranchShow.Name = "btnBackOfBranchShow";
-            btnBackOfBranchShow.RightToLeft = RightToLeft.No;
-            btnBackOfBranchShow.Size = new Size(283, 83);
-            btnBackOfBranchShow.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            btnBackOfBranchShow.TabIndex = 11;
-            btnBackOfBranchShow.TextColor = Color.Black;
-            btnBackOfBranchShow.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            btnBackOfBranchShow.Vertical_Alignment = StringAlignment.Center;
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            label8.ForeColor = SystemColors.ControlDark;
+            label8.Location = new Point(1070, 83);
+            label8.Name = "label8";
+            label8.Size = new Size(164, 30);
+            label8.TabIndex = 35;
+            label8.Text = "Ngày mở khoa";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            label6.ForeColor = SystemColors.ControlDark;
+            label6.Location = new Point(870, 83);
+            label6.Name = "label6";
+            label6.Size = new Size(148, 30);
+            label6.TabIndex = 34;
+            label6.Text = "Số điện thoại";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            label3.ForeColor = SystemColors.ControlDark;
+            label3.Location = new Point(570, 83);
+            label3.Name = "label3";
+            label3.Size = new Size(302, 30);
+            label3.TabIndex = 31;
+            label3.Text = "Họ và tên trưởng khoa/viện";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            label2.ForeColor = SystemColors.ControlDark;
+            label2.Location = new Point(370, 83);
+            label2.Name = "label2";
+            label2.Size = new Size(77, 30);
+            label2.TabIndex = 30;
+            label2.Text = "MSGV";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 28.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(533, 321);
+            label1.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            label1.ForeColor = SystemColors.ControlDark;
+            label1.Location = new Point(80, 83);
             label1.Name = "label1";
-            label1.Size = new Size(655, 62);
-            label1.TabIndex = 10;
-            label1.Text = "show thông tin của các ngành";
+            label1.Size = new Size(158, 30);
+            label1.TabIndex = 28;
+            label1.Text = "Tên khoa/viện";
+            // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.ColumnCount = 1;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.Location = new Point(67, 126);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 12;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
+            tableLayoutPanel1.Size = new Size(1483, 564);
+            tableLayoutPanel1.TabIndex = 29;
             // 
             // UserControlUDShow
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(btnBackOfBranchShow);
+            BackColor = Color.FromArgb(41, 44, 61);
+            Controls.Add(label8);
+            Controls.Add(label6);
+            Controls.Add(label3);
+            Controls.Add(label2);
             Controls.Add(label1);
+            Controls.Add(tableLayoutPanel1);
             Name = "UserControlUDShow";
-            Size = new Size(1390, 525);
+            Size = new Size(1575, 813);
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private ReaLTaiizor.Controls.ParrotButton btnBackOfBranchShow;
+        private Label label8;
+        private Label label6;
+        private Label label3;
+        private Label label2;
         private Label label1;
+        private TableLayoutPanel tableLayoutPanel1;
     }
 }
