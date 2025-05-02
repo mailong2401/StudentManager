@@ -23,7 +23,7 @@ namespace StudentManager
             // Thay Database=qlsv bằng tên database của bạn DataBase=ten-database
             // Nếu đăng nhập server bằng mật khẩu thì 
 
-            //string connectionString = "Data Source=TEN_SERVER;Initial Catalog=QLSinhVien;Integrated Security=True";
+            //string connectionString = "Data Source=TEN_SERVER;Initial Catalog=QuanLySinhVien;Integrated Security=True";
             string connectionString = "Server=localhost;Database=qlsv;Integrated Security=True;";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
