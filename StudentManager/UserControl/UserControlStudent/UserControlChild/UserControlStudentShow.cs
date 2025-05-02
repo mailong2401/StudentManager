@@ -20,6 +20,7 @@ namespace StudentManager
 
         private void GetStudentsFromDatabase()
         {
+            //string connectionString = "Server=localhost;Database=qlsv;User Id=myUsername;Password=myPassword;";
             string connectionString = "Server=localhost;Database=qlsv;Integrated Security=True;";
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
