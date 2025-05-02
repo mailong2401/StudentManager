@@ -45,12 +45,12 @@
             panelUserControlChild.Dock = DockStyle.Fill;
             panelUserControlChild.Location = new Point(0, 0);
             panelUserControlChild.Name = "panelUserControlChild";
-            panelUserControlChild.Size = new Size(1500, 900);
+            panelUserControlChild.Size = new Size(1575, 900);
             panelUserControlChild.TabIndex = 2;
             // 
             // panel1
             // 
-            panel1.BackColor = SystemColors.ActiveCaption;
+            panel1.BackColor = Color.FromArgb(5, 25, 30);
             panel1.Controls.Add(btnStatisticSearch);
             panel1.Controls.Add(btnStatisticShow);
             panel1.Controls.Add(btnStatisticAdd);
@@ -58,12 +58,12 @@
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.RightToLeft = RightToLeft.No;
-            panel1.Size = new Size(1500, 226);
+            panel1.Size = new Size(1575, 87);
             panel1.TabIndex = 1;
             // 
             // btnStatisticSearch
             // 
-            btnStatisticSearch.BackgroundColor = Color.FromArgb(255, 255, 255);
+            btnStatisticSearch.BackgroundColor = Color.FromArgb(37, 52, 68);
             btnStatisticSearch.ButtonImage = (Image)resources.GetObject("btnStatisticSearch.ButtonImage");
             btnStatisticSearch.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
             btnStatisticSearch.ButtonText = "Lọc";
@@ -75,18 +75,18 @@
             btnStatisticSearch.HoverBackgroundColor = Color.FromArgb(225, 225, 225);
             btnStatisticSearch.HoverTextColor = Color.DodgerBlue;
             btnStatisticSearch.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            btnStatisticSearch.Location = new Point(1100, 60);
+            btnStatisticSearch.Location = new Point(1083, 4);
             btnStatisticSearch.Name = "btnStatisticSearch";
             btnStatisticSearch.Size = new Size(303, 79);
             btnStatisticSearch.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             btnStatisticSearch.TabIndex = 5;
-            btnStatisticSearch.TextColor = Color.Black;
+            btnStatisticSearch.TextColor = Color.White;
             btnStatisticSearch.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             btnStatisticSearch.Vertical_Alignment = StringAlignment.Center;
             // 
             // btnStatisticShow
             // 
-            btnStatisticShow.BackgroundColor = Color.FromArgb(255, 255, 255);
+            btnStatisticShow.BackgroundColor = Color.FromArgb(37, 52, 68);
             btnStatisticShow.ButtonImage = (Image)resources.GetObject("btnStatisticShow.ButtonImage");
             btnStatisticShow.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
             btnStatisticShow.ButtonText = "Xem";
@@ -98,18 +98,18 @@
             btnStatisticShow.HoverBackgroundColor = Color.FromArgb(225, 225, 225);
             btnStatisticShow.HoverTextColor = Color.DodgerBlue;
             btnStatisticShow.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            btnStatisticShow.Location = new Point(650, 60);
+            btnStatisticShow.Location = new Point(623, 4);
             btnStatisticShow.Name = "btnStatisticShow";
             btnStatisticShow.Size = new Size(303, 79);
             btnStatisticShow.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             btnStatisticShow.TabIndex = 4;
-            btnStatisticShow.TextColor = Color.Black;
+            btnStatisticShow.TextColor = Color.White;
             btnStatisticShow.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             btnStatisticShow.Vertical_Alignment = StringAlignment.Center;
             // 
             // btnStatisticAdd
             // 
-            btnStatisticAdd.BackgroundColor = Color.FromArgb(255, 255, 255);
+            btnStatisticAdd.BackgroundColor = Color.FromArgb(37, 52, 68);
             btnStatisticAdd.ButtonImage = (Image)resources.GetObject("btnStatisticAdd.ButtonImage");
             btnStatisticAdd.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
             btnStatisticAdd.ButtonText = "Thêm";
@@ -121,15 +121,16 @@
             btnStatisticAdd.HoverBackgroundColor = Color.FromArgb(225, 225, 225);
             btnStatisticAdd.HoverTextColor = Color.DodgerBlue;
             btnStatisticAdd.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            btnStatisticAdd.Location = new Point(200, 60);
+            btnStatisticAdd.Location = new Point(183, 4);
             btnStatisticAdd.Name = "btnStatisticAdd";
             btnStatisticAdd.RightToLeft = RightToLeft.No;
             btnStatisticAdd.Size = new Size(303, 79);
             btnStatisticAdd.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             btnStatisticAdd.TabIndex = 3;
-            btnStatisticAdd.TextColor = Color.Black;
+            btnStatisticAdd.TextColor = Color.White;
             btnStatisticAdd.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             btnStatisticAdd.Vertical_Alignment = StringAlignment.Center;
+            btnStatisticAdd.Click += btnStatisticAdd_Click;
             // 
             // UserControlStatistic
             // 
@@ -138,7 +139,7 @@
             BackColor = Color.White;
             Controls.Add(panelUserControlChild);
             Name = "UserControlStatistic";
-            Size = new Size(1500, 900);
+            Size = new Size(1575, 900);
             panelUserControlChild.ResumeLayout(false);
             panel1.ResumeLayout(false);
             ResumeLayout(false);

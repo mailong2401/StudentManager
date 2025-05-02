@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlClassShow));
             btnBackOfClassShow = new ReaLTaiizor.Controls.ParrotButton();
-            label1 = new Label();
+            tableLayoutPanel1 = new TableLayoutPanel();
             SuspendLayout();
             // 
             // btnBackOfClassShow
@@ -47,7 +47,7 @@
             btnBackOfClassShow.HoverBackgroundColor = Color.Red;
             btnBackOfClassShow.HoverTextColor = Color.White;
             btnBackOfClassShow.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            btnBackOfClassShow.Location = new Point(37, 8);
+            btnBackOfClassShow.Location = new Point(236, 32);
             btnBackOfClassShow.Name = "btnBackOfClassShow";
             btnBackOfClassShow.RightToLeft = RightToLeft.No;
             btnBackOfClassShow.Size = new Size(283, 83);
@@ -57,31 +57,40 @@
             btnBackOfClassShow.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             btnBackOfClassShow.Vertical_Alignment = StringAlignment.Center;
             // 
-            // label1
+            // tableLayoutPanel1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 28.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(533, 321);
-            label1.Name = "label1";
-            label1.Size = new Size(655, 62);
-            label1.TabIndex = 10;
-            label1.Text = "show thông tin của các ngành";
+            tableLayoutPanel1.ColumnCount = 1;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.Location = new Point(180, 136);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 10;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            tableLayoutPanel1.Size = new Size(884, 423);
+            tableLayoutPanel1.TabIndex = 12;
             // 
             // UserControlClassShow
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(tableLayoutPanel1);
             Controls.Add(btnBackOfClassShow);
-            Controls.Add(label1);
             Name = "UserControlClassShow";
-            Size = new Size(1390, 525);
+            Size = new Size(1390, 803);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private ReaLTaiizor.Controls.ParrotButton btnBackOfClassShow;
-        private Label label1;
+        private TableLayoutPanel tableLayoutPanel1;
     }
 }

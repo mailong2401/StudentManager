@@ -18,24 +18,24 @@ namespace StudentManager
         }
         private void btnBranchAdd_Click(object sender, EventArgs e)
         {
-            panelUserControlChild.Controls.Clear();
+            mainBranch.Controls.Clear();
             UserControlBranchAdd ucBA = new UserControlBranchAdd();
             ucBA.Dock = DockStyle.Fill;
-            panelUserControlChild.Controls.Add(ucBA);
+            mainBranch.Controls.Add(ucBA);
         }
         private void btnBrandShow_Click(object sender, EventArgs e)
         {
-            panelUserControlChild.Controls.Clear();
+            mainBranch.Controls.Clear();
             UserControlBranchShow ucBS = new UserControlBranchShow();
             ucBS.Dock = DockStyle.Fill;
-            panelUserControlChild.Controls.Add(ucBS);
+            mainBranch.Controls.Add(ucBS);
         }
         private void btnBranchSearch_Click(object sender, EventArgs e)
         {
-            panelUserControlChild.Controls.Clear();
+            mainBranch.Controls.Clear();
             UserControlBranchSearch ucBSr = new UserControlBranchSearch();
             ucBSr.Dock = DockStyle.Fill;
-            panelUserControlChild.Controls.Add(ucBSr);
+            mainBranch.Controls.Add(ucBSr);
         }
 
         

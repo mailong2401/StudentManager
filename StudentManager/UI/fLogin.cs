@@ -23,7 +23,7 @@ namespace StudentManager
             // Thay Database=qlsv bằng tên database của bạn DataBase=ten-database
             // Nếu đăng nhập server bằng mật khẩu thì 
 
-            //string connectionString = "Server=localhost;Database=qlsv;User Id=myUsername;Password=myPassword;";
+            //string connectionString = "Data Source=TEN_SERVER;Initial Catalog=QuanLySinhVien;Integrated Security=True";
             string connectionString = "Server=localhost;Database=qlsv;Integrated Security=True;";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -46,14 +46,14 @@ namespace StudentManager
 
                             if (passwordInDatabase == inputPassword)
                             {
-                                MessageBox.Show("Đăng nhập thành công!");
+                                
                                 // TODO: chuyển sang màn hình chính ở đây
 
                                 // Ẩn form login
                                 this.Hide();
-
                                 // Mở form mới ten-form mainForm = new ten-form();
-                                // fMain mainForm = new fMain();
+                                fAdmin mainForm = new fAdmin();
+                                mainForm.ShowDialog();
 
                                 // Sau khi form main đóng thì đóng luôn chương trình
                                 this.Close();

@@ -15,30 +15,37 @@ namespace StudentManager
         public UserControlStudent()
         {
             InitializeComponent();
+
+            mainStudent.Controls.Clear();
+            UserControlStudentShow ucSS = new UserControlStudentShow();
+            ucSS.Dock = DockStyle.Fill;
+            mainStudent.Controls.Add(ucSS);
         }
 
         private void btnStudentAdd_Click(object sender, EventArgs e)
         {
-            panelUserControlChild.Controls.Clear();
+            mainStudent.Controls.Clear();
             UserControlStudentAdd ucSA = new UserControlStudentAdd();
             ucSA.Dock = DockStyle.Fill;
-            panelUserControlChild.Controls.Add(ucSA);
+            mainStudent.Controls.Add(ucSA);
         }
 
         private void btnStudentShow_Click(object sender, EventArgs e)
         {
-            panelUserControlChild.Controls.Clear();
+            mainStudent.Controls.Clear();
             UserControlStudentShow ucSS = new UserControlStudentShow();
             ucSS.Dock = DockStyle.Fill;
-            panelUserControlChild.Controls.Add(ucSS);
+            mainStudent.Controls.Add(ucSS);
         }
 
         private void btnStudentSearch_Click(object sender, EventArgs e)
         {
-            panelUserControlChild.Controls.Clear();
+            mainStudent.Controls.Clear();
             UserControlStudentSearch ucSSr = new UserControlStudentSearch();
             ucSSr.Dock = DockStyle.Fill;
-            panelUserControlChild.Controls.Add(ucSSr);
+            mainStudent.Controls.Add(ucSSr);
         }
+
+        
     }
 }

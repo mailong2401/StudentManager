@@ -1,4 +1,4 @@
-namespace StudentManager
+﻿namespace StudentManager
 {
     public partial class fAdmin : Form
     {
@@ -42,6 +42,6 @@ namespace StudentManager
             ucSS.Dock = DockStyle.Fill;
             panelUserControlDad.Controls.Add(ucSS);
         }
-       
+
     }
 }
