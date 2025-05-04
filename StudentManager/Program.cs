@@ -18,7 +18,7 @@ namespace StudentManager
         }
         static void CreateDatabaseAndTable()
         {
-            string connectionString = "Data Source=database.db;Version=3;";
+            string connectionString = "Data Source=mydb.sqlite;Version=3;";
             using (var connection = new SQLiteConnection(connectionString))
             {
                 connection.Open();

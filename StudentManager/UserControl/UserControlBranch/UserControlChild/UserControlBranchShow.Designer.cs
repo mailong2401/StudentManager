@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            tableLayoutPanel1 = new TableLayoutPanel();
+            tbkhoa = new TableLayoutPanel();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -37,27 +37,27 @@
             label6 = new Label();
             SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // tbkhoa
             // 
-            tableLayoutPanel1.ColumnCount = 1;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Location = new Point(67, 126);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 12;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
-            tableLayoutPanel1.Size = new Size(1483, 564);
-            tableLayoutPanel1.TabIndex = 21;
+            tbkhoa.ColumnCount = 1;
+            tbkhoa.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tbkhoa.Location = new Point(67, 126);
+            tbkhoa.Name = "tbkhoa";
+            tbkhoa.RowCount = 12;
+            tbkhoa.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
+            tbkhoa.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
+            tbkhoa.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
+            tbkhoa.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
+            tbkhoa.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
+            tbkhoa.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
+            tbkhoa.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
+            tbkhoa.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
+            tbkhoa.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
+            tbkhoa.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
+            tbkhoa.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
+            tbkhoa.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
+            tbkhoa.Size = new Size(1483, 564);
+            tbkhoa.TabIndex = 21;
             // 
             // label1
             // 
@@ -75,7 +75,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
             label2.ForeColor = SystemColors.ControlDark;
-            label2.Location = new Point(225, 83);
+            label2.Location = new Point(237, 83);
             label2.Name = "label2";
             label2.Size = new Size(120, 30);
             label2.TabIndex = 23;
@@ -136,7 +136,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(tableLayoutPanel1);
+            Controls.Add(tbkhoa);
             Name = "UserControlBranchShow";
             Size = new Size(1575, 813);
             ResumeLayout(false);
@@ -145,7 +145,7 @@
 
         #endregion
 
-        private TableLayoutPanel tableLayoutPanel1;
+        private TableLayoutPanel tbkhoa;
         private Label label1;
         private Label label2;
         private Label label3;
