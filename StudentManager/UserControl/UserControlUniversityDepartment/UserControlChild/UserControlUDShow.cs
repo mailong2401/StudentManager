@@ -106,5 +106,10 @@ namespace StudentManager
         {
 
         }
+
+        private void parrotButton4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
