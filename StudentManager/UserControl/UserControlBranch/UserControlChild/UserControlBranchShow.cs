@@ -21,7 +21,7 @@ namespace StudentManager
             string connectionString = "Data Source=mydb.sqlite;Version=3;";
 
             // Câu lệnh SQL để lấy dữ liệu
-            string query = "SELECT tenKhoa FROM Khoa";
+            string query = "SELECT maKhoa FROM Khoa";
 
             // Mở kết nối và thực hiện truy vấn
             using (SQLiteConnection conn = new SQLiteConnection(connectionString))
@@ -40,8 +40,8 @@ namespace StudentManager
                         while (reader.Read())
                         {
                             // Thêm tên khoa vào ComboBox
-                            string tenKhoa = reader["tenKhoa"].ToString();
-                            comboboxkhoa.Items.Add(tenKhoa);
+                            string maKhoa = reader["maKhoa"].ToString();
+                            comboboxkhoa.Items.Add(maKhoa);
                         }
                     }
                 }
@@ -57,7 +57,17 @@ namespace StudentManager
             using (SQLiteConnection conn = new SQLiteConnection(connectionString))
             {
                 conn.Open();
-                string query = "SELECT * FROM Nganh"; // Đảm bảo bảng 'Khoa' có tồn tại
+                // Bật foreign key support
+                using (var command = new SQLiteCommand("PRAGMA foreign_keys = ON;", conn))
+                {
+                    command.ExecuteNonQuery();
+                }
+
+                // Truy vấn kết hợp bảng Nganh và Khoa
+                string query = @"
+            SELECT Nganh.maNganh, Nganh.tenNganh, Khoa.tenKhoa
+            FROM Nganh
+            INNER JOIN Khoa ON Nganh.maKhoa = Khoa.maKhoa";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                 using (SQLiteDataReader reader = cmd.ExecuteReader())
@@ -74,8 +84,8 @@ namespace StudentManager
                         // Thiết lập dữ liệu
                         string maNganh = reader["maNganh"].ToString();
                         string tenNganh = reader["tenNganh"].ToString();
-                        string maKhoa = reader["maKhoa"].ToString();
-                        uIItemBranch.setItem(maNganh, tenNganh, maKhoa);
+                        string tenKhoa = reader["tenKhoa"].ToString(); // Thay vì maKhoa, lấy tenKhoa
+                        uIItemBranch.setItem(maNganh, tenNganh, tenKhoa); // Truyền tenKhoa vào
 
                         // Thêm vào Panel (hoặc FlowLayoutPanel)
                         tbNganh.Controls.Add(uIItemBranch);
@@ -84,6 +94,7 @@ namespace StudentManager
                 }
             }
         }
+
 
         private void inputNameNganh_TextChanged(object sender, EventArgs e)
         {
@@ -116,7 +127,7 @@ namespace StudentManager
                 try
                 {
                     InsertNgang(idNganh, nameNganh, idKhoa);
-                    MessageBox.Show("Thêm khoa thành công!");
+                    MessageBox.Show("Thêm Ngành thành công!");
                     inputidNganh.Text = "";
                     inputNameNganh.Text = "";
                     LoadAllBranches();

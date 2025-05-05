@@ -13,13 +13,33 @@ namespace StudentManager
 {
     public partial class UserControlUDShow : UserControl
     {
+        private class UniversityDepartment
+        {
+            string id;
+            string Name;
+
+            public UniversityDepartment()
+            {
+                id = "";
+                Name = "";
+            }
+            public UniversityDepartment(string id, string name)
+            {
+                this.id = id;
+                Name = name;
+            }
+            public string getId() {  return id; }
+            public string getName() { return Name; }
+        }
+        private List<UniversityDepartment> _universities = new List<UniversityDepartment>();
         // Chuỗi kết nối SQLite
         string connectionString = "Data Source=mydb.sqlite;Version=3;";
-
+        int indexCurrentTable = 1;
         public UserControlUDShow()
         {
             InitializeComponent();
             LoadAllBranches(); // Gọi hàm khi control được tạo
+            createTable();
         }
 
         private void btnConfirmOfUDAdd_Click_1(object sender, EventArgs e)
@@ -36,6 +56,7 @@ namespace StudentManager
                     inputidKhoa.Text = "";
                     inputNameKhoa.Text = "";
                     LoadAllBranches();
+                    createTable();
                 }
                 catch (SQLiteException ex)
                 {
@@ -72,6 +93,9 @@ namespace StudentManager
 
         private void LoadAllBranches()
         {
+            // Xóa danh sách _universities để tránh trùng lặp dữ liệu
+            _universities.Clear();
+
             using (SQLiteConnection conn = new SQLiteConnection(connectionString))
             {
                 conn.Open();
@@ -80,27 +104,51 @@ namespace StudentManager
                 using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                 using (SQLiteDataReader reader = cmd.ExecuteReader())
                 {
-                    // Xóa các control cũ trước khi thêm mới (nếu cần load lại nhiều lần)
-                    tablekhoa.Controls.Clear();
-
                     while (reader.Read())
                     {
-                        // Tạo control UIItemBranch
-                        UIItemUniversityDepartment uIItemBranch = new UIItemUniversityDepartment();
-                        uIItemBranch.Dock = DockStyle.Top;
-
-                        // Thiết lập dữ liệu
                         string maKhoa = reader["maKhoa"].ToString();
                         string tenKhoa = reader["tenKhoa"].ToString();
-                        uIItemBranch.setItem(maKhoa, tenKhoa);
-
-                        // Thêm vào Panel (hoặc FlowLayoutPanel)
-                        tablekhoa.Controls.Add(uIItemBranch);
-                        uIItemBranch.BringToFront(); // Đảm bảo thứ tự từ trên xuống
+                        UniversityDepartment temp = new UniversityDepartment(maKhoa, tenKhoa);
+                        _universities.Add(temp);
                     }
                 }
             }
+
+            // Gọi createTable sau khi dữ liệu đã được tải xong
+            createTable();
         }
+
+        private void createTable()
+        {
+            // Xóa các control cũ trước khi thêm mới (nếu cần load lại nhiều lần)
+            tablekhoa.Controls.Clear();
+
+            // 24
+            // 1  2  3  4  5  6  7  8  9  10 11 12
+            // 13 14 15 16 17 18 19 20 21 22 23 24
+
+            int cnt = 1;
+            int indexMax = indexCurrentTable * 12;
+            int indexMin = indexMax - 12 + 1;
+
+            foreach (UniversityDepartment universityDe in _universities)
+            {
+                if (cnt >= indexMin &&  cnt <= indexMax){
+                    // Tạo control UIItemUniversityDepartment
+                    UIItemUniversityDepartment uIItemBranch = new UIItemUniversityDepartment();
+                    uIItemBranch.Dock = DockStyle.Top;
+
+                    // Thiết lập dữ liệu
+                    uIItemBranch.setItem(universityDe.getId(), universityDe.getName());
+
+                    // Thêm vào Panel (hoặc FlowLayoutPanel)
+                    tablekhoa.Controls.Add(uIItemBranch);
+                    uIItemBranch.BringToFront(); // Đảm bảo thứ tự từ trên xuống
+                }
+            }
+        }
+
+
 
         private void inputidKhoa_TextChanged(object sender, EventArgs e)
         {
