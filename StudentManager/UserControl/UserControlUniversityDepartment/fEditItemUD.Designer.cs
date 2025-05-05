@@ -217,6 +217,7 @@
             Controls.Add(cyberGroupBox4);
             Controls.Add(lbNameKhoa);
             Name = "fEditItemUD";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "fEditItemUD";
             cyberGroupBox1.ResumeLayout(false);
             cyberGroupBox1.PerformLayout();

@@ -13,33 +13,31 @@ namespace StudentManager
 {
     public partial class UserControlUDShow : UserControl
     {
-        private class UniversityDepartment
+        public class UniversityDepartment
         {
-            string id;
-            string Name;
+            public string Id { get; set; }
+            public string Name { get; set; }
 
-            public UniversityDepartment()
-            {
-                id = "";
-                Name = "";
-            }
+            public UniversityDepartment() { }
+
             public UniversityDepartment(string id, string name)
             {
-                this.id = id;
+                Id = id;
                 Name = name;
             }
-            public string getId() { return id; }
-            public string getName() { return Name; }
         }
+
         private List<UniversityDepartment> _universities = new List<UniversityDepartment>();
         // Chuỗi kết nối SQLite
         string connectionString = "Data Source=mydb.sqlite;Version=3;";
-        int indexCurrentTable = 1;
+        int indexCurrentTable = 0;
+        int indexMinTable = 0;
+        int indexMaxTable;
+        // 0 1 2 3 4 5
         public UserControlUDShow()
         {
             InitializeComponent();
             LoadAllBranches(); // Gọi hàm khi control được tạo
-            createTable();
         }
 
         private void btnConfirmOfUDAdd_Click_1(object sender, EventArgs e)
@@ -120,6 +118,15 @@ namespace StudentManager
 
         private void createTable()
         {
+            if (_universities.Count == 0)
+            {
+                Label emptyLabel = new Label();
+                emptyLabel.Text = "Chưa có khoa nào.";
+                emptyLabel.Dock = DockStyle.Top;
+                tablekhoa.Controls.Add(emptyLabel);
+                return;
+            }
+
             // Xóa các control cũ trước khi thêm mới (nếu cần load lại nhiều lần)
             tablekhoa.Controls.Clear();
 
@@ -142,7 +149,7 @@ namespace StudentManager
                 uIItemBranch.Dock = DockStyle.Top;
 
                 // Thiết lập dữ liệu
-                uIItemBranch.setItem(universityDe.getId(), universityDe.getName());
+                uIItemBranch.setItem(universityDe.Id, universityDe.Name);
 
                 // Thêm vào Panel (hoặc FlowLayoutPanel)
                 tablekhoa.Controls.Add(uIItemBranch);
@@ -156,26 +163,40 @@ namespace StudentManager
         {
 
         }
-
-        private void page1_Click(object sender, EventArgs e)
+        private void ChangePage(int pageIndex)
         {
-            this.indexCurrentTable = 0;
-            LoadAllBranches();
+            indexMinTable = pageIndex > indexMinTable + 2
+                ? pageIndex - 2
+                : Math.Max(indexMinTable - (2 - (pageIndex - indexMinTable)), 0);
+
+            // Cập nhật lại số trang cho từng button
+            ReaLTaiizor.Controls.ParrotButton[] pages = { page1, page2, page3, page4, page5, page6 };
+            for (int i = 0; i < pages.Length; i++)
+            {
+                int pageNumber = indexMinTable + i + 1;
+                pages[i].ButtonText = pageNumber.ToString();
+                pages[i].BackgroundColor = Color.FromArgb(37, 52, 68);
+                pages[i].TextColor = Color.White;
+            }
+
+            // Tô sáng nút tương ứng với trang hiện tại
+            int selectedIndex = pageIndex - indexMinTable;
+            if (selectedIndex >= 0 && selectedIndex < pages.Length)
+            {
+                pages[selectedIndex].BackgroundColor = Color.FromArgb(195, 195, 195);
+                pages[selectedIndex].TextColor = Color.DodgerBlue;
+            }
+
+            this.indexCurrentTable = pageIndex;
             createTable();
         }
 
-        private void page2_Click(object sender, EventArgs e)
-        {
-            this.indexCurrentTable = 1;
-            LoadAllBranches();
-            createTable();
-        }
 
-        private void page3_Click(object sender, EventArgs e)
-        {
-            this.indexCurrentTable = 2;
-            LoadAllBranches();
-            createTable();
-        }
+        private void page1_Click(object sender, EventArgs e) => ChangePage(indexMinTable + 0);
+        private void page2_Click(object sender, EventArgs e) => ChangePage(indexMinTable + 1);
+        private void page3_Click(object sender, EventArgs e) => ChangePage(indexMinTable + 2);
+        private void page4_Click(object sender, EventArgs e) => ChangePage(indexMinTable + 3);
+        private void page5_Click(object sender, EventArgs e) => ChangePage(indexMinTable + 4);
+        private void page6_Click(object sender, EventArgs e) => ChangePage(indexMinTable + 5);
     }
 }
