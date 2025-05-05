@@ -77,11 +77,11 @@
             // 
             lbnamekhoa.AutoSize = true;
             lbnamekhoa.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            lbnamekhoa.Location = new Point(300, 5);
+            lbnamekhoa.Location = new Point(287, 5);
             lbnamekhoa.Name = "lbnamekhoa";
-            lbnamekhoa.Size = new Size(143, 30);
+            lbnamekhoa.Size = new Size(273, 30);
             lbnamekhoa.TabIndex = 1;
-            lbnamekhoa.Text = "1298731212";
+            lbnamekhoa.Text = "Viện Công nghệ Việt Hàn";
             // 
             // lbidkhoa
             // 
@@ -89,9 +89,9 @@
             lbidkhoa.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
             lbidkhoa.Location = new Point(10, 5);
             lbidkhoa.Name = "lbidkhoa";
-            lbidkhoa.Size = new Size(273, 30);
+            lbidkhoa.Size = new Size(62, 30);
             lbidkhoa.TabIndex = 0;
-            lbidkhoa.Text = "Viện Công nghệ Việt Hàn";
+            lbidkhoa.Text = "VKIT";
             // 
             // pictureBox2
             // 

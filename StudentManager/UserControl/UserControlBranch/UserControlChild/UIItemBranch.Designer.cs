@@ -79,7 +79,7 @@
             // 
             lbkhoa.AutoSize = true;
             lbkhoa.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            lbkhoa.Location = new Point(450, 5);
+            lbkhoa.Location = new Point(460, 5);
             lbkhoa.Name = "lbkhoa";
             lbkhoa.Size = new Size(282, 30);
             lbkhoa.TabIndex = 2;
@@ -89,7 +89,7 @@
             // 
             lbnamenganh.AutoSize = true;
             lbnamenganh.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            lbnamenganh.Location = new Point(155, 5);
+            lbnamenganh.Location = new Point(160, 5);
             lbnamenganh.Name = "lbnamenganh";
             lbnamenganh.Size = new Size(227, 30);
             lbnamenganh.TabIndex = 1;
