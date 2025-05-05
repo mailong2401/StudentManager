@@ -43,51 +43,8 @@ namespace StudentManager
 
         private void btnConfirmOfUDAdd_Click_1(object sender, EventArgs e)
         {
-
-            if (!string.IsNullOrWhiteSpace(inputNameKhoa.Text) && !string.IsNullOrWhiteSpace(inputidKhoa.Text))
-            {
-                string nameKhoa = inputNameKhoa.Text;
-                string idKhoa = inputidKhoa.Text;
-                try
-                {
-                    InsertKhoa(idKhoa, nameKhoa);
-                    MessageBox.Show("Thêm khoa thành công!");
-                    inputidKhoa.Text = "";
-                    inputNameKhoa.Text = "";
-                    LoadAllUD();
-                    createTable();
-                }
-                catch (SQLiteException ex)
-                {
-                    if (ex.ErrorCode == (int)SQLiteErrorCode.Constraint)
-                    {
-                        MessageBox.Show("Mã khoa đã tồn tại!");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Lỗi cơ sở dữ liệu: " + ex.Message);
-                    }
-                }
-            }
-            else
-            {
-                MessageBox.Show("Nhập thiếu thông tin");
-            }
-
-        }
-        public void InsertKhoa(string maKhoa, string tenKhoa)
-        {
-            using (SQLiteConnection conn = new SQLiteConnection("Data Source=mydb.sqlite;Version=3;"))
-            {
-                conn.Open();
-                string query = "INSERT INTO Khoa (maKhoa, tenKhoa) VALUES (@maKhoa, @tenKhoa)";
-                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@maKhoa", maKhoa);
-                    cmd.Parameters.AddWithValue("@tenKhoa", tenKhoa);
-                    cmd.ExecuteNonQuery();
-                }
-            }
+            fAddItemUD fAddItemUD = new fAddItemUD();
+            fAddItemUD.ShowDialog();
         }
 
         public static void LoadAllUD()
