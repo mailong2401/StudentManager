@@ -133,6 +133,16 @@ namespace StudentManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap loupe {
+            get {
+                object obj = ResourceManager.GetObject("loupe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pen {
             get {
                 object obj = ResourceManager.GetObject("pen", resourceCulture);
@@ -166,6 +176,16 @@ namespace StudentManager.Properties {
         internal static System.Drawing.Bitmap score {
             get {
                 object obj = ResourceManager.GetObject("score", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sort {
+            get {
+                object obj = ResourceManager.GetObject("sort", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

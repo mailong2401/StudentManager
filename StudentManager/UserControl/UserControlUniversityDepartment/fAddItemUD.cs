@@ -45,7 +45,7 @@ namespace StudentManager
                     MessageBox.Show("Thêm khoa thành công!");
                     inputidKhoa.Text = "";
                     inputNameKhoa.Text = "";
-                    UserControlUDShow.LoadAllUD();
+                    UserControlUDShow.LoadAllUD("");
                 }
                 catch (SQLiteException ex)
                 {

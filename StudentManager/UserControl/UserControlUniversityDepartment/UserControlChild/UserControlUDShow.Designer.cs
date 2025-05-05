@@ -41,6 +41,11 @@
             page4 = new ReaLTaiizor.Controls.ParrotButton();
             page5 = new ReaLTaiizor.Controls.ParrotButton();
             page6 = new ReaLTaiizor.Controls.ParrotButton();
+            inputidKhoa = new TextBox();
+            cyberGroupBox1 = new ReaLTaiizor.Controls.CyberGroupBox();
+            btnSearch = new ReaLTaiizor.Controls.ParrotButton();
+            btnSort = new ReaLTaiizor.Controls.ParrotButton();
+            cyberGroupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // label2
@@ -69,7 +74,7 @@
             // 
             tablekhoa.ColumnCount = 1;
             tablekhoa.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tablekhoa.Location = new Point(287, 188);
+            tablekhoa.Location = new Point(250, 188);
             tablekhoa.Name = "tablekhoa";
             tablekhoa.RowCount = 12;
             tablekhoa.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
@@ -101,10 +106,10 @@
             btnConfirmOfUDAdd.HoverBackgroundColor = Color.Lime;
             btnConfirmOfUDAdd.HoverTextColor = Color.White;
             btnConfirmOfUDAdd.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            btnConfirmOfUDAdd.Location = new Point(1350, 15);
+            btnConfirmOfUDAdd.Location = new Point(1374, 28);
             btnConfirmOfUDAdd.Name = "btnConfirmOfUDAdd";
             btnConfirmOfUDAdd.RightToLeft = RightToLeft.No;
-            btnConfirmOfUDAdd.Size = new Size(159, 50);
+            btnConfirmOfUDAdd.Size = new Size(185, 50);
             btnConfirmOfUDAdd.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             btnConfirmOfUDAdd.TabIndex = 35;
             btnConfirmOfUDAdd.TextColor = Color.White;
@@ -158,7 +163,7 @@
             pageLeft.TextColor = Color.Black;
             pageLeft.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             pageLeft.Vertical_Alignment = StringAlignment.Center;
-            pageLeft.Click += pageLeft_Click;
+            pageLeft.Click += this.pageLeft_Click;
             // 
             // page1
             // 
@@ -182,7 +187,7 @@
             page1.TextColor = Color.White;
             page1.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             page1.Vertical_Alignment = StringAlignment.Center;
-            page1.Click += page1_Click;
+            page1.Click += this.page1_Click;
             // 
             // page3
             // 
@@ -206,7 +211,7 @@
             page3.TextColor = Color.White;
             page3.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             page3.Vertical_Alignment = StringAlignment.Center;
-            page3.Click += page3_Click;
+            page3.Click += this.page3_Click;
             // 
             // page2
             // 
@@ -230,7 +235,7 @@
             page2.TextColor = Color.White;
             page2.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             page2.Vertical_Alignment = StringAlignment.Center;
-            page2.Click += page2_Click;
+            page2.Click += this.page2_Click;
             // 
             // page4
             // 
@@ -254,7 +259,7 @@
             page4.TextColor = Color.White;
             page4.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             page4.Vertical_Alignment = StringAlignment.Center;
-            page4.Click += page4_Click;
+            page4.Click += this.page4_Click;
             // 
             // page5
             // 
@@ -278,7 +283,7 @@
             page5.TextColor = Color.White;
             page5.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             page5.Vertical_Alignment = StringAlignment.Center;
-            page5.Click += page5_Click;
+            page5.Click += this.page5_Click;
             // 
             // page6
             // 
@@ -302,13 +307,112 @@
             page6.TextColor = Color.White;
             page6.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             page6.Vertical_Alignment = StringAlignment.Center;
-            page6.Click += page6_Click;
+            page6.Click += this.page6_Click;
+            // 
+            // inputidKhoa
+            // 
+            inputidKhoa.BackColor = Color.FromArgb(37, 52, 68);
+            inputidKhoa.BorderStyle = BorderStyle.None;
+            inputidKhoa.Font = new Font("Segoe UI", 17F, FontStyle.Bold);
+            inputidKhoa.ForeColor = Color.White;
+            inputidKhoa.Location = new Point(16, 11);
+            inputidKhoa.Margin = new Padding(3, 0, 3, 0);
+            inputidKhoa.Name = "inputidKhoa";
+            inputidKhoa.PlaceholderText = "Nhập mã khoa";
+            inputidKhoa.Size = new Size(339, 38);
+            inputidKhoa.TabIndex = 4;
+            // 
+            // cyberGroupBox1
+            // 
+            cyberGroupBox1.Alpha = 20;
+            cyberGroupBox1.BackColor = Color.Transparent;
+            cyberGroupBox1.Background = true;
+            cyberGroupBox1.Background_WidthPen = 3F;
+            cyberGroupBox1.BackgroundPen = true;
+            cyberGroupBox1.ColorBackground = Color.FromArgb(37, 52, 68);
+            cyberGroupBox1.ColorBackground_1 = Color.FromArgb(37, 52, 68);
+            cyberGroupBox1.ColorBackground_2 = Color.FromArgb(41, 63, 86);
+            cyberGroupBox1.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
+            cyberGroupBox1.ColorLighting = Color.FromArgb(29, 200, 238);
+            cyberGroupBox1.ColorPen_1 = Color.FromArgb(37, 52, 68);
+            cyberGroupBox1.ColorPen_2 = Color.FromArgb(41, 63, 86);
+            cyberGroupBox1.Controls.Add(inputidKhoa);
+            cyberGroupBox1.CyberGroupBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
+            cyberGroupBox1.ForeColor = Color.FromArgb(245, 245, 245);
+            cyberGroupBox1.Lighting = false;
+            cyberGroupBox1.LinearGradient_Background = false;
+            cyberGroupBox1.LinearGradientPen = false;
+            cyberGroupBox1.Location = new Point(701, 15);
+            cyberGroupBox1.Name = "cyberGroupBox1";
+            cyberGroupBox1.PenWidth = 15;
+            cyberGroupBox1.RGB = false;
+            cyberGroupBox1.Rounding = true;
+            cyberGroupBox1.RoundingInt = 60;
+            cyberGroupBox1.Size = new Size(377, 63);
+            cyberGroupBox1.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            cyberGroupBox1.TabIndex = 45;
+            cyberGroupBox1.Tag = "Cyber";
+            cyberGroupBox1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            cyberGroupBox1.Timer_RGB = 300;
+            // 
+            // btnSearch
+            // 
+            btnSearch.BackgroundColor = Color.DimGray;
+            btnSearch.ButtonImage = Properties.Resources.loupe;
+            btnSearch.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
+            btnSearch.ButtonText = "Tìm kiếm";
+            btnSearch.ClickBackColor = Color.Transparent;
+            btnSearch.ClickTextColor = Color.White;
+            btnSearch.CornerRadius = 25;
+            btnSearch.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            btnSearch.Horizontal_Alignment = StringAlignment.Center;
+            btnSearch.HoverBackgroundColor = Color.Lime;
+            btnSearch.HoverTextColor = Color.White;
+            btnSearch.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
+            btnSearch.Location = new Point(790, 94);
+            btnSearch.Name = "btnSearch";
+            btnSearch.RightToLeft = RightToLeft.No;
+            btnSearch.Size = new Size(185, 50);
+            btnSearch.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            btnSearch.TabIndex = 46;
+            btnSearch.TextColor = Color.White;
+            btnSearch.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            btnSearch.Vertical_Alignment = StringAlignment.Center;
+            btnSearch.Click += btnSearch_Click;
+            // 
+            // btnSort
+            // 
+            btnSort.BackgroundColor = Color.DimGray;
+            btnSort.ButtonImage = Properties.Resources.sort;
+            btnSort.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
+            btnSort.ButtonText = "Sắp xếp";
+            btnSort.ClickBackColor = Color.Transparent;
+            btnSort.ClickTextColor = Color.White;
+            btnSort.CornerRadius = 25;
+            btnSort.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            btnSort.Horizontal_Alignment = StringAlignment.Center;
+            btnSort.HoverBackgroundColor = Color.Lime;
+            btnSort.HoverTextColor = Color.White;
+            btnSort.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
+            btnSort.Location = new Point(1374, 108);
+            btnSort.Name = "btnSort";
+            btnSort.RightToLeft = RightToLeft.No;
+            btnSort.Size = new Size(185, 50);
+            btnSort.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            btnSort.TabIndex = 47;
+            btnSort.TextColor = Color.White;
+            btnSort.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            btnSort.Vertical_Alignment = StringAlignment.Center;
+            btnSort.Click += btnSort_Click;
             // 
             // UserControlUDShow
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(41, 44, 61);
+            Controls.Add(btnSort);
+            Controls.Add(btnSearch);
+            Controls.Add(cyberGroupBox1);
             Controls.Add(page6);
             Controls.Add(page5);
             Controls.Add(page4);
@@ -323,6 +427,8 @@
             Controls.Add(tablekhoa);
             Name = "UserControlUDShow";
             Size = new Size(1575, 813);
+            cyberGroupBox1.ResumeLayout(false);
+            cyberGroupBox1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -333,12 +439,16 @@
         private ReaLTaiizor.Controls.ParrotButton btnConfirmOfUDAdd;
         private ReaLTaiizor.Controls.ParrotButton pageRight;
         private ReaLTaiizor.Controls.ParrotButton pageLeft;
-        private ReaLTaiizor.Controls.ParrotButton page1;
-        private ReaLTaiizor.Controls.ParrotButton page3;
-        private ReaLTaiizor.Controls.ParrotButton page2;
-        private ReaLTaiizor.Controls.ParrotButton page4;
-        private ReaLTaiizor.Controls.ParrotButton page5;
-        private ReaLTaiizor.Controls.ParrotButton page6;
-        public static TableLayoutPanel tablekhoa;
+        private TextBox inputidKhoa;
+        private ReaLTaiizor.Controls.CyberGroupBox cyberGroupBox1;
+        private ReaLTaiizor.Controls.ParrotButton btnSearch;
+        static ReaLTaiizor.Controls.ParrotButton page1;
+        static ReaLTaiizor.Controls.ParrotButton page3;
+        static ReaLTaiizor.Controls.ParrotButton page2;
+        static ReaLTaiizor.Controls.ParrotButton page4;
+        static ReaLTaiizor.Controls.ParrotButton page5;
+        static ReaLTaiizor.Controls.ParrotButton page6;
+        static TableLayoutPanel tablekhoa;
+        private ReaLTaiizor.Controls.ParrotButton btnSort;
     }
 }

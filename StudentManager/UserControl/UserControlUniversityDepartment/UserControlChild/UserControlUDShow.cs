@@ -29,17 +29,18 @@ namespace StudentManager
 
         public static List<UniversityDepartment> _universities = new List<UniversityDepartment>();
         // Chuỗi kết nối SQLite
-        
+
         static int indexCurrentTable = 0;
-        int indexMinTable = 0;
+        static int indexMinTable = 0;
         int indexMaxTable;
         // 0 1 2 3 4 5
         public UserControlUDShow()
         {
             InitializeComponent();
-            LoadAllUD(); // Gọi hàm khi control được tạo
-            ChangePage(0);
+            LoadAllUD(maKhoaT); // Gọi hàm khi control được tạo
+
         }
+        static string maKhoaT = "";
 
         private void btnConfirmOfUDAdd_Click_1(object sender, EventArgs e)
         {
@@ -47,7 +48,7 @@ namespace StudentManager
             fAddItemUD.ShowDialog();
         }
 
-        public static void LoadAllUD()
+        public static void LoadAllUD(string x)
         {
             string connectionString = "Data Source=mydb.sqlite;Version=3;";
             // Xóa danh sách _universities để tránh trùng lặp dữ liệu
@@ -66,14 +67,18 @@ namespace StudentManager
                     {
                         string maKhoa = reader["maKhoa"].ToString();
                         string tenKhoa = reader["tenKhoa"].ToString();
-                        UniversityDepartment temp = new UniversityDepartment(maKhoa, tenKhoa);
-                        _universities.Add(temp);
+                        if (maKhoa.ToLower().Contains(maKhoaT.ToLower()))
+                        {
+                            UniversityDepartment temp = new UniversityDepartment(maKhoa, tenKhoa);
+                            _universities.Add(temp);
+                        }
                     }
                 }
             }
 
             // Gọi createTable sau khi dữ liệu đã được tải xong
             createTable();
+            ChangePage(0);
         }
 
         public static void createTable()
@@ -123,9 +128,9 @@ namespace StudentManager
         {
 
         }
-        
 
-        private void ChangePage(int pageIndex)
+
+        static void ChangePage(int pageIndex)
         {
             int itemsPerPage = 12;
             int totalPage = (int)Math.Ceiling(_universities.Count / (double)itemsPerPage);
@@ -168,13 +173,13 @@ namespace StudentManager
 
 
         //Các nút di chuyển trang
-        private void page1_Click(object sender, EventArgs e) => ChangePage(indexMinTable + 0);
-        private void page2_Click(object sender, EventArgs e) => ChangePage(indexMinTable + 1);
-        private void page3_Click(object sender, EventArgs e) => ChangePage(indexMinTable + 2);
-        private void page4_Click(object sender, EventArgs e) => ChangePage(indexMinTable + 3);
-        private void page5_Click(object sender, EventArgs e) => ChangePage(indexMinTable + 4);
-        private void page6_Click(object sender, EventArgs e) => ChangePage(indexMinTable + 5);
-        private void pageLeft_Click(object sender, EventArgs e)
+        void page1_Click(object sender, EventArgs e) => ChangePage(indexMinTable + 0);
+        void page2_Click(object sender, EventArgs e) => ChangePage(indexMinTable + 1);
+        void page3_Click(object sender, EventArgs e) => ChangePage(indexMinTable + 2);
+        void page4_Click(object sender, EventArgs e) => ChangePage(indexMinTable + 3);
+        void page5_Click(object sender, EventArgs e) => ChangePage(indexMinTable + 4);
+        void page6_Click(object sender, EventArgs e) => ChangePage(indexMinTable + 5);
+        void pageLeft_Click(object sender, EventArgs e)
         {
             // Lùi về trang trước nếu không ở trang đầu
             if (indexCurrentTable > 0)
@@ -193,6 +198,18 @@ namespace StudentManager
             {
                 ChangePage(indexCurrentTable + 1);
             }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            maKhoaT = inputidKhoa.Text;
+            maKhoaT = maKhoaT.Trim(); // xóa dấu cách đầu và cuối
+            LoadAllUD(maKhoaT);
+        }
+
+        private void btnSort_Click(object sender, EventArgs e)
+        {
+            tablekhoa.Location = new Point(200, 188);
         }
     }
 }
