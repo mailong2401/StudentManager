@@ -41,9 +41,9 @@
             cyberGroupBox4 = new ReaLTaiizor.Controls.CyberGroupBox();
             parrotButton1 = new ReaLTaiizor.Controls.ParrotButton();
             parrotButton2 = new ReaLTaiizor.Controls.ParrotButton();
-            parrotButton3 = new ReaLTaiizor.Controls.ParrotButton();
-            parrotButton4 = new ReaLTaiizor.Controls.ParrotButton();
-            parrotButton5 = new ReaLTaiizor.Controls.ParrotButton();
+            page1 = new ReaLTaiizor.Controls.ParrotButton();
+            page3 = new ReaLTaiizor.Controls.ParrotButton();
+            page2 = new ReaLTaiizor.Controls.ParrotButton();
             parrotButton6 = new ReaLTaiizor.Controls.ParrotButton();
             parrotButton7 = new ReaLTaiizor.Controls.ParrotButton();
             parrotButton8 = new ReaLTaiizor.Controls.ParrotButton();
@@ -281,75 +281,77 @@
             parrotButton2.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             parrotButton2.Vertical_Alignment = StringAlignment.Center;
             // 
-            // parrotButton3
+            // page1
             // 
-            parrotButton3.BackgroundColor = Color.FromArgb(37, 52, 68);
-            parrotButton3.ButtonImage = null;
-            parrotButton3.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.Material;
-            parrotButton3.ButtonText = "1";
-            parrotButton3.ClickBackColor = Color.FromArgb(195, 195, 195);
-            parrotButton3.ClickTextColor = Color.DodgerBlue;
-            parrotButton3.CornerRadius = 5;
-            parrotButton3.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            parrotButton3.Horizontal_Alignment = StringAlignment.Center;
-            parrotButton3.HoverBackgroundColor = Color.FromArgb(225, 225, 225);
-            parrotButton3.HoverTextColor = Color.DodgerBlue;
-            parrotButton3.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            parrotButton3.Location = new Point(638, 767);
-            parrotButton3.Name = "parrotButton3";
-            parrotButton3.Size = new Size(32, 32);
-            parrotButton3.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            parrotButton3.TabIndex = 38;
-            parrotButton3.TextColor = Color.White;
-            parrotButton3.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            parrotButton3.Vertical_Alignment = StringAlignment.Center;
+            page1.BackgroundColor = Color.FromArgb(37, 52, 68);
+            page1.ButtonImage = null;
+            page1.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.Material;
+            page1.ButtonText = "1";
+            page1.ClickBackColor = Color.FromArgb(195, 195, 195);
+            page1.ClickTextColor = Color.DodgerBlue;
+            page1.CornerRadius = 5;
+            page1.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            page1.Horizontal_Alignment = StringAlignment.Center;
+            page1.HoverBackgroundColor = Color.FromArgb(225, 225, 225);
+            page1.HoverTextColor = Color.DodgerBlue;
+            page1.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
+            page1.Location = new Point(638, 767);
+            page1.Name = "page1";
+            page1.Size = new Size(32, 32);
+            page1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            page1.TabIndex = 38;
+            page1.TextColor = Color.White;
+            page1.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            page1.Vertical_Alignment = StringAlignment.Center;
+            page1.Click += page1_Click;
             // 
-            // parrotButton4
+            // page3
             // 
-            parrotButton4.BackgroundColor = Color.FromArgb(37, 52, 68);
-            parrotButton4.ButtonImage = null;
-            parrotButton4.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.Material;
-            parrotButton4.ButtonText = "3";
-            parrotButton4.ClickBackColor = Color.FromArgb(195, 195, 195);
-            parrotButton4.ClickTextColor = Color.DodgerBlue;
-            parrotButton4.CornerRadius = 5;
-            parrotButton4.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            parrotButton4.Horizontal_Alignment = StringAlignment.Center;
-            parrotButton4.HoverBackgroundColor = Color.FromArgb(225, 225, 225);
-            parrotButton4.HoverTextColor = Color.DodgerBlue;
-            parrotButton4.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            parrotButton4.Location = new Point(714, 767);
-            parrotButton4.Name = "parrotButton4";
-            parrotButton4.Size = new Size(32, 32);
-            parrotButton4.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            parrotButton4.TabIndex = 39;
-            parrotButton4.TextColor = Color.White;
-            parrotButton4.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            parrotButton4.Vertical_Alignment = StringAlignment.Center;
-            parrotButton4.Click += parrotButton4_Click;
+            page3.BackgroundColor = Color.FromArgb(37, 52, 68);
+            page3.ButtonImage = null;
+            page3.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.Material;
+            page3.ButtonText = "3";
+            page3.ClickBackColor = Color.FromArgb(195, 195, 195);
+            page3.ClickTextColor = Color.DodgerBlue;
+            page3.CornerRadius = 5;
+            page3.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            page3.Horizontal_Alignment = StringAlignment.Center;
+            page3.HoverBackgroundColor = Color.FromArgb(225, 225, 225);
+            page3.HoverTextColor = Color.DodgerBlue;
+            page3.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
+            page3.Location = new Point(714, 767);
+            page3.Name = "page3";
+            page3.Size = new Size(32, 32);
+            page3.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            page3.TabIndex = 39;
+            page3.TextColor = Color.White;
+            page3.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            page3.Vertical_Alignment = StringAlignment.Center;
+            page3.Click += page3_Click;
             // 
-            // parrotButton5
+            // page2
             // 
-            parrotButton5.BackgroundColor = Color.FromArgb(37, 52, 68);
-            parrotButton5.ButtonImage = null;
-            parrotButton5.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.Material;
-            parrotButton5.ButtonText = "2";
-            parrotButton5.ClickBackColor = Color.FromArgb(195, 195, 195);
-            parrotButton5.ClickTextColor = Color.DodgerBlue;
-            parrotButton5.CornerRadius = 5;
-            parrotButton5.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            parrotButton5.Horizontal_Alignment = StringAlignment.Center;
-            parrotButton5.HoverBackgroundColor = Color.FromArgb(225, 225, 225);
-            parrotButton5.HoverTextColor = Color.DodgerBlue;
-            parrotButton5.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            parrotButton5.Location = new Point(676, 767);
-            parrotButton5.Name = "parrotButton5";
-            parrotButton5.Size = new Size(32, 32);
-            parrotButton5.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            parrotButton5.TabIndex = 40;
-            parrotButton5.TextColor = Color.White;
-            parrotButton5.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            parrotButton5.Vertical_Alignment = StringAlignment.Center;
+            page2.BackgroundColor = Color.FromArgb(37, 52, 68);
+            page2.ButtonImage = null;
+            page2.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.Material;
+            page2.ButtonText = "2";
+            page2.ClickBackColor = Color.FromArgb(195, 195, 195);
+            page2.ClickTextColor = Color.DodgerBlue;
+            page2.CornerRadius = 5;
+            page2.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            page2.Horizontal_Alignment = StringAlignment.Center;
+            page2.HoverBackgroundColor = Color.FromArgb(225, 225, 225);
+            page2.HoverTextColor = Color.DodgerBlue;
+            page2.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
+            page2.Location = new Point(676, 767);
+            page2.Name = "page2";
+            page2.Size = new Size(32, 32);
+            page2.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            page2.TabIndex = 40;
+            page2.TextColor = Color.White;
+            page2.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            page2.Vertical_Alignment = StringAlignment.Center;
+            page2.Click += page2_Click;
             // 
             // parrotButton6
             // 
@@ -428,9 +430,9 @@
             Controls.Add(parrotButton8);
             Controls.Add(parrotButton7);
             Controls.Add(parrotButton6);
-            Controls.Add(parrotButton5);
-            Controls.Add(parrotButton4);
-            Controls.Add(parrotButton3);
+            Controls.Add(page2);
+            Controls.Add(page3);
+            Controls.Add(page1);
             Controls.Add(parrotButton2);
             Controls.Add(parrotButton1);
             Controls.Add(btnConfirmOfUDAdd);
@@ -464,9 +466,9 @@
         private ReaLTaiizor.Controls.CyberGroupBox cyberGroupBox4;
         private ReaLTaiizor.Controls.ParrotButton parrotButton1;
         private ReaLTaiizor.Controls.ParrotButton parrotButton2;
-        private ReaLTaiizor.Controls.ParrotButton parrotButton3;
-        private ReaLTaiizor.Controls.ParrotButton parrotButton4;
-        private ReaLTaiizor.Controls.ParrotButton parrotButton5;
+        private ReaLTaiizor.Controls.ParrotButton page1;
+        private ReaLTaiizor.Controls.ParrotButton page3;
+        private ReaLTaiizor.Controls.ParrotButton page2;
         private ReaLTaiizor.Controls.ParrotButton parrotButton6;
         private ReaLTaiizor.Controls.ParrotButton parrotButton7;
         private ReaLTaiizor.Controls.ParrotButton parrotButton8;

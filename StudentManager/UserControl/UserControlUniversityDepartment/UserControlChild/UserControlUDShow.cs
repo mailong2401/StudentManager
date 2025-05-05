@@ -28,7 +28,7 @@ namespace StudentManager
                 this.id = id;
                 Name = name;
             }
-            public string getId() {  return id; }
+            public string getId() { return id; }
             public string getName() { return Name; }
         }
         private List<UniversityDepartment> _universities = new List<UniversityDepartment>();
@@ -126,25 +126,27 @@ namespace StudentManager
             // 24
             // 1  2  3  4  5  6  7  8  9  10 11 12
             // 13 14 15 16 17 18 19 20 21 22 23 24
-
-            int cnt = 1;
-            int indexMax = indexCurrentTable * 12;
-            int indexMin = indexMax - 12 + 1;
-
-            foreach (UniversityDepartment universityDe in _universities)
+            // max 30
+            // 2 * 12 + 11 = 
+            int indexMax = indexCurrentTable * 12 + 11;
+            if (indexCurrentTable * 12 + 11 > _universities.Count - 1)
             {
-                if (cnt >= indexMin &&  cnt <= indexMax){
-                    // Tạo control UIItemUniversityDepartment
-                    UIItemUniversityDepartment uIItemBranch = new UIItemUniversityDepartment();
-                    uIItemBranch.Dock = DockStyle.Top;
+                indexMax = _universities.Count - 1;
+            }
+            for (int i = indexMax; i >= indexCurrentTable * 12; i--)
+            {
 
-                    // Thiết lập dữ liệu
-                    uIItemBranch.setItem(universityDe.getId(), universityDe.getName());
+                var universityDe = _universities[i];
+                // Tạo control UIItemUniversityDepartment
+                UIItemUniversityDepartment uIItemBranch = new UIItemUniversityDepartment();
+                uIItemBranch.Dock = DockStyle.Top;
 
-                    // Thêm vào Panel (hoặc FlowLayoutPanel)
-                    tablekhoa.Controls.Add(uIItemBranch);
-                    uIItemBranch.BringToFront(); // Đảm bảo thứ tự từ trên xuống
-                }
+                // Thiết lập dữ liệu
+                uIItemBranch.setItem(universityDe.getId(), universityDe.getName());
+
+                // Thêm vào Panel (hoặc FlowLayoutPanel)
+                tablekhoa.Controls.Add(uIItemBranch);
+                uIItemBranch.BringToFront(); // Đảm bảo thứ tự từ trên xuống
             }
         }
 
@@ -155,9 +157,25 @@ namespace StudentManager
 
         }
 
-        private void parrotButton4_Click(object sender, EventArgs e)
+        private void page1_Click(object sender, EventArgs e)
         {
+            this.indexCurrentTable = 0;
+            LoadAllBranches();
+            createTable();
+        }
 
+        private void page2_Click(object sender, EventArgs e)
+        {
+            this.indexCurrentTable = 1;
+            LoadAllBranches();
+            createTable();
+        }
+
+        private void page3_Click(object sender, EventArgs e)
+        {
+            this.indexCurrentTable = 2;
+            LoadAllBranches();
+            createTable();
         }
     }
 }
