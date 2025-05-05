@@ -18,9 +18,9 @@ namespace StudentManager
         }
         public void setItem(string id, string name, string khoa)
         {
-            lbid.Text = id;
+            lbidnganh.Text = id;
             lbnamenganh.Text = name;
-            lbkhoa.Text = khoa;
+            lbnamekhoa.Text = khoa;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

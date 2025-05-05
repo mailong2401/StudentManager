@@ -38,7 +38,7 @@
             lbCodeKhoa = new Label();
             cyberGroupBox4 = new ReaLTaiizor.Controls.CyberGroupBox();
             inputNameNganh = new TextBox();
-            lbNameKhoa = new Label();
+            lbNameNganh = new Label();
             cyberGroupBox2 = new ReaLTaiizor.Controls.CyberGroupBox();
             comboboxkhoa = new StudentManager.CustomControl.BorderlessComboBox();
             label7 = new Label();
@@ -214,16 +214,16 @@
             inputNameNganh.Size = new Size(270, 32);
             inputNameNganh.TabIndex = 4;
             // 
-            // lbNameKhoa
+            // lbNameNganh
             // 
-            lbNameKhoa.AutoSize = true;
-            lbNameKhoa.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
-            lbNameKhoa.ForeColor = SystemColors.Control;
-            lbNameKhoa.Location = new Point(560, 15);
-            lbNameKhoa.Name = "lbNameKhoa";
-            lbNameKhoa.Size = new Size(170, 41);
-            lbNameKhoa.TabIndex = 36;
-            lbNameKhoa.Text = "Tên Ngành";
+            lbNameNganh.AutoSize = true;
+            lbNameNganh.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            lbNameNganh.ForeColor = SystemColors.Control;
+            lbNameNganh.Location = new Point(560, 15);
+            lbNameNganh.Name = "lbNameNganh";
+            lbNameNganh.Size = new Size(170, 41);
+            lbNameNganh.TabIndex = 36;
+            lbNameNganh.Text = "Tên Ngành";
             // 
             // cyberGroupBox2
             // 
@@ -273,41 +273,41 @@
             comboboxkhoa.Size = new Size(277, 37);
             comboboxkhoa.TabIndex = 39;
             // 
-            // label7
+            // lbNameKhoa
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
-            label7.ForeColor = SystemColors.Control;
-            label7.Location = new Point(1116, 15);
-            label7.Name = "label7";
-            label7.Size = new Size(89, 41);
-            label7.TabIndex = 38;
-            label7.Text = "Khoa";
+            lbNameKhoa.AutoSize = true;
+            lbNameKhoa.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            lbNameKhoa.ForeColor = SystemColors.Control;
+            lbNameKhoa.Location = new Point(1116, 15);
+            lbNameKhoa.Name = "lbNameKhoa";
+            lbNameKhoa.Size = new Size(89, 41);
+            lbNameKhoa.TabIndex = 38;
+            lbNameKhoa.Text = "Khoa";
             // 
-            // btnConfirmOfUDAdd
+            // btnConfirmOfBranchAdd
             // 
-            btnConfirmOfUDAdd.BackgroundColor = Color.DimGray;
-            btnConfirmOfUDAdd.ButtonImage = (Image)resources.GetObject("btnConfirmOfUDAdd.ButtonImage");
-            btnConfirmOfUDAdd.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
-            btnConfirmOfUDAdd.ButtonText = "Thêm";
-            btnConfirmOfUDAdd.ClickBackColor = Color.Transparent;
-            btnConfirmOfUDAdd.ClickTextColor = Color.White;
-            btnConfirmOfUDAdd.CornerRadius = 25;
-            btnConfirmOfUDAdd.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
-            btnConfirmOfUDAdd.Horizontal_Alignment = StringAlignment.Center;
-            btnConfirmOfUDAdd.HoverBackgroundColor = Color.Lime;
-            btnConfirmOfUDAdd.HoverTextColor = Color.White;
-            btnConfirmOfUDAdd.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            btnConfirmOfUDAdd.Location = new Point(34, 83);
-            btnConfirmOfUDAdd.Name = "btnConfirmOfUDAdd";
-            btnConfirmOfUDAdd.RightToLeft = RightToLeft.No;
-            btnConfirmOfUDAdd.Size = new Size(159, 50);
-            btnConfirmOfUDAdd.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            btnConfirmOfUDAdd.TabIndex = 39;
-            btnConfirmOfUDAdd.TextColor = Color.White;
-            btnConfirmOfUDAdd.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            btnConfirmOfUDAdd.Vertical_Alignment = StringAlignment.Center;
-            btnConfirmOfUDAdd.Click += btnConfirmOfUDAdd_Click;
+            btnConfirmOfBranchAdd.BackgroundColor = Color.DimGray;
+            btnConfirmOfBranchAdd.ButtonImage = (Image)resources.GetObject("btnConfirmOfBranchAdd.ButtonImage");
+            btnConfirmOfBranchAdd.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
+            btnConfirmOfBranchAdd.ButtonText = "Thêm";
+            btnConfirmOfBranchAdd.ClickBackColor = Color.Transparent;
+            btnConfirmOfBranchAdd.ClickTextColor = Color.White;
+            btnConfirmOfBranchAdd.CornerRadius = 25;
+            btnConfirmOfBranchAdd.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            btnConfirmOfBranchAdd.Horizontal_Alignment = StringAlignment.Center;
+            btnConfirmOfBranchAdd.HoverBackgroundColor = Color.Lime;
+            btnConfirmOfBranchAdd.HoverTextColor = Color.White;
+            btnConfirmOfBranchAdd.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
+            btnConfirmOfBranchAdd.Location = new Point(34, 83);
+            btnConfirmOfBranchAdd.Name = "btnConfirmOfBranchAdd";
+            btnConfirmOfBranchAdd.RightToLeft = RightToLeft.No;
+            btnConfirmOfBranchAdd.Size = new Size(159, 50);
+            btnConfirmOfBranchAdd.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            btnConfirmOfBranchAdd.TabIndex = 39;
+            btnConfirmOfBranchAdd.TextColor = Color.White;
+            btnConfirmOfBranchAdd.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            btnConfirmOfBranchAdd.Vertical_Alignment = StringAlignment.Center;
+            btnConfirmOfBranchAdd.Click += btnConfirmOfUDAdd_Click;
             // 
             // page6
             // 
@@ -512,13 +512,13 @@
             Controls.Add(page1);
             Controls.Add(parrotButton2);
             Controls.Add(parrotButton1);
-            Controls.Add(btnConfirmOfUDAdd);
+            Controls.Add(btnConfirmOfBranchAdd);
             Controls.Add(cyberGroupBox2);
-            Controls.Add(label7);
+            Controls.Add(lbNameKhoa);
             Controls.Add(cyberGroupBox1);
             Controls.Add(lbCodeKhoa);
             Controls.Add(cyberGroupBox4);
-            Controls.Add(lbNameKhoa);
+            Controls.Add(lbNameNganh);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -545,9 +545,9 @@
         private Label lbCodeKhoa;
         private ReaLTaiizor.Controls.CyberGroupBox cyberGroupBox4;
         private TextBox inputNameNganh;
-        private Label lbNameKhoa;
+        private Label lbNameNganh;
         private ReaLTaiizor.Controls.CyberGroupBox cyberGroupBox2;
-        private Label label7;
+        private Label lbNameKhoa;
         private CustomControl.BorderlessComboBox comboboxkhoa;
         private ReaLTaiizor.Controls.ParrotButton btnConfirmOfUDAdd;
         private ReaLTaiizor.Controls.ParrotButton page6;

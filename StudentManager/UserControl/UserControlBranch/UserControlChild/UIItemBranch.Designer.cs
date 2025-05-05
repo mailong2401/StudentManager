@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             exampleBox = new ReaLTaiizor.Controls.CyberGroupBox();
-            lbkhoa = new Label();
+            lbnamekhoa = new Label();
             lbnamenganh = new Label();
-            lbid = new Label();
+            lbidnganh = new Label();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             exampleBox.SuspendLayout();
@@ -53,9 +53,9 @@
             exampleBox.ColorLighting = Color.FromArgb(29, 200, 238);
             exampleBox.ColorPen_1 = Color.FromArgb(37, 52, 68);
             exampleBox.ColorPen_2 = Color.FromArgb(41, 63, 86);
-            exampleBox.Controls.Add(lbkhoa);
+            exampleBox.Controls.Add(lbnamekhoa);
             exampleBox.Controls.Add(lbnamenganh);
-            exampleBox.Controls.Add(lbid);
+            exampleBox.Controls.Add(lbidnganh);
             exampleBox.CyberGroupBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
             exampleBox.Dock = DockStyle.Left;
             exampleBox.ForeColor = Color.FromArgb(245, 245, 245);
@@ -75,15 +75,15 @@
             exampleBox.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             exampleBox.Timer_RGB = 300;
             // 
-            // lbkhoa
+            // lbnamekhoa
             // 
-            lbkhoa.AutoSize = true;
-            lbkhoa.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            lbkhoa.Location = new Point(460, 5);
-            lbkhoa.Name = "lbkhoa";
-            lbkhoa.Size = new Size(282, 30);
-            lbkhoa.TabIndex = 2;
-            lbkhoa.Text = "Khoa công nghệ thông tin";
+            lbnamekhoa.AutoSize = true;
+            lbnamekhoa.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            lbnamekhoa.Location = new Point(460, 5);
+            lbnamekhoa.Name = "lbnamekhoa";
+            lbnamekhoa.Size = new Size(282, 30);
+            lbnamekhoa.TabIndex = 2;
+            lbnamekhoa.Text = "Khoa công nghệ thông tin";
             // 
             // lbnamenganh
             // 
@@ -95,15 +95,15 @@
             lbnamenganh.TabIndex = 1;
             lbnamenganh.Text = "Công nghệ thông tin";
             // 
-            // lbid
+            // lbidnganh
             // 
-            lbid.AutoSize = true;
-            lbid.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            lbid.Location = new Point(10, 5);
-            lbid.Name = "lbid";
-            lbid.Size = new Size(83, 30);
-            lbid.TabIndex = 0;
-            lbid.Text = "CNTT1";
+            lbidnganh.AutoSize = true;
+            lbidnganh.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            lbidnganh.Location = new Point(10, 5);
+            lbidnganh.Name = "lbidnganh";
+            lbidnganh.Size = new Size(83, 30);
+            lbidnganh.TabIndex = 0;
+            lbidnganh.Text = "CNTT1";
             // 
             // pictureBox2
             // 
@@ -153,9 +153,9 @@
         private Label label33;
         private Label label34;
         private Label label35;
-        private Label lbkhoa;
+        private Label lbnamekhoa;
         private Label lbnamenganh;
-        private Label lbid;
+        private Label lbidnganh;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
     }
