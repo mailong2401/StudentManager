@@ -25,7 +25,7 @@ namespace StudentManager
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            fEditItemBranch mainForm = new fEditItemBranch(lbid.Text, lbnamenganh.Text,lbkhoa.Text);
+            fEditItemBranch mainForm = new fEditItemBranch(lbidnganh.Text, lbnamenganh.Text,lbnamekhoa.Text);
             if (mainForm.ShowDialog() == DialogResult.OK) // Giả sử OK có nghĩa là chỉnh sửa thành công
             {
                 MessageBox.Show("Sửa thành công!");

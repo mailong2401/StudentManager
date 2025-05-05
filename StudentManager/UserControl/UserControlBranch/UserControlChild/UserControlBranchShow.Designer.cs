@@ -41,7 +41,6 @@
             lbNameNganh = new Label();
             cyberGroupBox2 = new ReaLTaiizor.Controls.CyberGroupBox();
             comboboxkhoa = new StudentManager.CustomControl.BorderlessComboBox();
-            label7 = new Label();
             btnConfirmOfUDAdd = new ReaLTaiizor.Controls.ParrotButton();
             page6 = new ReaLTaiizor.Controls.ParrotButton();
             page5 = new ReaLTaiizor.Controls.ParrotButton();
@@ -286,28 +285,28 @@
             // 
             // btnConfirmOfBranchAdd
             // 
-            btnConfirmOfBranchAdd.BackgroundColor = Color.DimGray;
-            btnConfirmOfBranchAdd.ButtonImage = (Image)resources.GetObject("btnConfirmOfBranchAdd.ButtonImage");
-            btnConfirmOfBranchAdd.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
-            btnConfirmOfBranchAdd.ButtonText = "Thêm";
-            btnConfirmOfBranchAdd.ClickBackColor = Color.Transparent;
-            btnConfirmOfBranchAdd.ClickTextColor = Color.White;
-            btnConfirmOfBranchAdd.CornerRadius = 25;
-            btnConfirmOfBranchAdd.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
-            btnConfirmOfBranchAdd.Horizontal_Alignment = StringAlignment.Center;
-            btnConfirmOfBranchAdd.HoverBackgroundColor = Color.Lime;
-            btnConfirmOfBranchAdd.HoverTextColor = Color.White;
-            btnConfirmOfBranchAdd.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            btnConfirmOfBranchAdd.Location = new Point(34, 83);
-            btnConfirmOfBranchAdd.Name = "btnConfirmOfBranchAdd";
-            btnConfirmOfBranchAdd.RightToLeft = RightToLeft.No;
-            btnConfirmOfBranchAdd.Size = new Size(159, 50);
-            btnConfirmOfBranchAdd.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            btnConfirmOfBranchAdd.TabIndex = 39;
-            btnConfirmOfBranchAdd.TextColor = Color.White;
-            btnConfirmOfBranchAdd.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            btnConfirmOfBranchAdd.Vertical_Alignment = StringAlignment.Center;
-            btnConfirmOfBranchAdd.Click += btnConfirmOfUDAdd_Click;
+            btnConfirmOfUDAdd.BackgroundColor = Color.DimGray;
+            btnConfirmOfUDAdd.ButtonImage = (Image)resources.GetObject("btnConfirmOfBranchAdd.ButtonImage");
+            btnConfirmOfUDAdd.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
+            btnConfirmOfUDAdd.ButtonText = "Thêm";
+            btnConfirmOfUDAdd.ClickBackColor = Color.Transparent;
+            btnConfirmOfUDAdd.ClickTextColor = Color.White;
+            btnConfirmOfUDAdd.CornerRadius = 25;
+            btnConfirmOfUDAdd.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            btnConfirmOfUDAdd.Horizontal_Alignment = StringAlignment.Center;
+            btnConfirmOfUDAdd.HoverBackgroundColor = Color.Lime;
+            btnConfirmOfUDAdd.HoverTextColor = Color.White;
+            btnConfirmOfUDAdd.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
+            btnConfirmOfUDAdd.Location = new Point(34, 83);
+            btnConfirmOfUDAdd.Name = "btnConfirmOfBranchAdd";
+            btnConfirmOfUDAdd.RightToLeft = RightToLeft.No;
+            btnConfirmOfUDAdd.Size = new Size(159, 50);
+            btnConfirmOfUDAdd.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            btnConfirmOfUDAdd.TabIndex = 39;
+            btnConfirmOfUDAdd.TextColor = Color.White;
+            btnConfirmOfUDAdd.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            btnConfirmOfUDAdd.Vertical_Alignment = StringAlignment.Center;
+            btnConfirmOfUDAdd.Click += btnConfirmOfUDAdd_Click;
             // 
             // page6
             // 
@@ -512,7 +511,7 @@
             Controls.Add(page1);
             Controls.Add(parrotButton2);
             Controls.Add(parrotButton1);
-            Controls.Add(btnConfirmOfBranchAdd);
+            Controls.Add(btnConfirmOfUDAdd);
             Controls.Add(cyberGroupBox2);
             Controls.Add(lbNameKhoa);
             Controls.Add(cyberGroupBox1);
