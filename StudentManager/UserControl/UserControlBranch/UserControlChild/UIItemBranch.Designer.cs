@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             exampleBox = new ReaLTaiizor.Controls.CyberGroupBox();
-            lbdate = new Label();
-            lbname = new Label();
-            lbmsgv = new Label();
             lbkhoa = new Label();
             lbnamenganh = new Label();
             lbid = new Label();
@@ -56,9 +53,6 @@
             exampleBox.ColorLighting = Color.FromArgb(29, 200, 238);
             exampleBox.ColorPen_1 = Color.FromArgb(37, 52, 68);
             exampleBox.ColorPen_2 = Color.FromArgb(41, 63, 86);
-            exampleBox.Controls.Add(lbdate);
-            exampleBox.Controls.Add(lbname);
-            exampleBox.Controls.Add(lbmsgv);
             exampleBox.Controls.Add(lbkhoa);
             exampleBox.Controls.Add(lbnamenganh);
             exampleBox.Controls.Add(lbid);
@@ -80,36 +74,6 @@
             exampleBox.Tag = "Cyber";
             exampleBox.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             exampleBox.Timer_RGB = 300;
-            // 
-            // lbdate
-            // 
-            lbdate.AutoSize = true;
-            lbdate.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            lbdate.Location = new Point(1250, 5);
-            lbdate.Name = "lbdate";
-            lbdate.Size = new Size(137, 30);
-            lbdate.TabIndex = 6;
-            lbdate.Text = "24/09/2000";
-            // 
-            // lbname
-            // 
-            lbname.AutoSize = true;
-            lbname.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            lbname.Location = new Point(980, 5);
-            lbname.Name = "lbname";
-            lbname.Size = new Size(250, 30);
-            lbname.TabIndex = 5;
-            lbname.Text = "Phạm Nguyễn Minh Trí";
-            // 
-            // lbmsgv
-            // 
-            lbmsgv.AutoSize = true;
-            lbmsgv.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            lbmsgv.Location = new Point(790, 5);
-            lbmsgv.Name = "lbmsgv";
-            lbmsgv.Size = new Size(117, 30);
-            lbmsgv.TabIndex = 4;
-            lbmsgv.Text = "12398124";
             // 
             // lbkhoa
             // 
@@ -188,13 +152,10 @@
         private Label label33;
         private Label label34;
         private Label label35;
-        private Label lbname;
-        private Label lbmsgv;
         private Label lbkhoa;
         private Label lbnamenganh;
         private Label lbid;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
-        private Label lbdate;
     }
 }

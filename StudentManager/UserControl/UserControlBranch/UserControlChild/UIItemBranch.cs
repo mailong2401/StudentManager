@@ -16,10 +16,11 @@ namespace StudentManager
         {
             InitializeComponent();
         }
-        public void setItem(string id, string name)
+        public void setItem(string id, string name,string khoa)
         {
             lbid.Text = id;
             lbnamenganh.Text = name;
+            lbkhoa.Text = khoa;
         }
     }
 }
