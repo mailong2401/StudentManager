@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace StudentManager
 {
-    public partial class UserControlClassAdd : UserControl
+    public partial class UserControlScore : UserControl
     {
-        public UserControlClassAdd()
+        public UserControlScore()
         {
             InitializeComponent();
         }
