@@ -66,7 +66,7 @@
             exampleBox.RGB = false;
             exampleBox.Rounding = true;
             exampleBox.RoundingInt = 60;
-            exampleBox.Size = new Size(891, 41);
+            exampleBox.Size = new Size(1402, 41);
             exampleBox.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             exampleBox.TabIndex = 29;
             exampleBox.Tag = "Cyber";
@@ -96,7 +96,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.remove;
-            pictureBox2.Location = new Point(944, 5);
+            pictureBox2.Location = new Point(1441, 5);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(30, 30);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -107,7 +107,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.pen;
-            pictureBox1.Location = new Point(908, 5);
+            pictureBox1.Location = new Point(1408, 4);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(30, 30);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -124,7 +124,7 @@
             Controls.Add(pictureBox1);
             Controls.Add(exampleBox);
             Name = "UIItemUniversityDepartment";
-            Size = new Size(1000, 41);
+            Size = new Size(1477, 41);
             exampleBox.ResumeLayout(false);
             exampleBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

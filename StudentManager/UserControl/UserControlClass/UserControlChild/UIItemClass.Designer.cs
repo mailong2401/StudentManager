@@ -121,7 +121,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.remove;
-            pictureBox2.Location = new Point(1444, 5);
+            pictureBox2.Location = new Point(1441, 5);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(30, 30);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;

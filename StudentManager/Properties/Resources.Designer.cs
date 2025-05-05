@@ -113,6 +113,16 @@ namespace StudentManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap down_chevron {
+            get {
+                object obj = ResourceManager.GetObject("down-chevron", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap graduated {
             get {
                 object obj = ResourceManager.GetObject("graduated", resourceCulture);
@@ -216,6 +226,16 @@ namespace StudentManager.Properties {
         internal static System.Drawing.Bitmap university {
             get {
                 object obj = ResourceManager.GetObject("university", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap up_chevron {
+            get {
+                object obj = ResourceManager.GetObject("up-chevron", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

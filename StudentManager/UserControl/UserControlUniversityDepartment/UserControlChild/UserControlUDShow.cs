@@ -27,28 +27,38 @@ namespace StudentManager
             }
         }
 
-        public static List<UniversityDepartment> _universities = new List<UniversityDepartment>();
+        List<UniversityDepartment> _universities = new List<UniversityDepartment>();
         // Chuỗi kết nối SQLite
 
-        static int indexCurrentTable = 0;
-        static int indexMinTable = 0;
+        int indexCurrentTable = 0;
+        int indexMinTable = 0;
         int indexMaxTable;
         // 0 1 2 3 4 5
         public UserControlUDShow()
         {
             InitializeComponent();
+            // Gán các sự kiện Click cho các nút phân trang
+            page1.Click += page1_Click;
+            page2.Click += page2_Click;
+            page3.Click += page3_Click;
+            page4.Click += page4_Click;
+            page5.Click += page5_Click;
+            page6.Click += page6_Click;
+
+            pageLeft.Click += pageLeft_Click;
+            pageRight.Click += pageRight_Click;
             LoadAllUD(maKhoaT); // Gọi hàm khi control được tạo
 
         }
-        static string maKhoaT = "";
+
+        string maKhoaT = "";
 
         private void btnConfirmOfUDAdd_Click_1(object sender, EventArgs e)
         {
-            fAddItemUD fAddItemUD = new fAddItemUD();
-            fAddItemUD.ShowDialog();
+
         }
 
-        public static void LoadAllUD(string x)
+        public void LoadAllUD(string x)
         {
             string connectionString = "Data Source=mydb.sqlite;Version=3;";
             // Xóa danh sách _universities để tránh trùng lặp dữ liệu
@@ -81,7 +91,7 @@ namespace StudentManager
             ChangePage(0);
         }
 
-        public static void createTable()
+        public void createTable()
         {
             if (_universities.Count == 0)
             {
@@ -94,7 +104,6 @@ namespace StudentManager
 
             // Xóa các control cũ trước khi thêm mới (nếu cần load lại nhiều lần)
             tablekhoa.Controls.Clear();
-
             // 24
             // 1  2  3  4  5  6  7  8  9  10 11 12
             // 13 14 15 16 17 18 19 20 21 22 23 24
@@ -110,7 +119,7 @@ namespace StudentManager
 
                 var universityDe = _universities[i];
                 // Tạo control UIItemUniversityDepartment
-                UIItemUniversityDepartment uIItemBranch = new UIItemUniversityDepartment();
+                UIItemUniversityDepartment uIItemBranch = new UIItemUniversityDepartment(this);
                 uIItemBranch.Dock = DockStyle.Top;
 
                 // Thiết lập dữ liệu
@@ -130,7 +139,7 @@ namespace StudentManager
         }
 
 
-        static void ChangePage(int pageIndex)
+        void ChangePage(int pageIndex)
         {
             int itemsPerPage = 12;
             int totalPage = (int)Math.Ceiling(_universities.Count / (double)itemsPerPage);
@@ -200,16 +209,68 @@ namespace StudentManager
             }
         }
 
+
+
+
+        private void btnConfirmOfUDAdd_Click(object sender, EventArgs e)
+        {
+            fAddItemUD fAddItemUD = new fAddItemUD(this);
+            fAddItemUD.ShowDialog();
+        }
+
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            pbidkhoa.Image = null;  // Ẩn ảnh của pbidkhoa
+            pbnamekhoa.Image = null;  // Ẩn ảnh của pbnamekhoa
             maKhoaT = inputidKhoa.Text;
             maKhoaT = maKhoaT.Trim(); // xóa dấu cách đầu và cuối
             LoadAllUD(maKhoaT);
         }
+        bool sortid = true;
+        bool sortname = true;
 
-        private void btnSort_Click(object sender, EventArgs e)
+        private void lbkhoa_Click(object sender, EventArgs e)
         {
-            tablekhoa.Location = new Point(200, 188);
+            // Khi nhấn vào lbkhoa, đảm bảo ảnh của pbnamekhoa không hiển thị
+            pbnamekhoa.Image = null;  // Ẩn ảnh của pbnamekhoa
+
+            if (sortid == false)
+            {
+                pbidkhoa.Image = Properties.Resources.up_chevron;
+                _universities.Sort((x, y) => x.Id.CompareTo(y.Id));  // Sắp xếp theo Id tăng dần
+                sortid = true;
+            }
+            else
+            {
+                pbidkhoa.Image = Properties.Resources.down_chevron;
+                _universities.Sort((x, y) => y.Id.CompareTo(x.Id));  // Sắp xếp theo Id giảm dần
+                sortid = false;
+            }
+
+            // Tạo lại bảng sau khi sắp xếp
+            createTable();
         }
+
+        private void lbnamekhoa_Click(object sender, EventArgs e)
+        {
+            // Khi nhấn vào lbnamekhoa, đảm bảo ảnh của pbidkhoa không hiển thị
+            pbidkhoa.Image = null;  // Ẩn ảnh của pbidkhoa
+
+            if (sortname == false)
+            {
+                pbnamekhoa.Image = Properties.Resources.up_chevron;
+                _universities.Sort((x, y) => x.Name.CompareTo(y.Name));
+                sortname = true;
+            }
+            else
+            {
+                pbnamekhoa.Image = Properties.Resources.down_chevron;
+                _universities.Sort((x, y) => y.Name.CompareTo(x.Name));
+                sortname = false;
+            }
+
+            createTable();
+        }
+
     }
 }

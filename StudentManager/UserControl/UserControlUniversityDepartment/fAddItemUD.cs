@@ -13,9 +13,15 @@ namespace StudentManager
 {
     public partial class fAddItemUD : Form
     {
+        private UserControlUDShow _parent;
         public fAddItemUD()
         {
             InitializeComponent();
+        }
+        public fAddItemUD(UserControlUDShow parent)
+        {
+            InitializeComponent();
+            _parent = parent;
         }
 
         public void InsertKhoa(string maKhoa, string tenKhoa)
@@ -45,7 +51,7 @@ namespace StudentManager
                     MessageBox.Show("Thêm khoa thành công!");
                     inputidKhoa.Text = "";
                     inputNameKhoa.Text = "";
-                    UserControlUDShow.LoadAllUD("");
+                    _parent.LoadAllUD(""); // Gọi lại phương thức của đối tượng cha
                 }
                 catch (SQLiteException ex)
                 {

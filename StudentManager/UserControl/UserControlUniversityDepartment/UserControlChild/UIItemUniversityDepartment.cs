@@ -14,9 +14,15 @@ namespace StudentManager
 {
     public partial class UIItemUniversityDepartment : UserControl
     {
+        private UserControlUDShow _parent;
         public UIItemUniversityDepartment()
         {
             InitializeComponent();
+        }
+        public UIItemUniversityDepartment(UserControlUDShow parent)
+        {
+            InitializeComponent();
+            _parent = parent;
         }
         public void setItem(string id, string name)
         {
@@ -66,8 +72,8 @@ namespace StudentManager
                 {
                     parent.Controls.Remove(this);
 
-                    // Tùy chọn: cập nhật lại layout (không bắt buộc nếu dùng AutoSize)
-                    UserControlUDShow.LoadAllUD("");
+                    // Tùy chọn: cập nhật lại layout (không bắt buộc nếu dùng AutoSize)s
+                    _parent.LoadAllUD(""); // Gọi lại phương thức của đối tượng cha
                 }
             }
         }
