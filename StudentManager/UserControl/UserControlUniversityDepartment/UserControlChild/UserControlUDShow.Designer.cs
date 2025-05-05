@@ -56,7 +56,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
             label2.ForeColor = SystemColors.ControlDark;
-            label2.Location = new Point(563, 145);
+            label2.Location = new Point(574, 145);
             label2.Name = "label2";
             label2.Size = new Size(107, 30);
             label2.TabIndex = 30;
@@ -67,7 +67,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
             label1.ForeColor = SystemColors.ControlDark;
-            label1.Location = new Point(273, 145);
+            label1.Location = new Point(297, 145);
             label1.Name = "label1";
             label1.Size = new Size(102, 30);
             label1.TabIndex = 28;
@@ -77,7 +77,7 @@
             // 
             tablekhoa.ColumnCount = 1;
             tablekhoa.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tablekhoa.Location = new Point(260, 188);
+            tablekhoa.Location = new Point(287, 188);
             tablekhoa.Name = "tablekhoa";
             tablekhoa.RowCount = 12;
             tablekhoa.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
@@ -115,7 +115,7 @@
             cyberGroupBox1.Lighting = false;
             cyberGroupBox1.LinearGradient_Background = false;
             cyberGroupBox1.LinearGradientPen = false;
-            cyberGroupBox1.Location = new Point(188, 15);
+            cyberGroupBox1.Location = new Point(250, 15);
             cyberGroupBox1.Name = "cyberGroupBox1";
             cyberGroupBox1.PenWidth = 15;
             cyberGroupBox1.RGB = false;
@@ -134,7 +134,7 @@
             inputidKhoa.BorderStyle = BorderStyle.None;
             inputidKhoa.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             inputidKhoa.ForeColor = Color.White;
-            inputidKhoa.Location = new Point(16, 6);
+            inputidKhoa.Location = new Point(15, 9);
             inputidKhoa.Margin = new Padding(3, 0, 3, 0);
             inputidKhoa.Name = "inputidKhoa";
             inputidKhoa.PlaceholderText = "Nhập mã khoa";
@@ -147,7 +147,7 @@
             lbCodeKhoa.AutoSize = true;
             lbCodeKhoa.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
             lbCodeKhoa.ForeColor = SystemColors.Control;
-            lbCodeKhoa.Location = new Point(19, 15);
+            lbCodeKhoa.Location = new Point(70, 15);
             lbCodeKhoa.Name = "lbCodeKhoa";
             lbCodeKhoa.Size = new Size(142, 41);
             lbCodeKhoa.TabIndex = 34;
@@ -167,7 +167,7 @@
             btnConfirmOfUDAdd.HoverBackgroundColor = Color.Lime;
             btnConfirmOfUDAdd.HoverTextColor = Color.White;
             btnConfirmOfUDAdd.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            btnConfirmOfUDAdd.Location = new Point(1189, 15);
+            btnConfirmOfUDAdd.Location = new Point(1350, 15);
             btnConfirmOfUDAdd.Name = "btnConfirmOfUDAdd";
             btnConfirmOfUDAdd.RightToLeft = RightToLeft.No;
             btnConfirmOfUDAdd.Size = new Size(159, 50);
@@ -183,7 +183,7 @@
             lbNameKhoa.AutoSize = true;
             lbNameKhoa.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
             lbNameKhoa.ForeColor = SystemColors.Control;
-            lbNameKhoa.Location = new Point(576, 15);
+            lbNameKhoa.Location = new Point(720, 15);
             lbNameKhoa.Name = "lbNameKhoa";
             lbNameKhoa.Size = new Size(144, 41);
             lbNameKhoa.TabIndex = 32;
@@ -222,7 +222,7 @@
             cyberGroupBox4.Lighting = false;
             cyberGroupBox4.LinearGradient_Background = false;
             cyberGroupBox4.LinearGradientPen = false;
-            cyberGroupBox4.Location = new Point(742, 15);
+            cyberGroupBox4.Location = new Point(900, 15);
             cyberGroupBox4.Name = "cyberGroupBox4";
             cyberGroupBox4.PenWidth = 15;
             cyberGroupBox4.RGB = false;
@@ -381,7 +381,7 @@
             parrotButton7.BackgroundColor = Color.FromArgb(37, 52, 68);
             parrotButton7.ButtonImage = null;
             parrotButton7.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.Material;
-            parrotButton7.ButtonText = "4";
+            parrotButton7.ButtonText = "5";
             parrotButton7.ClickBackColor = Color.FromArgb(195, 195, 195);
             parrotButton7.ClickTextColor = Color.DodgerBlue;
             parrotButton7.CornerRadius = 5;
@@ -404,7 +404,7 @@
             parrotButton8.BackgroundColor = Color.FromArgb(37, 52, 68);
             parrotButton8.ButtonImage = null;
             parrotButton8.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.Material;
-            parrotButton8.ButtonText = "4";
+            parrotButton8.ButtonText = "6";
             parrotButton8.ClickBackColor = Color.FromArgb(195, 195, 195);
             parrotButton8.ClickTextColor = Color.DodgerBlue;
             parrotButton8.CornerRadius = 5;

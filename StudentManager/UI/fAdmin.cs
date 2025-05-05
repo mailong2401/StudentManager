@@ -24,9 +24,9 @@
         private void btnLop_Click(object sender, EventArgs e)
         {
             panelUserControlDad.Controls.Clear();
-            UserControlClass ucC = new UserControlClass();
-            ucC.Dock = DockStyle.Fill;
-            panelUserControlDad.Controls.Add(ucC);
+            UserControlClassShow ucCS = new UserControlClassShow();
+            ucCS.Dock = DockStyle.Fill;
+            panelUserControlDad.Controls.Add(ucCS);
         }
         private void btnSinhVien_Click(object sender, EventArgs e)
         {
