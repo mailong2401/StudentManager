@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace StudentManager
 {
@@ -47,7 +48,7 @@ namespace StudentManager
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void pictureBox2_Click_1(object sender, EventArgs e)
@@ -70,5 +71,17 @@ namespace StudentManager
                 }
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            fEditItemUD mainForm = new fEditItemUD(lbidkhoa.Text, lbnamekhoa.Text);
+            if (mainForm.ShowDialog() == DialogResult.OK) // Giả sử OK có nghĩa là chỉnh sửa thành công
+            {
+                lbidkhoa.Text = mainForm.getEditedId(); // Giả sử bạn có id đã chỉnh sửa
+                lbnamekhoa.Text = mainForm.getEditedName(); // Giả sử bạn có tên đã chỉnh sửa
+                MessageBox.Show("Sửa thành công!");
+            }
+        }
+
     }
 }
