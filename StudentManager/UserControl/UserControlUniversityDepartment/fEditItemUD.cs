@@ -9,6 +9,7 @@ namespace StudentManager
         public fEditItemUD()
         {
             InitializeComponent();
+
         }
 
         public fEditItemUD(string id, string name)
