@@ -15,6 +15,10 @@ namespace StudentManager
         public UserControlBranch()
         {
             InitializeComponent();
+            mainBranch.Controls.Clear();
+            UserControlBranchShow ucBS = new UserControlBranchShow();
+            ucBS.Dock = DockStyle.Fill;
+            mainBranch.Controls.Add(ucBS);
         }
         private void btnBrandShow_Click(object sender, EventArgs e)
         {
