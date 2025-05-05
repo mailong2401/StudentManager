@@ -89,7 +89,7 @@
             cyberGroupBox4.Lighting = false;
             cyberGroupBox4.LinearGradient_Background = false;
             cyberGroupBox4.LinearGradientPen = false;
-            cyberGroupBox4.Location = new Point(1184, 34);
+            cyberGroupBox4.Location = new Point(1088, 45);
             cyberGroupBox4.Name = "cyberGroupBox4";
             cyberGroupBox4.PenWidth = 15;
             cyberGroupBox4.RGB = false;
