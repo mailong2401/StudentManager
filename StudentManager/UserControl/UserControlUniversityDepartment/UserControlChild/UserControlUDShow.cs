@@ -38,6 +38,7 @@ namespace StudentManager
         {
             InitializeComponent();
             LoadAllBranches(); // Gọi hàm khi control được tạo
+            ChangePage(0);
         }
 
         private void btnConfirmOfUDAdd_Click_1(object sender, EventArgs e)
@@ -102,6 +103,7 @@ namespace StudentManager
                 using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                 using (SQLiteDataReader reader = cmd.ExecuteReader())
                 {
+                    _universities.Clear();
                     while (reader.Read())
                     {
                         string maKhoa = reader["maKhoa"].ToString();

@@ -33,6 +33,7 @@ namespace StudentManager
             InitializeComponent();
             LoadAllBranches(); // Gọi hàm khi control được tạo
             LoadKhoaData();
+            ChangePage(0);
         }
         private void LoadKhoaData()
         {
@@ -94,6 +95,8 @@ namespace StudentManager
                 {
                     // Xóa các control cũ trước khi thêm mới (nếu cần load lại nhiều lần)
                     tbNganh.Controls.Clear();
+                    _branches.Clear();
+
 
                     while (reader.Read())
                     {
@@ -173,7 +176,7 @@ namespace StudentManager
 
         private void btnConfirmOfUDAdd_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(inputNameNganh.Text) && !string.IsNullOrWhiteSpace(inputidNganh.Text))
+            if (!string.IsNullOrWhiteSpace(inputNameNganh.Text) && !string.IsNullOrWhiteSpace(inputidNganh.Text) && comboboxkhoa.SelectedIndex != -1)
             {
                 string nameNganh = inputNameNganh.Text;
                 string idNganh = inputidNganh.Text;
@@ -249,35 +252,5 @@ namespace StudentManager
         private void page4_Click(object sender, EventArgs e) => ChangePage(indexMinTable + 3);
         private void page5_Click(object sender, EventArgs e) => ChangePage(indexMinTable + 4);
         private void page6_Click(object sender, EventArgs e) => ChangePage(indexMinTable + 5);
-
-        private void page1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void page2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void page3_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void page4_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void page5_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void page6_Click_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }
