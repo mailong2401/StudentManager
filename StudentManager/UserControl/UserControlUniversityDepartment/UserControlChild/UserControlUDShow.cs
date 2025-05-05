@@ -165,11 +165,21 @@ namespace StudentManager
         }
         private void ChangePage(int pageIndex)
         {
-            indexMinTable = pageIndex > indexMinTable + 2
-                ? pageIndex - 2
-                : Math.Max(indexMinTable - (2 - (pageIndex - indexMinTable)), 0);
+            int itemsPerPage = 12;
+            int totalPage = (int)Math.Ceiling(_universities.Count / (double)itemsPerPage);
+            int maxIndexMinTable = Math.Max(totalPage - 6, 0); // Vì có 6 nút trang
 
-            // Cập nhật lại số trang cho từng button
+            // Tính toán indexMinTable hợp lý
+            if (pageIndex > indexMinTable + 2)
+            {
+                indexMinTable = Math.Min(pageIndex - 2, maxIndexMinTable);
+            }
+            else
+            {
+                indexMinTable = Math.Max(indexMinTable - (2 - (pageIndex - indexMinTable)), 0);
+            }
+
+            // Cập nhật các nút phân trang
             ReaLTaiizor.Controls.ParrotButton[] pages = { page1, page2, page3, page4, page5, page6 };
             for (int i = 0; i < pages.Length; i++)
             {
@@ -177,9 +187,12 @@ namespace StudentManager
                 pages[i].ButtonText = pageNumber.ToString();
                 pages[i].BackgroundColor = Color.FromArgb(37, 52, 68);
                 pages[i].TextColor = Color.White;
+
+                // Ẩn nút nếu vượt quá tổng số trang
+                pages[i].Visible = pageNumber <= totalPage;
             }
 
-            // Tô sáng nút tương ứng với trang hiện tại
+            // Tô màu nút đang được chọn
             int selectedIndex = pageIndex - indexMinTable;
             if (selectedIndex >= 0 && selectedIndex < pages.Length)
             {
@@ -187,9 +200,10 @@ namespace StudentManager
                 pages[selectedIndex].TextColor = Color.DodgerBlue;
             }
 
-            this.indexCurrentTable = pageIndex;
+            indexCurrentTable = pageIndex;
             createTable();
         }
+
 
 
         private void page1_Click(object sender, EventArgs e) => ChangePage(indexMinTable + 0);
