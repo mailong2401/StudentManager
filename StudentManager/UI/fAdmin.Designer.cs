@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fAdmin));
             panel1 = new Panel();
+            btnDiem = new ReaLTaiizor.Controls.ParrotButton();
+            btnMon = new ReaLTaiizor.Controls.ParrotButton();
             btnKhoa = new ReaLTaiizor.Controls.ParrotButton();
             btnThongKe = new ReaLTaiizor.Controls.ParrotButton();
             btnSinhVien = new ReaLTaiizor.Controls.ParrotButton();
@@ -47,6 +49,8 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(5, 25, 30);
+            panel1.Controls.Add(btnDiem);
+            panel1.Controls.Add(btnMon);
             panel1.Controls.Add(btnKhoa);
             panel1.Controls.Add(btnThongKe);
             panel1.Controls.Add(btnSinhVien);
@@ -62,25 +66,73 @@
             panel1.Size = new Size(343, 829);
             panel1.TabIndex = 0;
             // 
+            // btnDiem
+            // 
+            btnDiem.BackgroundColor = Color.Transparent;
+            btnDiem.ButtonImage = Properties.Resources.score;
+            btnDiem.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.Material;
+            btnDiem.ButtonText = "Điểm";
+            btnDiem.ClickBackColor = Color.FromArgb(15, 40, 45);
+            btnDiem.ClickTextColor = Color.DodgerBlue;
+            btnDiem.CornerRadius = 0;
+            btnDiem.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDiem.Horizontal_Alignment = StringAlignment.Center;
+            btnDiem.HoverBackgroundColor = Color.FromArgb(15, 40, 45);
+            btnDiem.HoverTextColor = Color.DodgerBlue;
+            btnDiem.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
+            btnDiem.Location = new Point(3, 800);
+            btnDiem.Name = "btnDiem";
+            btnDiem.Size = new Size(340, 64);
+            btnDiem.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            btnDiem.TabIndex = 10;
+            btnDiem.TextColor = Color.White;
+            btnDiem.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            btnDiem.Vertical_Alignment = StringAlignment.Center;
+            btnDiem.Click += btnDiem_Click;
+            // 
+            // btnMon
+            // 
+            btnMon.BackgroundColor = Color.Transparent;
+            btnMon.ButtonImage = Properties.Resources.subject;
+            btnMon.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.Material;
+            btnMon.ButtonText = "Môn học";
+            btnMon.ClickBackColor = Color.FromArgb(15, 40, 45);
+            btnMon.ClickTextColor = Color.DodgerBlue;
+            btnMon.CornerRadius = 0;
+            btnMon.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnMon.Horizontal_Alignment = StringAlignment.Center;
+            btnMon.HoverBackgroundColor = Color.FromArgb(15, 40, 45);
+            btnMon.HoverTextColor = Color.DodgerBlue;
+            btnMon.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
+            btnMon.Location = new Point(3, 550);
+            btnMon.Name = "btnMon";
+            btnMon.Size = new Size(340, 64);
+            btnMon.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            btnMon.TabIndex = 9;
+            btnMon.TextColor = Color.White;
+            btnMon.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            btnMon.Vertical_Alignment = StringAlignment.Center;
+            btnMon.Click += btnMon_Click;
+            // 
             // btnKhoa
             // 
             btnKhoa.BackgroundColor = Color.Transparent;
-            btnKhoa.ButtonImage = (Image)resources.GetObject("btnKhoa.ButtonImage");
+            btnKhoa.ButtonImage = Properties.Resources.university;
             btnKhoa.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.Material;
             btnKhoa.ButtonText = "Khoa/Viện";
-            btnKhoa.ClickBackColor = Color.FromArgb(195, 195, 195);
+            btnKhoa.ClickBackColor = Color.FromArgb(15, 40, 45);
             btnKhoa.ClickTextColor = Color.DodgerBlue;
             btnKhoa.CornerRadius = 0;
             btnKhoa.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnKhoa.Horizontal_Alignment = StringAlignment.Center;
-            btnKhoa.HoverBackgroundColor = Color.FromArgb(225, 225, 225);
+            btnKhoa.HoverBackgroundColor = Color.FromArgb(15, 40, 45);
             btnKhoa.HoverTextColor = Color.DodgerBlue;
             btnKhoa.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
             btnKhoa.ImeMode = ImeMode.NoControl;
-            btnKhoa.Location = new Point(3, 200);
+            btnKhoa.Location = new Point(3, 175);
             btnKhoa.Name = "btnKhoa";
             btnKhoa.RightToLeft = RightToLeft.No;
-            btnKhoa.Size = new Size(340, 96);
+            btnKhoa.Size = new Size(340, 64);
             btnKhoa.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             btnKhoa.TabIndex = 8;
             btnKhoa.TextColor = Color.White;
@@ -91,20 +143,20 @@
             // btnThongKe
             // 
             btnThongKe.BackgroundColor = Color.Transparent;
-            btnThongKe.ButtonImage = (Image)resources.GetObject("btnThongKe.ButtonImage");
+            btnThongKe.ButtonImage = Properties.Resources.statistic;
             btnThongKe.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.Material;
             btnThongKe.ButtonText = "Thống kê";
-            btnThongKe.ClickBackColor = Color.FromArgb(195, 195, 195);
+            btnThongKe.ClickBackColor = Color.FromArgb(15, 40, 45);
             btnThongKe.ClickTextColor = Color.DodgerBlue;
             btnThongKe.CornerRadius = 0;
             btnThongKe.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnThongKe.Horizontal_Alignment = StringAlignment.Center;
-            btnThongKe.HoverBackgroundColor = Color.FromArgb(225, 225, 225);
+            btnThongKe.HoverBackgroundColor = Color.FromArgb(15, 40, 45);
             btnThongKe.HoverTextColor = Color.DodgerBlue;
             btnThongKe.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            btnThongKe.Location = new Point(3, 900);
+            btnThongKe.Location = new Point(3, 925);
             btnThongKe.Name = "btnThongKe";
-            btnThongKe.Size = new Size(340, 96);
+            btnThongKe.Size = new Size(340, 64);
             btnThongKe.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             btnThongKe.TabIndex = 7;
             btnThongKe.TextColor = Color.White;
@@ -115,20 +167,20 @@
             // btnSinhVien
             // 
             btnSinhVien.BackgroundColor = Color.Transparent;
-            btnSinhVien.ButtonImage = (Image)resources.GetObject("btnSinhVien.ButtonImage");
+            btnSinhVien.ButtonImage = Properties.Resources.graduated;
             btnSinhVien.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.Material;
             btnSinhVien.ButtonText = "Sinh viên";
-            btnSinhVien.ClickBackColor = Color.FromArgb(195, 195, 195);
+            btnSinhVien.ClickBackColor = Color.FromArgb(15, 40, 45);
             btnSinhVien.ClickTextColor = Color.DodgerBlue;
             btnSinhVien.CornerRadius = 0;
             btnSinhVien.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSinhVien.Horizontal_Alignment = StringAlignment.Center;
-            btnSinhVien.HoverBackgroundColor = Color.FromArgb(225, 225, 225);
+            btnSinhVien.HoverBackgroundColor = Color.FromArgb(15, 40, 45);
             btnSinhVien.HoverTextColor = Color.DodgerBlue;
             btnSinhVien.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            btnSinhVien.Location = new Point(3, 725);
+            btnSinhVien.Location = new Point(3, 675);
             btnSinhVien.Name = "btnSinhVien";
-            btnSinhVien.Size = new Size(340, 96);
+            btnSinhVien.Size = new Size(340, 64);
             btnSinhVien.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             btnSinhVien.TabIndex = 6;
             btnSinhVien.TextColor = Color.White;
@@ -139,20 +191,20 @@
             // btnLop
             // 
             btnLop.BackgroundColor = Color.Transparent;
-            btnLop.ButtonImage = (Image)resources.GetObject("btnLop.ButtonImage");
+            btnLop.ButtonImage = Properties.Resources._class;
             btnLop.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.Material;
             btnLop.ButtonText = "Lớp học";
-            btnLop.ClickBackColor = Color.FromArgb(195, 195, 195);
+            btnLop.ClickBackColor = Color.FromArgb(15, 40, 45);
             btnLop.ClickTextColor = Color.DodgerBlue;
             btnLop.CornerRadius = 0;
             btnLop.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLop.Horizontal_Alignment = StringAlignment.Center;
-            btnLop.HoverBackgroundColor = Color.FromArgb(225, 225, 225);
+            btnLop.HoverBackgroundColor = Color.FromArgb(15, 40, 45);
             btnLop.HoverTextColor = Color.DodgerBlue;
             btnLop.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            btnLop.Location = new Point(3, 555);
+            btnLop.Location = new Point(3, 425);
             btnLop.Name = "btnLop";
-            btnLop.Size = new Size(340, 96);
+            btnLop.Size = new Size(340, 64);
             btnLop.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             btnLop.TabIndex = 5;
             btnLop.TextColor = Color.White;
@@ -163,20 +215,20 @@
             // btnNganh
             // 
             btnNganh.BackgroundColor = Color.Transparent;
-            btnNganh.ButtonImage = (Image)resources.GetObject("btnNganh.ButtonImage");
+            btnNganh.ButtonImage = Properties.Resources.branch;
             btnNganh.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.Material;
             btnNganh.ButtonText = "Ngành học";
-            btnNganh.ClickBackColor = Color.FromArgb(195, 195, 195);
+            btnNganh.ClickBackColor = Color.FromArgb(15, 40, 45);
             btnNganh.ClickTextColor = Color.DodgerBlue;
             btnNganh.CornerRadius = 0;
             btnNganh.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnNganh.Horizontal_Alignment = StringAlignment.Center;
-            btnNganh.HoverBackgroundColor = Color.FromArgb(225, 225, 225);
+            btnNganh.HoverBackgroundColor = Color.FromArgb(15, 40, 45);
             btnNganh.HoverTextColor = Color.DodgerBlue;
             btnNganh.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            btnNganh.Location = new Point(3, 375);
+            btnNganh.Location = new Point(3, 300);
             btnNganh.Name = "btnNganh";
-            btnNganh.Size = new Size(340, 96);
+            btnNganh.Size = new Size(340, 64);
             btnNganh.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             btnNganh.TabIndex = 2;
             btnNganh.TextColor = Color.White;
@@ -265,5 +317,7 @@
         private ReaLTaiizor.Controls.ParrotButton btnLop;
         private ReaLTaiizor.Controls.ParrotButton btnKhoa;
         private Panel panelUserControlDad;
+        private ReaLTaiizor.Controls.ParrotButton btnMon;
+        private ReaLTaiizor.Controls.ParrotButton btnDiem;
     }
 }
