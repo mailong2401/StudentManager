@@ -272,17 +272,6 @@
             comboboxkhoa.Size = new Size(277, 37);
             comboboxkhoa.TabIndex = 39;
             // 
-            // lbNameKhoa
-            // 
-            lbNameKhoa.AutoSize = true;
-            lbNameKhoa.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
-            lbNameKhoa.ForeColor = SystemColors.Control;
-            lbNameKhoa.Location = new Point(1116, 15);
-            lbNameKhoa.Name = "lbNameKhoa";
-            lbNameKhoa.Size = new Size(89, 41);
-            lbNameKhoa.TabIndex = 38;
-            lbNameKhoa.Text = "Khoa";
-            // 
             // btnConfirmOfBranchAdd
             // 
             btnConfirmOfUDAdd.BackgroundColor = Color.DimGray;
@@ -513,7 +502,6 @@
             Controls.Add(parrotButton1);
             Controls.Add(btnConfirmOfUDAdd);
             Controls.Add(cyberGroupBox2);
-            Controls.Add(lbNameKhoa);
             Controls.Add(cyberGroupBox1);
             Controls.Add(lbCodeKhoa);
             Controls.Add(cyberGroupBox4);
@@ -546,7 +534,6 @@
         private TextBox inputNameNganh;
         private Label lbNameNganh;
         private ReaLTaiizor.Controls.CyberGroupBox cyberGroupBox2;
-        private Label lbNameKhoa;
         private CustomControl.BorderlessComboBox comboboxkhoa;
         private ReaLTaiizor.Controls.ParrotButton btnConfirmOfUDAdd;
         private ReaLTaiizor.Controls.ParrotButton page6;
