@@ -27,17 +27,17 @@ namespace StudentManager
             }
         }
 
-        private List<UniversityDepartment> _universities = new List<UniversityDepartment>();
+        public static List<UniversityDepartment> _universities = new List<UniversityDepartment>();
         // Chuỗi kết nối SQLite
-        string connectionString = "Data Source=mydb.sqlite;Version=3;";
-        int indexCurrentTable = 0;
+        
+        static int indexCurrentTable = 0;
         int indexMinTable = 0;
         int indexMaxTable;
         // 0 1 2 3 4 5
         public UserControlUDShow()
         {
             InitializeComponent();
-            LoadAllBranches(); // Gọi hàm khi control được tạo
+            LoadAllUD(); // Gọi hàm khi control được tạo
             ChangePage(0);
         }
 
@@ -54,7 +54,7 @@ namespace StudentManager
                     MessageBox.Show("Thêm khoa thành công!");
                     inputidKhoa.Text = "";
                     inputNameKhoa.Text = "";
-                    LoadAllBranches();
+                    LoadAllUD();
                     createTable();
                 }
                 catch (SQLiteException ex)
@@ -90,8 +90,9 @@ namespace StudentManager
             }
         }
 
-        private void LoadAllBranches()
+        public static void LoadAllUD()
         {
+            string connectionString = "Data Source=mydb.sqlite;Version=3;";
             // Xóa danh sách _universities để tránh trùng lặp dữ liệu
             _universities.Clear();
 
@@ -118,7 +119,7 @@ namespace StudentManager
             createTable();
         }
 
-        private void createTable()
+        public static void createTable()
         {
             if (_universities.Count == 0)
             {
@@ -165,6 +166,8 @@ namespace StudentManager
         {
 
         }
+        
+
         private void ChangePage(int pageIndex)
         {
             int itemsPerPage = 12;
@@ -207,12 +210,32 @@ namespace StudentManager
         }
 
 
-
+        //Các nút di chuyển trang
         private void page1_Click(object sender, EventArgs e) => ChangePage(indexMinTable + 0);
         private void page2_Click(object sender, EventArgs e) => ChangePage(indexMinTable + 1);
         private void page3_Click(object sender, EventArgs e) => ChangePage(indexMinTable + 2);
         private void page4_Click(object sender, EventArgs e) => ChangePage(indexMinTable + 3);
         private void page5_Click(object sender, EventArgs e) => ChangePage(indexMinTable + 4);
         private void page6_Click(object sender, EventArgs e) => ChangePage(indexMinTable + 5);
+        private void pageLeft_Click(object sender, EventArgs e)
+        {
+            // Lùi về trang trước nếu không ở trang đầu
+            if (indexCurrentTable > 0)
+            {
+                ChangePage(indexCurrentTable - 1);
+            }
+        }
+
+        private void pageRight_Click(object sender, EventArgs e)
+        {
+            int itemsPerPage = 12;
+            int totalPage = (int)Math.Ceiling(_universities.Count / (double)itemsPerPage);
+
+            // Tiến tới trang tiếp theo nếu chưa ở trang cuối
+            if (indexCurrentTable < totalPage - 1)
+            {
+                ChangePage(indexCurrentTable + 1);
+            }
+        }
     }
 }

@@ -280,6 +280,7 @@
             // 
             // panelUserControlDad
             // 
+            panelUserControlDad.BackColor = Color.FromArgb(41, 44, 61);
             panelUserControlDad.Dock = DockStyle.Fill;
             panelUserControlDad.Location = new Point(343, 0);
             panelUserControlDad.Name = "panelUserControlDad";

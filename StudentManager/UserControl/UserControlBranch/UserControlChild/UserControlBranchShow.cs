@@ -37,32 +37,31 @@ namespace StudentManager
         }
         private void LoadKhoaData()
         {
-            // Chuỗi kết nối tới cơ sở dữ liệu SQLite
             string connectionString = "Data Source=mydb.sqlite;Version=3;";
+            string query = "SELECT maKhoa, tenKhoa FROM Khoa";
 
-            // Câu lệnh SQL để lấy dữ liệu
-            string query = "SELECT maKhoa FROM Khoa";
-
-            // Mở kết nối và thực hiện truy vấn
             using (SQLiteConnection conn = new SQLiteConnection(connectionString))
             {
                 try
                 {
                     conn.Open();
                     using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                    using (SQLiteDataReader reader = cmd.ExecuteReader())
                     {
-                        SQLiteDataReader reader = cmd.ExecuteReader();
+                        // Danh sách chứa dữ liệu khoa
+                        List<KeyValuePair<string, string>> data = new List<KeyValuePair<string, string>>();
 
-                        // Xóa hết các item cũ trong ComboBox (nếu có)
-                        comboboxkhoa.Items.Clear();
-
-                        // Đọc dữ liệu và thêm vào ComboBox
                         while (reader.Read())
                         {
-                            // Thêm tên khoa vào ComboBox
                             string maKhoa = reader["maKhoa"].ToString();
-                            comboboxkhoa.Items.Add(maKhoa);
+                            string tenKhoa = reader["tenKhoa"].ToString();
+                            data.Add(new KeyValuePair<string, string>(maKhoa, tenKhoa));
                         }
+
+                        // Gán danh sách vào ComboBox
+                        comboboxkhoa.DataSource = data;
+                        comboboxkhoa.DisplayMember = "Value"; // tenKhoa
+                        comboboxkhoa.ValueMember = "Key";     // maKhoa
                     }
                 }
                 catch (Exception ex)
@@ -71,6 +70,7 @@ namespace StudentManager
                 }
             }
         }
+
 
 
         private void LoadAllBranches()
@@ -180,7 +180,7 @@ namespace StudentManager
             {
                 string nameNganh = inputNameNganh.Text;
                 string idNganh = inputidNganh.Text;
-                string idKhoa = comboboxkhoa.SelectedItem.ToString();
+                string idKhoa = comboboxkhoa.SelectedValue.ToString();
                 try
                 {
                     InsertNgang(idNganh, nameNganh, idKhoa);
@@ -252,5 +252,27 @@ namespace StudentManager
         private void page4_Click(object sender, EventArgs e) => ChangePage(indexMinTable + 3);
         private void page5_Click(object sender, EventArgs e) => ChangePage(indexMinTable + 4);
         private void page6_Click(object sender, EventArgs e) => ChangePage(indexMinTable + 5);
+        private void pageLeft_Click(object sender, EventArgs e)
+        {
+            // Lùi về trang trước nếu không ở trang đầu
+            if (indexCurrentTable > 0)
+            {
+                ChangePage(indexCurrentTable - 1);
+            }
+        }
+
+        private void pageRight_Click(object sender, EventArgs e)
+        {
+            int itemsPerPage = 12;
+            int totalPage = (int)Math.Ceiling(_branches.Count / (double)itemsPerPage);
+
+            // Tiến tới trang tiếp theo nếu chưa ở trang cuối
+            if (indexCurrentTable < totalPage - 1)
+            {
+                ChangePage(indexCurrentTable + 1);
+
+
+            }
+        }
     }
 }

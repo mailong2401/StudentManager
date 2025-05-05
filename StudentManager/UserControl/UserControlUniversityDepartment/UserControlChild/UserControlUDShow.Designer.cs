@@ -39,8 +39,8 @@
             lbNameKhoa = new Label();
             inputNameKhoa = new TextBox();
             cyberGroupBox4 = new ReaLTaiizor.Controls.CyberGroupBox();
-            parrotButton1 = new ReaLTaiizor.Controls.ParrotButton();
-            parrotButton2 = new ReaLTaiizor.Controls.ParrotButton();
+            pageRight = new ReaLTaiizor.Controls.ParrotButton();
+            pageLeft = new ReaLTaiizor.Controls.ParrotButton();
             page1 = new ReaLTaiizor.Controls.ParrotButton();
             page3 = new ReaLTaiizor.Controls.ParrotButton();
             page2 = new ReaLTaiizor.Controls.ParrotButton();
@@ -235,51 +235,53 @@
             cyberGroupBox4.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             cyberGroupBox4.Timer_RGB = 300;
             // 
-            // parrotButton1
+            // pageRight
             // 
-            parrotButton1.BackgroundColor = Color.FromArgb(37, 52, 68);
-            parrotButton1.ButtonImage = Properties.Resources.right_arrow;
-            parrotButton1.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.Material;
-            parrotButton1.ButtonText = "";
-            parrotButton1.ClickBackColor = Color.FromArgb(195, 195, 195);
-            parrotButton1.ClickTextColor = Color.DodgerBlue;
-            parrotButton1.CornerRadius = 5;
-            parrotButton1.Font = new Font("Microsoft Sans Serif", 14F);
-            parrotButton1.Horizontal_Alignment = StringAlignment.Center;
-            parrotButton1.HoverBackgroundColor = Color.FromArgb(225, 225, 225);
-            parrotButton1.HoverTextColor = Color.DodgerBlue;
-            parrotButton1.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            parrotButton1.Location = new Point(872, 767);
-            parrotButton1.Name = "parrotButton1";
-            parrotButton1.Size = new Size(32, 32);
-            parrotButton1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            parrotButton1.TabIndex = 36;
-            parrotButton1.TextColor = Color.Black;
-            parrotButton1.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            parrotButton1.Vertical_Alignment = StringAlignment.Center;
+            pageRight.BackgroundColor = Color.FromArgb(37, 52, 68);
+            pageRight.ButtonImage = Properties.Resources.right_arrow;
+            pageRight.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.Material;
+            pageRight.ButtonText = "";
+            pageRight.ClickBackColor = Color.FromArgb(195, 195, 195);
+            pageRight.ClickTextColor = Color.DodgerBlue;
+            pageRight.CornerRadius = 5;
+            pageRight.Font = new Font("Microsoft Sans Serif", 14F);
+            pageRight.Horizontal_Alignment = StringAlignment.Center;
+            pageRight.HoverBackgroundColor = Color.FromArgb(225, 225, 225);
+            pageRight.HoverTextColor = Color.DodgerBlue;
+            pageRight.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
+            pageRight.Location = new Point(872, 767);
+            pageRight.Name = "pageRight";
+            pageRight.Size = new Size(32, 32);
+            pageRight.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            pageRight.TabIndex = 36;
+            pageRight.TextColor = Color.Black;
+            pageRight.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            pageRight.Vertical_Alignment = StringAlignment.Center;
+            pageRight.Click += pageRight_Click;
             // 
-            // parrotButton2
+            // pageLeft
             // 
-            parrotButton2.BackgroundColor = Color.FromArgb(37, 52, 68);
-            parrotButton2.ButtonImage = Properties.Resources.left_arrow;
-            parrotButton2.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.Material;
-            parrotButton2.ButtonText = "";
-            parrotButton2.ClickBackColor = Color.FromArgb(195, 195, 195);
-            parrotButton2.ClickTextColor = Color.DodgerBlue;
-            parrotButton2.CornerRadius = 5;
-            parrotButton2.Font = new Font("Microsoft Sans Serif", 14F);
-            parrotButton2.Horizontal_Alignment = StringAlignment.Center;
-            parrotButton2.HoverBackgroundColor = Color.FromArgb(225, 225, 225);
-            parrotButton2.HoverTextColor = Color.DodgerBlue;
-            parrotButton2.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            parrotButton2.Location = new Point(595, 767);
-            parrotButton2.Name = "parrotButton2";
-            parrotButton2.Size = new Size(32, 32);
-            parrotButton2.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            parrotButton2.TabIndex = 37;
-            parrotButton2.TextColor = Color.Black;
-            parrotButton2.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            parrotButton2.Vertical_Alignment = StringAlignment.Center;
+            pageLeft.BackgroundColor = Color.FromArgb(37, 52, 68);
+            pageLeft.ButtonImage = Properties.Resources.left_arrow;
+            pageLeft.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.Material;
+            pageLeft.ButtonText = "";
+            pageLeft.ClickBackColor = Color.FromArgb(195, 195, 195);
+            pageLeft.ClickTextColor = Color.DodgerBlue;
+            pageLeft.CornerRadius = 5;
+            pageLeft.Font = new Font("Microsoft Sans Serif", 14F);
+            pageLeft.Horizontal_Alignment = StringAlignment.Center;
+            pageLeft.HoverBackgroundColor = Color.FromArgb(225, 225, 225);
+            pageLeft.HoverTextColor = Color.DodgerBlue;
+            pageLeft.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
+            pageLeft.Location = new Point(595, 767);
+            pageLeft.Name = "pageLeft";
+            pageLeft.Size = new Size(32, 32);
+            pageLeft.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            pageLeft.TabIndex = 37;
+            pageLeft.TextColor = Color.Black;
+            pageLeft.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            pageLeft.Vertical_Alignment = StringAlignment.Center;
+            pageLeft.Click += pageLeft_Click;
             // 
             // page1
             // 
@@ -436,8 +438,8 @@
             Controls.Add(page2);
             Controls.Add(page3);
             Controls.Add(page1);
-            Controls.Add(parrotButton2);
-            Controls.Add(parrotButton1);
+            Controls.Add(pageLeft);
+            Controls.Add(pageRight);
             Controls.Add(btnConfirmOfUDAdd);
             Controls.Add(cyberGroupBox1);
             Controls.Add(lbCodeKhoa);
@@ -459,7 +461,7 @@
         #endregion
         private Label label2;
         private Label label1;
-        private TableLayoutPanel tablekhoa;
+        public static TableLayoutPanel tablekhoa;
         private ReaLTaiizor.Controls.CyberGroupBox cyberGroupBox1;
         private TextBox inputidKhoa;
         private Label lbCodeKhoa;
@@ -467,8 +469,8 @@
         private Label lbNameKhoa;
         private TextBox inputNameKhoa;
         private ReaLTaiizor.Controls.CyberGroupBox cyberGroupBox4;
-        private ReaLTaiizor.Controls.ParrotButton parrotButton1;
-        private ReaLTaiizor.Controls.ParrotButton parrotButton2;
+        private ReaLTaiizor.Controls.ParrotButton pageRight;
+        private ReaLTaiizor.Controls.ParrotButton pageLeft;
         private ReaLTaiizor.Controls.ParrotButton page1;
         private ReaLTaiizor.Controls.ParrotButton page3;
         private ReaLTaiizor.Controls.ParrotButton page2;

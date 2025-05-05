@@ -67,7 +67,7 @@ namespace StudentManager
                     parent.Controls.Remove(this);
 
                     // Tùy chọn: cập nhật lại layout (không bắt buộc nếu dùng AutoSize)
-                    parent.Refresh();
+                    UserControlUDShow.LoadAllUD();
                 }
             }
         }

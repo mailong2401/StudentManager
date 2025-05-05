@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             exampleBox = new ReaLTaiizor.Controls.CyberGroupBox();
-            lbnamenganh = new Label();
-            lbnamekhoa = new Label();
+            lbnameKhoa = new Label();
+            lbnameNganh = new Label();
             lbnamelop = new Label();
             lbmalop = new Label();
             pictureBox2 = new PictureBox();
@@ -54,8 +54,8 @@
             exampleBox.ColorLighting = Color.FromArgb(29, 200, 238);
             exampleBox.ColorPen_1 = Color.FromArgb(37, 52, 68);
             exampleBox.ColorPen_2 = Color.FromArgb(41, 63, 86);
-            exampleBox.Controls.Add(lbnamenganh);
-            exampleBox.Controls.Add(lbnamekhoa);
+            exampleBox.Controls.Add(lbnameKhoa);
+            exampleBox.Controls.Add(lbnameNganh);
             exampleBox.Controls.Add(lbnamelop);
             exampleBox.Controls.Add(lbmalop);
             exampleBox.CyberGroupBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
@@ -77,25 +77,25 @@
             exampleBox.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             exampleBox.Timer_RGB = 300;
             // 
-            // lbnamenganh
+            // lbnameKhoa
             // 
-            lbnamenganh.AutoSize = true;
-            lbnamenganh.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            lbnamenganh.Location = new Point(1000, 5);
-            lbnamenganh.Name = "lbnamenganh";
-            lbnamenganh.Size = new Size(227, 30);
-            lbnamenganh.TabIndex = 3;
-            lbnamenganh.Text = "Công nghệ thông tin";
+            lbnameKhoa.AutoSize = true;
+            lbnameKhoa.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            lbnameKhoa.Location = new Point(1000, 5);
+            lbnameKhoa.Name = "lbnameKhoa";
+            lbnameKhoa.Size = new Size(227, 30);
+            lbnameKhoa.TabIndex = 3;
+            lbnameKhoa.Text = "Công nghệ thông tin";
             // 
-            // lbnamekhoa
+            // lbnameNganh
             // 
-            lbnamekhoa.AutoSize = true;
-            lbnamekhoa.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            lbnamekhoa.Location = new Point(700, 5);
-            lbnamekhoa.Name = "lbnamekhoa";
-            lbnamekhoa.Size = new Size(282, 30);
-            lbnamekhoa.TabIndex = 2;
-            lbnamekhoa.Text = "Viện Công nghệ Việt Nhật";
+            lbnameNganh.AutoSize = true;
+            lbnameNganh.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            lbnameNganh.Location = new Point(700, 5);
+            lbnameNganh.Name = "lbnameNganh";
+            lbnameNganh.Size = new Size(282, 30);
+            lbnameNganh.TabIndex = 2;
+            lbnameNganh.Text = "Viện Công nghệ Việt Nhật";
             // 
             // lbnamelop
             // 
@@ -116,6 +116,7 @@
             lbmalop.Size = new Size(129, 30);
             lbmalop.TabIndex = 0;
             lbmalop.Text = "23DTHHA2";
+            lbmalop.Click += lbmalop_Click;
             // 
             // pictureBox2
             // 
@@ -168,7 +169,7 @@
         private Label lbmalop;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
-        private Label lbnamekhoa;
-        private Label lbnamenganh;
+        private Label lbnameNganh;
+        private Label lbnameKhoa;
     }
 }

@@ -16,5 +16,17 @@ namespace StudentManager
         {
             InitializeComponent();
         }
+        public void setitem(string id, string name, string namenganh, string namekhoa)
+        {
+            lbmalop.Text = id;
+            lbnamelop.Text = name;
+            lbnameNganh.Text = namenganh;
+            lbnameKhoa.Text = namekhoa;
+        }
+
+        private void lbmalop_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
