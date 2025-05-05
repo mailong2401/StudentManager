@@ -1,6 +1,6 @@
 ﻿namespace StudentManager
 {
-    partial class UserControlBranch
+    partial class UserControlScore
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,29 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            mainBranch = new Panel();
             SuspendLayout();
             // 
-            // mainBranch
-            // 
-            mainBranch.Dock = DockStyle.Fill;
-            mainBranch.Location = new Point(0, 0);
-            mainBranch.Name = "mainBranch";
-            mainBranch.Size = new Size(1575, 900);
-            mainBranch.TabIndex = 4;
-            // 
-            // UserControlBranch
+            // UserControlScore
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
-            Controls.Add(mainBranch);
-            Name = "UserControlBranch";
+            Name = "UserControlScore";
             Size = new Size(1575, 900);
             ResumeLayout(false);
         }
 
         #endregion
-        private Panel mainBranch;
     }
 }

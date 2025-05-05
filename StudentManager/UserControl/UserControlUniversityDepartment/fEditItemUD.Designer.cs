@@ -1,13 +1,13 @@
 ﻿namespace StudentManager
 {
-    partial class UserControlUDShow
+    partial class fEditItemUD
     {
-        /// <summary> 
+        /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
+        /// <summary>
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,18 +20,15 @@
             base.Dispose(disposing);
         }
 
-        #region Component Designer generated code
+        #region Windows Form Designer generated code
 
-        /// <summary> 
-        /// Required method for Designer support - do not modify 
+        /// <summary>
+        /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlUDShow));
-            label2 = new Label();
-            label1 = new Label();
-            tablekhoa = new TableLayoutPanel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fEditItemUD));
             cyberGroupBox1 = new ReaLTaiizor.Controls.CyberGroupBox();
             inputidKhoa = new TextBox();
             lbCodeKhoa = new Label();
@@ -39,53 +36,10 @@
             inputNameKhoa = new TextBox();
             lbNameKhoa = new Label();
             btnConfirmOfUDAdd = new ReaLTaiizor.Controls.ParrotButton();
+            parrotButton1 = new ReaLTaiizor.Controls.ParrotButton();
             cyberGroupBox1.SuspendLayout();
             cyberGroupBox4.SuspendLayout();
             SuspendLayout();
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            label2.ForeColor = SystemColors.ControlDark;
-            label2.Location = new Point(563, 145);
-            label2.Name = "label2";
-            label2.Size = new Size(107, 30);
-            label2.TabIndex = 30;
-            label2.Text = "Tên Khoa";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            label1.ForeColor = SystemColors.ControlDark;
-            label1.Location = new Point(273, 145);
-            label1.Name = "label1";
-            label1.Size = new Size(102, 30);
-            label1.TabIndex = 28;
-            label1.Text = "Mã khoa";
-            // 
-            // tablekhoa
-            // 
-            tablekhoa.ColumnCount = 1;
-            tablekhoa.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tablekhoa.Location = new Point(260, 188);
-            tablekhoa.Name = "tablekhoa";
-            tablekhoa.RowCount = 12;
-            tablekhoa.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
-            tablekhoa.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
-            tablekhoa.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
-            tablekhoa.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
-            tablekhoa.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
-            tablekhoa.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
-            tablekhoa.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
-            tablekhoa.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
-            tablekhoa.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
-            tablekhoa.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
-            tablekhoa.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
-            tablekhoa.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
-            tablekhoa.Size = new Size(1000, 564);
-            tablekhoa.TabIndex = 29;
             // 
             // cyberGroupBox1
             // 
@@ -107,7 +61,7 @@
             cyberGroupBox1.Lighting = false;
             cyberGroupBox1.LinearGradient_Background = false;
             cyberGroupBox1.LinearGradientPen = false;
-            cyberGroupBox1.Location = new Point(257, 19);
+            cyberGroupBox1.Location = new Point(294, 93);
             cyberGroupBox1.Name = "cyberGroupBox1";
             cyberGroupBox1.PenWidth = 15;
             cyberGroupBox1.RGB = false;
@@ -115,7 +69,7 @@
             cyberGroupBox1.RoundingInt = 60;
             cyberGroupBox1.Size = new Size(377, 63);
             cyberGroupBox1.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            cyberGroupBox1.TabIndex = 33;
+            cyberGroupBox1.TabIndex = 37;
             cyberGroupBox1.Tag = "Cyber";
             cyberGroupBox1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             cyberGroupBox1.Timer_RGB = 300;
@@ -132,17 +86,16 @@
             inputidKhoa.PlaceholderText = "Nhập mã khoa";
             inputidKhoa.Size = new Size(256, 38);
             inputidKhoa.TabIndex = 4;
-            inputidKhoa.TextChanged += inputidKhoa_TextChanged;
             // 
             // lbCodeKhoa
             // 
             lbCodeKhoa.AutoSize = true;
             lbCodeKhoa.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
             lbCodeKhoa.ForeColor = SystemColors.Control;
-            lbCodeKhoa.Location = new Point(61, 30);
+            lbCodeKhoa.Location = new Point(125, 99);
             lbCodeKhoa.Name = "lbCodeKhoa";
             lbCodeKhoa.Size = new Size(161, 46);
-            lbCodeKhoa.TabIndex = 34;
+            lbCodeKhoa.TabIndex = 38;
             lbCodeKhoa.Text = "Mã Khoa";
             // 
             // cyberGroupBox4
@@ -165,7 +118,7 @@
             cyberGroupBox4.Lighting = false;
             cyberGroupBox4.LinearGradient_Background = false;
             cyberGroupBox4.LinearGradientPen = false;
-            cyberGroupBox4.Location = new Point(883, 19);
+            cyberGroupBox4.Location = new Point(294, 196);
             cyberGroupBox4.Name = "cyberGroupBox4";
             cyberGroupBox4.PenWidth = 15;
             cyberGroupBox4.RGB = false;
@@ -173,7 +126,7 @@
             cyberGroupBox4.RoundingInt = 60;
             cyberGroupBox4.Size = new Size(377, 63);
             cyberGroupBox4.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            cyberGroupBox4.TabIndex = 31;
+            cyberGroupBox4.TabIndex = 35;
             cyberGroupBox4.Tag = "Cyber";
             cyberGroupBox4.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             cyberGroupBox4.Timer_RGB = 300;
@@ -196,10 +149,10 @@
             lbNameKhoa.AutoSize = true;
             lbNameKhoa.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
             lbNameKhoa.ForeColor = SystemColors.Control;
-            lbNameKhoa.Location = new Point(704, 30);
+            lbNameKhoa.Location = new Point(125, 202);
             lbNameKhoa.Name = "lbNameKhoa";
             lbNameKhoa.Size = new Size(163, 46);
-            lbNameKhoa.TabIndex = 32;
+            lbNameKhoa.TabIndex = 36;
             lbNameKhoa.Text = "Tên khoa";
             // 
             // btnConfirmOfUDAdd
@@ -207,7 +160,7 @@
             btnConfirmOfUDAdd.BackgroundColor = Color.DimGray;
             btnConfirmOfUDAdd.ButtonImage = (Image)resources.GetObject("btnConfirmOfUDAdd.ButtonImage");
             btnConfirmOfUDAdd.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
-            btnConfirmOfUDAdd.ButtonText = "Thêm";
+            btnConfirmOfUDAdd.ButtonText = "Sửa";
             btnConfirmOfUDAdd.ClickBackColor = Color.Transparent;
             btnConfirmOfUDAdd.ClickTextColor = Color.White;
             btnConfirmOfUDAdd.CornerRadius = 25;
@@ -216,32 +169,55 @@
             btnConfirmOfUDAdd.HoverBackgroundColor = Color.Lime;
             btnConfirmOfUDAdd.HoverTextColor = Color.White;
             btnConfirmOfUDAdd.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            btnConfirmOfUDAdd.Location = new Point(1337, 25);
+            btnConfirmOfUDAdd.Location = new Point(503, 331);
             btnConfirmOfUDAdd.Name = "btnConfirmOfUDAdd";
             btnConfirmOfUDAdd.RightToLeft = RightToLeft.No;
             btnConfirmOfUDAdd.Size = new Size(168, 57);
             btnConfirmOfUDAdd.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            btnConfirmOfUDAdd.TabIndex = 35;
+            btnConfirmOfUDAdd.TabIndex = 36;
             btnConfirmOfUDAdd.TextColor = Color.White;
             btnConfirmOfUDAdd.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             btnConfirmOfUDAdd.Vertical_Alignment = StringAlignment.Center;
-            btnConfirmOfUDAdd.Click += btnConfirmOfUDAdd_Click_1;
+            btnConfirmOfUDAdd.Click += btnConfirmOfUDAdd_Click;
             // 
-            // UserControlUDShow
+            // parrotButton1
+            // 
+            parrotButton1.BackgroundColor = Color.DimGray;
+            parrotButton1.ButtonImage = (Image)resources.GetObject("parrotButton1.ButtonImage");
+            parrotButton1.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
+            parrotButton1.ButtonText = "Xóa";
+            parrotButton1.ClickBackColor = Color.Transparent;
+            parrotButton1.ClickTextColor = Color.White;
+            parrotButton1.CornerRadius = 25;
+            parrotButton1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            parrotButton1.Horizontal_Alignment = StringAlignment.Center;
+            parrotButton1.HoverBackgroundColor = Color.Lime;
+            parrotButton1.HoverTextColor = Color.White;
+            parrotButton1.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
+            parrotButton1.Location = new Point(125, 331);
+            parrotButton1.Name = "parrotButton1";
+            parrotButton1.RightToLeft = RightToLeft.No;
+            parrotButton1.Size = new Size(168, 57);
+            parrotButton1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            parrotButton1.TabIndex = 39;
+            parrotButton1.TextColor = Color.White;
+            parrotButton1.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            parrotButton1.Vertical_Alignment = StringAlignment.Center;
+            // 
+            // fEditItemUD
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(41, 44, 61);
+            ClientSize = new Size(800, 450);
+            Controls.Add(parrotButton1);
             Controls.Add(btnConfirmOfUDAdd);
             Controls.Add(cyberGroupBox1);
             Controls.Add(lbCodeKhoa);
             Controls.Add(cyberGroupBox4);
             Controls.Add(lbNameKhoa);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(tablekhoa);
-            Name = "UserControlUDShow";
-            Size = new Size(1575, 813);
+            Name = "fEditItemUD";
+            Text = "fEditItemUD";
             cyberGroupBox1.ResumeLayout(false);
             cyberGroupBox1.PerformLayout();
             cyberGroupBox4.ResumeLayout(false);
@@ -251,9 +227,7 @@
         }
 
         #endregion
-        private Label label2;
-        private Label label1;
-        private TableLayoutPanel tablekhoa;
+
         private ReaLTaiizor.Controls.CyberGroupBox cyberGroupBox1;
         private TextBox inputidKhoa;
         private Label lbCodeKhoa;
@@ -261,5 +235,6 @@
         private TextBox inputNameKhoa;
         private Label lbNameKhoa;
         private ReaLTaiizor.Controls.ParrotButton btnConfirmOfUDAdd;
+        private ReaLTaiizor.Controls.ParrotButton parrotButton1;
     }
 }

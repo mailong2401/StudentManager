@@ -14,13 +14,12 @@ namespace StudentManager
         public UserControlStudentShow()
         {
             InitializeComponent();
-            GetStudentsFromDatabase();
             LoadTable();
         }
 
         private void GetStudentsFromDatabase()
         {
-            //string connectionString = "Data Source=TEN_SERVER;Initial Catalog=QLSinhVien;Integrated Security=True";
+            //string connectionString = "Data Source=WINDOWS-PC\\SQLEXPRESS;Initial Catalog=QuanLySinhVien;Integrated Security=True;";
             string connectionString = "Server=localhost;Database=qlsv;Integrated Security=True;";
             using (SqlConnection conn = new SqlConnection(connectionString))
             {

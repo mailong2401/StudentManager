@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace StudentManager
 {
-    public partial class UserControlUDSearch : UserControl
+    public partial class UserControlSubject : UserControl
     {
-        public UserControlUDSearch()
+        public UserControlSubject()
         {
             InitializeComponent();
         }

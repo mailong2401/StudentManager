@@ -43,5 +43,20 @@
             panelUserControlDad.Controls.Add(ucSS);
         }
 
+        private void btnMon_Click(object sender, EventArgs e)
+        {
+            panelUserControlDad.Controls.Clear();
+            UserControlSubject ucSJ = new UserControlSubject();
+            ucSJ.Dock = DockStyle.Fill;
+            panelUserControlDad.Controls.Add(ucSJ);
+        }
+
+        private void btnDiem_Click(object sender, EventArgs e)
+        {
+            panelUserControlDad.Controls.Clear();
+            UserControlScore ucSC = new UserControlScore();
+            ucSC.Dock = DockStyle.Fill;
+            panelUserControlDad.Controls.Add(ucSC);
+        }
     }
 }

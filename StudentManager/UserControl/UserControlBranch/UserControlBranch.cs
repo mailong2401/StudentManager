@@ -16,13 +16,6 @@ namespace StudentManager
         {
             InitializeComponent();
         }
-        private void btnBranchAdd_Click(object sender, EventArgs e)
-        {
-            mainBranch.Controls.Clear();
-            UserControlBranchAdd ucBA = new UserControlBranchAdd();
-            ucBA.Dock = DockStyle.Fill;
-            mainBranch.Controls.Add(ucBA);
-        }
         private void btnBrandShow_Click(object sender, EventArgs e)
         {
             mainBranch.Controls.Clear();
@@ -30,14 +23,5 @@ namespace StudentManager
             ucBS.Dock = DockStyle.Fill;
             mainBranch.Controls.Add(ucBS);
         }
-        private void btnBranchSearch_Click(object sender, EventArgs e)
-        {
-            mainBranch.Controls.Clear();
-            UserControlBranchSearch ucBSr = new UserControlBranchSearch();
-            ucBSr.Dock = DockStyle.Fill;
-            mainBranch.Controls.Add(ucBSr);
-        }
-
-        
     }
 }

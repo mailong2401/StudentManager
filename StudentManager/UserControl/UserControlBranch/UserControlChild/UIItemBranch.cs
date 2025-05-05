@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace StudentManager
 {
-    public partial class UserControlClassSearch : UserControl
+    public partial class UIItemBranch : UserControl
     {
-        public UserControlClassSearch()
+        public UIItemBranch()
         {
             InitializeComponent();
+        }
+        public void setItem(string id, string name)
+        {
+            lbid.Text = id;
+            lbnamenganh.Text = name;
         }
     }
 }
