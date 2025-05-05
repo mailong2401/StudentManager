@@ -217,7 +217,6 @@
             inputNameNganh.PlaceholderText = "Nhập tên Ngành";
             inputNameNganh.Size = new Size(270, 32);
             inputNameNganh.TabIndex = 4;
-            inputNameNganh.TextChanged += inputNameNganh_TextChanged;
             // 
             // lbNameKhoa
             // 
