@@ -45,6 +45,8 @@
             parrotButton4 = new ReaLTaiizor.Controls.ParrotButton();
             parrotButton5 = new ReaLTaiizor.Controls.ParrotButton();
             parrotButton6 = new ReaLTaiizor.Controls.ParrotButton();
+            parrotButton7 = new ReaLTaiizor.Controls.ParrotButton();
+            parrotButton8 = new ReaLTaiizor.Controls.ParrotButton();
             cyberGroupBox1.SuspendLayout();
             cyberGroupBox4.SuspendLayout();
             SuspendLayout();
@@ -247,7 +249,7 @@
             parrotButton1.HoverBackgroundColor = Color.FromArgb(225, 225, 225);
             parrotButton1.HoverTextColor = Color.DodgerBlue;
             parrotButton1.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            parrotButton1.Location = new Point(812, 767);
+            parrotButton1.Location = new Point(872, 767);
             parrotButton1.Name = "parrotButton1";
             parrotButton1.Size = new Size(32, 32);
             parrotButton1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
@@ -372,11 +374,59 @@
             parrotButton6.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             parrotButton6.Vertical_Alignment = StringAlignment.Center;
             // 
+            // parrotButton7
+            // 
+            parrotButton7.BackgroundColor = Color.FromArgb(37, 52, 68);
+            parrotButton7.ButtonImage = null;
+            parrotButton7.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.Material;
+            parrotButton7.ButtonText = "4";
+            parrotButton7.ClickBackColor = Color.FromArgb(195, 195, 195);
+            parrotButton7.ClickTextColor = Color.DodgerBlue;
+            parrotButton7.CornerRadius = 5;
+            parrotButton7.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            parrotButton7.Horizontal_Alignment = StringAlignment.Center;
+            parrotButton7.HoverBackgroundColor = Color.FromArgb(225, 225, 225);
+            parrotButton7.HoverTextColor = Color.DodgerBlue;
+            parrotButton7.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
+            parrotButton7.Location = new Point(790, 767);
+            parrotButton7.Name = "parrotButton7";
+            parrotButton7.Size = new Size(32, 32);
+            parrotButton7.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            parrotButton7.TabIndex = 42;
+            parrotButton7.TextColor = Color.White;
+            parrotButton7.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            parrotButton7.Vertical_Alignment = StringAlignment.Center;
+            // 
+            // parrotButton8
+            // 
+            parrotButton8.BackgroundColor = Color.FromArgb(37, 52, 68);
+            parrotButton8.ButtonImage = null;
+            parrotButton8.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.Material;
+            parrotButton8.ButtonText = "4";
+            parrotButton8.ClickBackColor = Color.FromArgb(195, 195, 195);
+            parrotButton8.ClickTextColor = Color.DodgerBlue;
+            parrotButton8.CornerRadius = 5;
+            parrotButton8.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            parrotButton8.Horizontal_Alignment = StringAlignment.Center;
+            parrotButton8.HoverBackgroundColor = Color.FromArgb(225, 225, 225);
+            parrotButton8.HoverTextColor = Color.DodgerBlue;
+            parrotButton8.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
+            parrotButton8.Location = new Point(828, 767);
+            parrotButton8.Name = "parrotButton8";
+            parrotButton8.Size = new Size(32, 32);
+            parrotButton8.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            parrotButton8.TabIndex = 43;
+            parrotButton8.TextColor = Color.White;
+            parrotButton8.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            parrotButton8.Vertical_Alignment = StringAlignment.Center;
+            // 
             // UserControlUDShow
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(41, 44, 61);
+            Controls.Add(parrotButton8);
+            Controls.Add(parrotButton7);
             Controls.Add(parrotButton6);
             Controls.Add(parrotButton5);
             Controls.Add(parrotButton4);
@@ -418,5 +468,7 @@
         private ReaLTaiizor.Controls.ParrotButton parrotButton4;
         private ReaLTaiizor.Controls.ParrotButton parrotButton5;
         private ReaLTaiizor.Controls.ParrotButton parrotButton6;
+        private ReaLTaiizor.Controls.ParrotButton parrotButton7;
+        private ReaLTaiizor.Controls.ParrotButton parrotButton8;
     }
 }
