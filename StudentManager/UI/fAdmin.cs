@@ -10,16 +10,16 @@
         private void btnKhoa_Click(object sender, EventArgs e)
         {
             panelUserControlDad.Controls.Clear();
-            UserControlUD ucU = new UserControlUD();
-            ucU.Dock = DockStyle.Fill;
-            panelUserControlDad.Controls.Add(ucU);
+            UserControlUDShow ucUDS = new UserControlUDShow();
+            ucUDS.Dock = DockStyle.Fill;
+            panelUserControlDad.Controls.Add(ucUDS);
         }
         private void btnNganh_Click(object sender, EventArgs e)
         {
             panelUserControlDad.Controls.Clear();
-            UserControlBranch ucB = new UserControlBranch();
-            ucB.Dock = DockStyle.Fill;
-            panelUserControlDad.Controls.Add(ucB);
+            UserControlBranchShow ucBS = new UserControlBranchShow();
+            ucBS.Dock = DockStyle.Fill;
+            panelUserControlDad.Controls.Add(ucBS);
         }
         private void btnLop_Click(object sender, EventArgs e)
         {
@@ -46,9 +46,9 @@
         private void btnMon_Click(object sender, EventArgs e)
         {
             panelUserControlDad.Controls.Clear();
-            UserControlSubject ucSJ = new UserControlSubject();
-            ucSJ.Dock = DockStyle.Fill;
-            panelUserControlDad.Controls.Add(ucSJ);
+            UserControlSubjectShow ucSJS = new UserControlSubjectShow();
+            ucSJS.Dock = DockStyle.Fill;
+            panelUserControlDad.Controls.Add(ucSJS);
         }
 
         private void btnDiem_Click(object sender, EventArgs e)

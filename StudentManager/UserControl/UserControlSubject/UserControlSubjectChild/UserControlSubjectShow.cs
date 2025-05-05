@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace StudentManager
 {
-    public partial class UIItemBranch : UserControl
+    public partial class UserControlSubjectShow : UserControl
     {
-        public UIItemBranch()
+        public UserControlSubjectShow()
         {
             InitializeComponent();
-        }
-        public void setItem(string id, string name,string khoa)
-        {
-            lbidnganh.Text = id;
-            lbnamenganh.Text = name;
-            lbnamekhoa.Text = khoa;
         }
     }
 }

@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             exampleBox = new ReaLTaiizor.Controls.CyberGroupBox();
-            lbnganh = new Label();
-            lbkhoa = new Label();
+            lbnamenganh = new Label();
+            lbnamekhoa = new Label();
+            lbnamelop = new Label();
+            lbmalop = new Label();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
-            lblop = new Label();
             exampleBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -53,9 +54,10 @@
             exampleBox.ColorLighting = Color.FromArgb(29, 200, 238);
             exampleBox.ColorPen_1 = Color.FromArgb(37, 52, 68);
             exampleBox.ColorPen_2 = Color.FromArgb(41, 63, 86);
-            exampleBox.Controls.Add(lblop);
-            exampleBox.Controls.Add(lbnganh);
-            exampleBox.Controls.Add(lbkhoa);
+            exampleBox.Controls.Add(lbnamenganh);
+            exampleBox.Controls.Add(lbnamekhoa);
+            exampleBox.Controls.Add(lbnamelop);
+            exampleBox.Controls.Add(lbmalop);
             exampleBox.CyberGroupBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
             exampleBox.Dock = DockStyle.Left;
             exampleBox.ForeColor = Color.FromArgb(245, 245, 245);
@@ -75,25 +77,45 @@
             exampleBox.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             exampleBox.Timer_RGB = 300;
             // 
-            // lbnganh
+            // lbnamenganh
             // 
-            lbnganh.AutoSize = true;
-            lbnganh.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            lbnganh.Location = new Point(350, 5);
-            lbnganh.Name = "lbnganh";
-            lbnganh.Size = new Size(121, 30);
-            lbnganh.TabIndex = 1;
-            lbnganh.Text = "Marketing";
+            lbnamenganh.AutoSize = true;
+            lbnamenganh.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            lbnamenganh.Location = new Point(1000, 5);
+            lbnamenganh.Name = "lbnamenganh";
+            lbnamenganh.Size = new Size(227, 30);
+            lbnamenganh.TabIndex = 3;
+            lbnamenganh.Text = "Công nghệ thông tin";
             // 
-            // lbkhoa
+            // lbnamekhoa
             // 
-            lbkhoa.AutoSize = true;
-            lbkhoa.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            lbkhoa.Location = new Point(10, 5);
-            lbkhoa.Name = "lbkhoa";
-            lbkhoa.Size = new Size(285, 30);
-            lbkhoa.TabIndex = 0;
-            lbkhoa.Text = "Khoa Công nghệ thông tin";
+            lbnamekhoa.AutoSize = true;
+            lbnamekhoa.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            lbnamekhoa.Location = new Point(700, 5);
+            lbnamekhoa.Name = "lbnamekhoa";
+            lbnamekhoa.Size = new Size(282, 30);
+            lbnamekhoa.TabIndex = 2;
+            lbnamekhoa.Text = "Viện Công nghệ Việt Nhật";
+            // 
+            // lbnamelop
+            // 
+            lbnamelop.AutoSize = true;
+            lbnamelop.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            lbnamelop.Location = new Point(350, 5);
+            lbnamelop.Name = "lbnamelop";
+            lbnamelop.Size = new Size(246, 30);
+            lbnamelop.TabIndex = 1;
+            lbnamelop.Text = "Công nghệ thông tin 2";
+            // 
+            // lbmalop
+            // 
+            lbmalop.AutoSize = true;
+            lbmalop.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            lbmalop.Location = new Point(10, 5);
+            lbmalop.Name = "lbmalop";
+            lbmalop.Size = new Size(129, 30);
+            lbmalop.TabIndex = 0;
+            lbmalop.Text = "23DTHHA2";
             // 
             // pictureBox2
             // 
@@ -114,16 +136,6 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 30;
             pictureBox1.TabStop = false;
-            // 
-            // lblop
-            // 
-            lblop.AutoSize = true;
-            lblop.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            lblop.Location = new Point(700, 5);
-            lblop.Name = "lblop";
-            lblop.Size = new Size(129, 30);
-            lblop.TabIndex = 2;
-            lblop.Text = "23DTHHA2";
             // 
             // UIItemClass
             // 
@@ -152,10 +164,11 @@
         private Label label33;
         private Label label34;
         private Label label35;
-        private Label lbnganh;
-        private Label lbkhoa;
+        private Label lbnamelop;
+        private Label lbmalop;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
-        private Label lblop;
+        private Label lbnamekhoa;
+        private Label lbnamenganh;
     }
 }

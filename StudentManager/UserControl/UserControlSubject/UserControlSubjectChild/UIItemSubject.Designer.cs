@@ -1,6 +1,6 @@
 ﻿namespace StudentManager
 {
-    partial class UIItemBranch
+    partial class UIItemSubject
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             exampleBox = new ReaLTaiizor.Controls.CyberGroupBox();
-            lbnamekhoa = new Label();
             lbnamenganh = new Label();
-            lbidnganh = new Label();
+            lbnamekhoa = new Label();
+            lbnamemon = new Label();
+            lbmamon = new Label();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
+            lbnamelop = new Label();
             exampleBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -53,9 +55,11 @@
             exampleBox.ColorLighting = Color.FromArgb(29, 200, 238);
             exampleBox.ColorPen_1 = Color.FromArgb(37, 52, 68);
             exampleBox.ColorPen_2 = Color.FromArgb(41, 63, 86);
-            exampleBox.Controls.Add(lbnamekhoa);
+            exampleBox.Controls.Add(lbnamelop);
             exampleBox.Controls.Add(lbnamenganh);
-            exampleBox.Controls.Add(lbidnganh);
+            exampleBox.Controls.Add(lbnamekhoa);
+            exampleBox.Controls.Add(lbnamemon);
+            exampleBox.Controls.Add(lbmamon);
             exampleBox.CyberGroupBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
             exampleBox.Dock = DockStyle.Left;
             exampleBox.ForeColor = Color.FromArgb(245, 245, 245);
@@ -75,35 +79,45 @@
             exampleBox.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             exampleBox.Timer_RGB = 300;
             // 
-            // lbnamekhoa
-            // 
-            lbnamekhoa.AutoSize = true;
-            lbnamekhoa.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            lbnamekhoa.Location = new Point(460, 5);
-            lbnamekhoa.Name = "lbnamekhoa";
-            lbnamekhoa.Size = new Size(282, 30);
-            lbnamekhoa.TabIndex = 2;
-            lbnamekhoa.Text = "Khoa công nghệ thông tin";
-            // 
             // lbnamenganh
             // 
             lbnamenganh.AutoSize = true;
             lbnamenganh.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            lbnamenganh.Location = new Point(160, 5);
+            lbnamenganh.Location = new Point(800, 5);
             lbnamenganh.Name = "lbnamenganh";
-            lbnamenganh.Size = new Size(227, 30);
-            lbnamenganh.TabIndex = 1;
-            lbnamenganh.Text = "Công nghệ thông tin";
+            lbnamenganh.Size = new Size(282, 30);
+            lbnamenganh.TabIndex = 3;
+            lbnamenganh.Text = "Viện Công nghệ Việt Nhật";
             // 
-            // lbidnganh
+            // lbnamekhoa
             // 
-            lbidnganh.AutoSize = true;
-            lbidnganh.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            lbidnganh.Location = new Point(10, 5);
-            lbidnganh.Name = "lbidnganh";
-            lbidnganh.Size = new Size(83, 30);
-            lbidnganh.TabIndex = 0;
-            lbidnganh.Text = "CNTT1";
+            lbnamekhoa.AutoSize = true;
+            lbnamekhoa.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            lbnamekhoa.Location = new Point(500, 5);
+            lbnamekhoa.Name = "lbnamekhoa";
+            lbnamekhoa.Size = new Size(282, 30);
+            lbnamekhoa.TabIndex = 2;
+            lbnamekhoa.Text = "Viện Công nghệ Việt Nhật";
+            // 
+            // lbnamemon
+            // 
+            lbnamemon.AutoSize = true;
+            lbnamemon.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            lbnamemon.Location = new Point(150, 5);
+            lbnamemon.Name = "lbnamemon";
+            lbnamemon.Size = new Size(314, 30);
+            lbnamemon.TabIndex = 1;
+            lbnamemon.Text = "Cấu trúc dữ liệu và giải thuật";
+            // 
+            // lbmamon
+            // 
+            lbmamon.AutoSize = true;
+            lbmamon.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            lbmamon.Location = new Point(10, 5);
+            lbmamon.Name = "lbmamon";
+            lbmamon.Size = new Size(105, 30);
+            lbmamon.TabIndex = 0;
+            lbmamon.Text = "CTDL-GT";
             // 
             // pictureBox2
             // 
@@ -125,7 +139,17 @@
             pictureBox1.TabIndex = 30;
             pictureBox1.TabStop = false;
             // 
-            // UIItemBranch
+            // lbnamelop
+            // 
+            lbnamelop.AutoSize = true;
+            lbnamelop.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            lbnamelop.Location = new Point(1100, 5);
+            lbnamelop.Name = "lbnamelop";
+            lbnamelop.Size = new Size(129, 30);
+            lbnamelop.TabIndex = 4;
+            lbnamelop.Text = "23DTHHA2";
+            // 
+            // UIItemSubject
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -133,7 +157,7 @@
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Controls.Add(exampleBox);
-            Name = "UIItemBranch";
+            Name = "UIItemSubject";
             Size = new Size(1477, 41);
             exampleBox.ResumeLayout(false);
             exampleBox.PerformLayout();
@@ -152,10 +176,12 @@
         private Label label33;
         private Label label34;
         private Label label35;
-        private Label lbnamekhoa;
-        private Label lbnamenganh;
-        private Label lbidnganh;
+        private Label lbnamemon;
+        private Label lbmamon;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
+        private Label lbnamekhoa;
+        private Label lbnamenganh;
+        private Label lbnamelop;
     }
 }
