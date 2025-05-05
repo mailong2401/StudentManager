@@ -16,11 +16,20 @@ namespace StudentManager
         {
             InitializeComponent();
         }
-        public void setItem(string id, string name,string khoa)
+        public void setItem(string id, string name, string khoa)
         {
             lbid.Text = id;
             lbnamenganh.Text = name;
             lbkhoa.Text = khoa;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            fEditItemBranch mainForm = new fEditItemBranch(lbid.Text, lbnamenganh.Text,lbkhoa.Text);
+            if (mainForm.ShowDialog() == DialogResult.OK) // Giả sử OK có nghĩa là chỉnh sửa thành công
+            {
+                MessageBox.Show("Sửa thành công!");
+            }
         }
     }
 }
