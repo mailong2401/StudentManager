@@ -17,13 +17,7 @@ namespace StudentManager
             InitializeComponent();
         }
 
-        private void btnClassAdd_Click(object sender, EventArgs e)
-        {
-            mainclass.Controls.Clear();
-            UserControlClassAdd ucCA = new UserControlClassAdd();
-            ucCA.Dock = DockStyle.Fill;
-            mainclass.Controls.Add(ucCA);
-        }
+        
 
         private void btnClassShow_Click(object sender, EventArgs e)
         {
@@ -33,12 +27,6 @@ namespace StudentManager
             mainclass.Controls.Add(ucCS);
         }
 
-        private void btnClassSearch_Click(object sender, EventArgs e)
-        {
-            mainclass.Controls.Clear();
-            UserControlClassSearch ucCSr = new UserControlClassSearch();
-            ucCSr.Dock = DockStyle.Fill;
-            mainclass.Controls.Add(ucCSr);
-        }
+       
     }
 }
