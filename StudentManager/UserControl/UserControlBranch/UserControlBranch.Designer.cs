@@ -30,9 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlBranch));
             panel1 = new Panel();
-            btnBranchSearch = new ReaLTaiizor.Controls.ParrotButton();
             btnBranchShow = new ReaLTaiizor.Controls.ParrotButton();
-            btnBranchAdd = new ReaLTaiizor.Controls.ParrotButton();
             mainBranch = new Panel();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -40,39 +38,13 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(5, 25, 30);
-            panel1.Controls.Add(btnBranchSearch);
             panel1.Controls.Add(btnBranchShow);
-            panel1.Controls.Add(btnBranchAdd);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.RightToLeft = RightToLeft.No;
             panel1.Size = new Size(1575, 87);
             panel1.TabIndex = 3;
-            // 
-            // btnBranchSearch
-            // 
-            btnBranchSearch.BackgroundColor = Color.FromArgb(37, 52, 68);
-            btnBranchSearch.ButtonImage = (Image)resources.GetObject("btnBranchSearch.ButtonImage");
-            btnBranchSearch.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
-            btnBranchSearch.ButtonText = "Lọc";
-            btnBranchSearch.ClickBackColor = Color.FromArgb(195, 195, 195);
-            btnBranchSearch.ClickTextColor = Color.DodgerBlue;
-            btnBranchSearch.CornerRadius = 40;
-            btnBranchSearch.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBranchSearch.Horizontal_Alignment = StringAlignment.Center;
-            btnBranchSearch.HoverBackgroundColor = Color.FromArgb(225, 225, 225);
-            btnBranchSearch.HoverTextColor = Color.DodgerBlue;
-            btnBranchSearch.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            btnBranchSearch.Location = new Point(1083, 4);
-            btnBranchSearch.Name = "btnBranchSearch";
-            btnBranchSearch.Size = new Size(303, 79);
-            btnBranchSearch.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            btnBranchSearch.TabIndex = 5;
-            btnBranchSearch.TextColor = Color.White;
-            btnBranchSearch.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            btnBranchSearch.Vertical_Alignment = StringAlignment.Center;
-            btnBranchSearch.Click += btnBranchSearch_Click;
             // 
             // btnBranchShow
             // 
@@ -98,31 +70,6 @@
             btnBranchShow.Vertical_Alignment = StringAlignment.Center;
             btnBranchShow.Click += btnBrandShow_Click;
             // 
-            // btnBranchAdd
-            // 
-            btnBranchAdd.BackgroundColor = Color.FromArgb(37, 52, 68);
-            btnBranchAdd.ButtonImage = (Image)resources.GetObject("btnBranchAdd.ButtonImage");
-            btnBranchAdd.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
-            btnBranchAdd.ButtonText = "Thêm";
-            btnBranchAdd.ClickBackColor = Color.FromArgb(195, 195, 195);
-            btnBranchAdd.ClickTextColor = Color.DodgerBlue;
-            btnBranchAdd.CornerRadius = 40;
-            btnBranchAdd.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBranchAdd.Horizontal_Alignment = StringAlignment.Center;
-            btnBranchAdd.HoverBackgroundColor = Color.FromArgb(225, 225, 225);
-            btnBranchAdd.HoverTextColor = Color.DodgerBlue;
-            btnBranchAdd.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            btnBranchAdd.Location = new Point(183, 4);
-            btnBranchAdd.Name = "btnBranchAdd";
-            btnBranchAdd.RightToLeft = RightToLeft.No;
-            btnBranchAdd.Size = new Size(303, 79);
-            btnBranchAdd.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            btnBranchAdd.TabIndex = 3;
-            btnBranchAdd.TextColor = Color.White;
-            btnBranchAdd.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            btnBranchAdd.Vertical_Alignment = StringAlignment.Center;
-            btnBranchAdd.Click += btnBranchAdd_Click;
-            // 
             // mainBranch
             // 
             mainBranch.Dock = DockStyle.Fill;
@@ -147,9 +94,7 @@
         #endregion
 
         private Panel panel1;
-        private ReaLTaiizor.Controls.ParrotButton btnBranchSearch;
         private ReaLTaiizor.Controls.ParrotButton btnBranchShow;
-        private ReaLTaiizor.Controls.ParrotButton btnBranchAdd;
         private Panel mainBranch;
     }
 }

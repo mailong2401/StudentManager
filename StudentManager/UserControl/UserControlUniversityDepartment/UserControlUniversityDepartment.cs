@@ -15,15 +15,12 @@ namespace StudentManager
         public UserControlUD()
         {
             InitializeComponent();
+            mainUD.Controls.Clear();
+            UserControlUDShow ucUDS = new UserControlUDShow();
+            ucUDS.Dock = DockStyle.Fill;
+            mainUD.Controls.Add(ucUDS);
         }
 
-        private void btnUDAdd_Click(object sender, EventArgs e)
-        {
-            mainUD.Controls.Clear();
-            UserControlUDAdd ucUDA = new UserControlUDAdd();
-            ucUDA.Dock = DockStyle.Fill;
-            mainUD.Controls.Add(ucUDA);
-        }
 
         private void btnUDShow_Click(object sender, EventArgs e)
         {
@@ -31,14 +28,6 @@ namespace StudentManager
             UserControlUDShow ucUDS = new UserControlUDShow();
             ucUDS.Dock = DockStyle.Fill;
             mainUD.Controls.Add(ucUDS);
-        }
-
-        private void btnUDSearch_Click(object sender, EventArgs e)
-        {
-            mainUD.Controls.Clear();
-            UserControlUDSearch ucUDSr = new UserControlUDSearch();
-            ucUDSr.Dock = DockStyle.Fill;
-            mainUD.Controls.Add(ucUDSr);
         }
     }
 }

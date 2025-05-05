@@ -29,11 +29,8 @@
         private void InitializeComponent()
         {
             exampleBox = new ReaLTaiizor.Controls.CyberGroupBox();
-            lbdate = new Label();
-            lbphone = new Label();
-            lbname = new Label();
-            lbid = new Label();
-            lbkhoa = new Label();
+            lbnamekhoa = new Label();
+            lbidkhoa = new Label();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             exampleBox.SuspendLayout();
@@ -55,11 +52,8 @@
             exampleBox.ColorLighting = Color.FromArgb(29, 200, 238);
             exampleBox.ColorPen_1 = Color.FromArgb(37, 52, 68);
             exampleBox.ColorPen_2 = Color.FromArgb(41, 63, 86);
-            exampleBox.Controls.Add(lbdate);
-            exampleBox.Controls.Add(lbphone);
-            exampleBox.Controls.Add(lbname);
-            exampleBox.Controls.Add(lbid);
-            exampleBox.Controls.Add(lbkhoa);
+            exampleBox.Controls.Add(lbnamekhoa);
+            exampleBox.Controls.Add(lbidkhoa);
             exampleBox.CyberGroupBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
             exampleBox.Dock = DockStyle.Left;
             exampleBox.ForeColor = Color.FromArgb(245, 245, 245);
@@ -72,77 +66,48 @@
             exampleBox.RGB = false;
             exampleBox.Rounding = true;
             exampleBox.RoundingInt = 60;
-            exampleBox.Size = new Size(1402, 41);
+            exampleBox.Size = new Size(891, 41);
             exampleBox.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             exampleBox.TabIndex = 29;
             exampleBox.Tag = "Cyber";
             exampleBox.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             exampleBox.Timer_RGB = 300;
             // 
-            // lbdate
+            // lbnamekhoa
             // 
-            lbdate.AutoSize = true;
-            lbdate.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            lbdate.Location = new Point(1000, 5);
-            lbdate.Name = "lbdate";
-            lbdate.Size = new Size(111, 30);
-            lbdate.TabIndex = 6;
-            lbdate.Text = "1/1/2015";
+            lbnamekhoa.AutoSize = true;
+            lbnamekhoa.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            lbnamekhoa.Location = new Point(300, 5);
+            lbnamekhoa.Name = "lbnamekhoa";
+            lbnamekhoa.Size = new Size(143, 30);
+            lbnamekhoa.TabIndex = 1;
+            lbnamekhoa.Text = "1298731212";
             // 
-            // lbphone
+            // lbidkhoa
             // 
-            lbphone.AutoSize = true;
-            lbphone.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            lbphone.Location = new Point(800, 5);
-            lbphone.Name = "lbphone";
-            lbphone.Size = new Size(143, 30);
-            lbphone.TabIndex = 5;
-            lbphone.Text = "0901234567";
-            // 
-            // lbname
-            // 
-            lbname.AutoSize = true;
-            lbname.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            lbname.Location = new Point(500, 5);
-            lbname.Name = "lbname";
-            lbname.Size = new Size(187, 30);
-            lbname.TabIndex = 2;
-            lbname.Text = "Mai Dương Long";
-            // 
-            // lbid
-            // 
-            lbid.AutoSize = true;
-            lbid.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            lbid.Location = new Point(300, 5);
-            lbid.Name = "lbid";
-            lbid.Size = new Size(143, 30);
-            lbid.TabIndex = 1;
-            lbid.Text = "1298731212";
-            // 
-            // lbkhoa
-            // 
-            lbkhoa.AutoSize = true;
-            lbkhoa.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            lbkhoa.Location = new Point(10, 5);
-            lbkhoa.Name = "lbkhoa";
-            lbkhoa.Size = new Size(273, 30);
-            lbkhoa.TabIndex = 0;
-            lbkhoa.Text = "Viện Công nghệ Việt Hàn";
+            lbidkhoa.AutoSize = true;
+            lbidkhoa.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            lbidkhoa.Location = new Point(10, 5);
+            lbidkhoa.Name = "lbidkhoa";
+            lbidkhoa.Size = new Size(273, 30);
+            lbidkhoa.TabIndex = 0;
+            lbidkhoa.Text = "Viện Công nghệ Việt Hàn";
             // 
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.remove;
-            pictureBox2.Location = new Point(1444, 5);
+            pictureBox2.Location = new Point(944, 5);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(30, 30);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 31;
             pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click_1;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.pen;
-            pictureBox1.Location = new Point(1408, 4);
+            pictureBox1.Location = new Point(908, 5);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(30, 30);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -158,7 +123,7 @@
             Controls.Add(pictureBox1);
             Controls.Add(exampleBox);
             Name = "UIItemUniversityDepartment";
-            Size = new Size(1477, 41);
+            Size = new Size(1000, 41);
             exampleBox.ResumeLayout(false);
             exampleBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -176,12 +141,9 @@
         private Label label33;
         private Label label34;
         private Label label35;
-        private Label lbphone;
-        private Label lbname;
-        private Label lbid;
-        private Label lbkhoa;
+        private Label lbnamekhoa;
+        private Label lbidkhoa;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
-        private Label lbdate;
     }
 }
