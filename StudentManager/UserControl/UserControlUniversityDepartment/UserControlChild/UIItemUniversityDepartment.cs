@@ -86,6 +86,7 @@ namespace StudentManager
                 lbidkhoa.Text = mainForm.getEditedId(); // Giả sử bạn có id đã chỉnh sửa
                 lbnamekhoa.Text = mainForm.getEditedName(); // Giả sử bạn có tên đã chỉnh sửa
                 MessageBox.Show("Sửa thành công!");
+                _parent.LoadAllUD(_parent.maKhoaT);
             }
         }
 

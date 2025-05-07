@@ -32,7 +32,6 @@ namespace StudentManager
 
         int indexCurrentTable = 0;
         int indexMinTable = 0;
-        int indexMaxTable;
         // 0 1 2 3 4 5
         public UserControlUDShow()
         {
@@ -51,7 +50,8 @@ namespace StudentManager
 
         }
 
-        string maKhoaT = "";
+        public string maKhoaT = "";
+        string tenKhoaT = "";
 
         private void btnConfirmOfUDAdd_Click_1(object sender, EventArgs e)
         {
@@ -72,7 +72,6 @@ namespace StudentManager
                 using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                 using (SQLiteDataReader reader = cmd.ExecuteReader())
                 {
-                    _universities.Clear();
                     while (reader.Read())
                     {
                         string maKhoa = reader["maKhoa"].ToString();
@@ -85,30 +84,17 @@ namespace StudentManager
                     }
                 }
             }
-
-            // Gọi createTable sau khi dữ liệu đã được tải xong
-            createTable();
-            ChangePage(0);
+            ChangePage(indexCurrentTable);
         }
 
         public void createTable()
         {
+            tablekhoa.Controls.Clear();
             if (_universities.Count == 0)
             {
-                Label emptyLabel = new Label();
-                emptyLabel.Text = "Chưa có khoa nào.";
-                emptyLabel.Dock = DockStyle.Top;
-                tablekhoa.Controls.Add(emptyLabel);
+                MessageBox.Show("Khong tim thay khoa nao");
                 return;
-            }
-
-            // Xóa các control cũ trước khi thêm mới (nếu cần load lại nhiều lần)
-            tablekhoa.Controls.Clear();
-            // 24
-            // 1  2  3  4  5  6  7  8  9  10 11 12
-            // 13 14 15 16 17 18 19 20 21 22 23 24
-            // max 30
-            // 2 * 12 + 11 = 
+            }  
             int indexMax = indexCurrentTable * 12 + 11;
             if (indexCurrentTable * 12 + 11 > _universities.Count - 1)
             {

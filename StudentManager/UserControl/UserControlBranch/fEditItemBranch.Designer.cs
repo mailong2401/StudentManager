@@ -72,7 +72,7 @@
             // btnConfirmOfUDAdd
             // 
             btnConfirmOfUDAdd.BackgroundColor = Color.DimGray;
-            btnConfirmOfUDAdd.ButtonImage = (Image)resources.GetObject("btnConfirmOfUDAdd.ButtonImage");
+            btnConfirmOfUDAdd.ButtonImage = Properties.Resources.sort;
             btnConfirmOfUDAdd.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
             btnConfirmOfUDAdd.ButtonText = "Sửa";
             btnConfirmOfUDAdd.ClickBackColor = Color.Transparent;

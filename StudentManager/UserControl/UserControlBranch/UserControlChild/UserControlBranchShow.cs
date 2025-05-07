@@ -12,8 +12,6 @@ namespace StudentManager
             public string Name { get; set; }
             public string NameKhoa { get; set; }
 
-            public Branch() { }
-
             public Branch(string id, string name, string nameKhoa)
             {
                 Id = id;
