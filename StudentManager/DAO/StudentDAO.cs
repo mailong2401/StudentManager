@@ -5,7 +5,6 @@ namespace StudentManager.DAO
 {
     public class StudentDAO
     {
-        // Lấy tất cả sinh viên
         public static List<Student> GetAll()
         {
             var list = new List<Student>();
@@ -35,8 +34,6 @@ namespace StudentManager.DAO
 
             return list;
         }
-
-        // Thêm sinh viên mới
         public static bool Insert(Student sv)
         {
             using (var conn = Database.GetConnection())

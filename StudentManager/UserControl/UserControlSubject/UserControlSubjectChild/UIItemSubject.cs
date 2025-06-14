@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StudentManager.model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace StudentManager
         public UIItemSubject()
         {
             InitializeComponent();
+        }
+        public void setItem(Subject subject)
+        {
+            lb_maMon.Text = subject.MaMon;
+            lb_tenMon.Text = subject.TenMon;
+            lb_SoTinChi.Text = subject.SoTinChi.ToString();
         }
     }
 }
