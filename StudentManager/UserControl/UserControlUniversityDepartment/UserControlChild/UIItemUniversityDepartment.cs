@@ -89,6 +89,5 @@ namespace StudentManager
                 _parent.LoadAllUD(_parent.maKhoaT);
             }
         }
-
     }
 }

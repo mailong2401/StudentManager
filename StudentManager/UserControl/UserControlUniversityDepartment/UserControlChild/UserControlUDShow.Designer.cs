@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlUDShow));
             panelMain = new Panel();
+            pbnamekhoa = new PictureBox();
             pbidkhoa = new PictureBox();
             btnSearch = new ReaLTaiizor.Controls.ParrotButton();
             cyberGroupBox1 = new ReaLTaiizor.Controls.CyberGroupBox();
@@ -47,11 +48,10 @@
             lbkhoa = new Label();
             tablekhoa = new TableLayoutPanel();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            pbnamekhoa = new PictureBox();
             panelMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pbnamekhoa).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbidkhoa).BeginInit();
             cyberGroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pbnamekhoa).BeginInit();
             SuspendLayout();
             // 
             // panelMain
@@ -77,9 +77,18 @@
             panelMain.Size = new Size(1704, 807);
             panelMain.TabIndex = 48;
             // 
+            // pbnamekhoa
+            // 
+            pbnamekhoa.Location = new Point(574, 157);
+            pbnamekhoa.Name = "pbnamekhoa";
+            pbnamekhoa.Size = new Size(24, 24);
+            pbnamekhoa.SizeMode = PictureBoxSizeMode.Zoom;
+            pbnamekhoa.TabIndex = 63;
+            pbnamekhoa.TabStop = false;
+            // 
             // pbidkhoa
             // 
-            pbidkhoa.Location = new Point(155, 147);
+            pbidkhoa.Location = new Point(168, 157);
             pbidkhoa.Name = "pbidkhoa";
             pbidkhoa.Size = new Size(24, 24);
             pbidkhoa.SizeMode = PictureBoxSizeMode.Zoom;
@@ -153,7 +162,7 @@
             inputidKhoa.Location = new Point(16, 11);
             inputidKhoa.Margin = new Padding(3, 0, 3, 0);
             inputidKhoa.Name = "inputidKhoa";
-            inputidKhoa.PlaceholderText = "Nhập mã khoa";
+            inputidKhoa.PlaceholderText = "Nhập tên khoa";
             inputidKhoa.Size = new Size(339, 38);
             inputidKhoa.TabIndex = 4;
             // 
@@ -171,7 +180,7 @@
             page6.HoverBackgroundColor = Color.FromArgb(225, 225, 225);
             page6.HoverTextColor = Color.DodgerBlue;
             page6.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            page6.Location = new Point(693, 763);
+            page6.Location = new Point(828, 767);
             page6.Name = "page6";
             page6.Size = new Size(32, 32);
             page6.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
@@ -194,7 +203,7 @@
             page5.HoverBackgroundColor = Color.FromArgb(225, 225, 225);
             page5.HoverTextColor = Color.DodgerBlue;
             page5.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            page5.Location = new Point(655, 763);
+            page5.Location = new Point(790, 767);
             page5.Name = "page5";
             page5.Size = new Size(32, 32);
             page5.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
@@ -217,7 +226,7 @@
             page4.HoverBackgroundColor = Color.FromArgb(225, 225, 225);
             page4.HoverTextColor = Color.DodgerBlue;
             page4.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            page4.Location = new Point(617, 763);
+            page4.Location = new Point(752, 767);
             page4.Name = "page4";
             page4.Size = new Size(32, 32);
             page4.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
@@ -240,7 +249,7 @@
             page2.HoverBackgroundColor = Color.FromArgb(225, 225, 225);
             page2.HoverTextColor = Color.DodgerBlue;
             page2.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            page2.Location = new Point(541, 763);
+            page2.Location = new Point(676, 767);
             page2.Name = "page2";
             page2.Size = new Size(32, 32);
             page2.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
@@ -263,7 +272,7 @@
             page3.HoverBackgroundColor = Color.FromArgb(225, 225, 225);
             page3.HoverTextColor = Color.DodgerBlue;
             page3.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            page3.Location = new Point(579, 763);
+            page3.Location = new Point(714, 767);
             page3.Name = "page3";
             page3.Size = new Size(32, 32);
             page3.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
@@ -286,7 +295,7 @@
             page1.HoverBackgroundColor = Color.FromArgb(225, 225, 225);
             page1.HoverTextColor = Color.DodgerBlue;
             page1.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            page1.Location = new Point(503, 763);
+            page1.Location = new Point(638, 767);
             page1.Name = "page1";
             page1.Size = new Size(32, 32);
             page1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
@@ -309,7 +318,7 @@
             pageLeft.HoverBackgroundColor = Color.FromArgb(225, 225, 225);
             pageLeft.HoverTextColor = Color.DodgerBlue;
             pageLeft.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            pageLeft.Location = new Point(460, 763);
+            pageLeft.Location = new Point(600, 767);
             pageLeft.Name = "pageLeft";
             pageLeft.Size = new Size(32, 32);
             pageLeft.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
@@ -332,7 +341,7 @@
             pageRight.HoverBackgroundColor = Color.FromArgb(225, 225, 225);
             pageRight.HoverTextColor = Color.DodgerBlue;
             pageRight.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            pageRight.Location = new Point(737, 763);
+            pageRight.Location = new Point(866, 767);
             pageRight.Name = "pageRight";
             pageRight.Size = new Size(32, 32);
             pageRight.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
@@ -358,7 +367,7 @@
             btnConfirmOfUDAdd.Location = new Point(1239, 24);
             btnConfirmOfUDAdd.Name = "btnConfirmOfUDAdd";
             btnConfirmOfUDAdd.RightToLeft = RightToLeft.No;
-            btnConfirmOfUDAdd.Size = new Size(185, 50);
+            btnConfirmOfUDAdd.Size = new Size(159, 50);
             btnConfirmOfUDAdd.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             btnConfirmOfUDAdd.TabIndex = 51;
             btnConfirmOfUDAdd.TextColor = Color.White;
@@ -371,7 +380,7 @@
             lbnamekhoa.AutoSize = true;
             lbnamekhoa.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
             lbnamekhoa.ForeColor = SystemColors.ControlDark;
-            lbnamekhoa.Location = new Point(439, 141);
+            lbnamekhoa.Location = new Point(461, 151);
             lbnamekhoa.Name = "lbnamekhoa";
             lbnamekhoa.Size = new Size(107, 30);
             lbnamekhoa.TabIndex = 50;
@@ -385,7 +394,7 @@
             lbkhoa.ForeColor = SystemColors.ControlDark;
             lbkhoa.Image = Properties.Resources.down_chevron;
             lbkhoa.ImageAlign = ContentAlignment.MiddleRight;
-            lbkhoa.Location = new Point(47, 141);
+            lbkhoa.Location = new Point(60, 151);
             lbkhoa.Name = "lbkhoa";
             lbkhoa.Size = new Size(102, 30);
             lbkhoa.TabIndex = 48;
@@ -414,15 +423,6 @@
             tablekhoa.Size = new Size(1483, 564);
             tablekhoa.TabIndex = 49;
             // 
-            // pbnamekhoa
-            // 
-            pbnamekhoa.Location = new Point(552, 147);
-            pbnamekhoa.Name = "pbnamekhoa";
-            pbnamekhoa.Size = new Size(24, 24);
-            pbnamekhoa.SizeMode = PictureBoxSizeMode.Zoom;
-            pbnamekhoa.TabIndex = 63;
-            pbnamekhoa.TabStop = false;
-            // 
             // UserControlUDShow
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -433,10 +433,10 @@
             Size = new Size(1820, 813);
             panelMain.ResumeLayout(false);
             panelMain.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pbnamekhoa).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbidkhoa).EndInit();
             cyberGroupBox1.ResumeLayout(false);
             cyberGroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pbnamekhoa).EndInit();
             ResumeLayout(false);
         }
 

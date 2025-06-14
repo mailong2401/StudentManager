@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StudentManager.model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,19 +17,16 @@ namespace StudentManager
         {
             InitializeComponent();
         }
-        public void setItem(String id, String name, String date, String render, String dress, String phone, String dclass)
+        public void setItem(Student student)
         {
-            lbid.Text = id;
-            lbname.Text = name;
-            lbdate.Text = date;
-            lbrender.Text = render;
-            lbdress.Text = dress;
-            lbphone.Text = phone;
+            lbid.Text = student.MSSV.ToString();
+            lbname.Text = student.HoTen;
+            lbdate.Text = student.NgaySinh; // hoặc student.BirthDate.ToShortDateString()
+            lbrender.Text = student.GioiTinh;
+            lbdress.Text = student.DiaChi;
+            lbphone.Text = student.SoDienThoai;
+            lbclass.Text = student.MaLop;
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

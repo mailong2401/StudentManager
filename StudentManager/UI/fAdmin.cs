@@ -43,7 +43,7 @@ namespace StudentManager
         }
         private void btnSinhVien_Click(object sender, EventArgs e)
         {
-            LoadUserControl(new UserControlStudent(),4);
+            LoadUserControl(new UserControlStudentShow(),4);
         }
         private void btnThongKe_Click(object sender, EventArgs e)
         {
@@ -57,7 +57,7 @@ namespace StudentManager
 
         private void btnDiem_Click(object sender, EventArgs e)
         {
-            LoadUserControl(new UserControlScore(),5);
+            LoadUserControl(new UserControlScoreShow(),5);
         }
     }
 }

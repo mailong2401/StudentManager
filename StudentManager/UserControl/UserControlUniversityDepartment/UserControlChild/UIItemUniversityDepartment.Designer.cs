@@ -77,7 +77,7 @@
             // 
             lbnamekhoa.AutoSize = true;
             lbnamekhoa.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            lbnamekhoa.Location = new Point(287, 5);
+            lbnamekhoa.Location = new Point(411, 5);
             lbnamekhoa.Name = "lbnamekhoa";
             lbnamekhoa.Size = new Size(273, 30);
             lbnamekhoa.TabIndex = 1;

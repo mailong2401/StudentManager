@@ -1,31 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using StudentManager.model;
 using System.Data.SQLite;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+
 
 namespace StudentManager
 {
     public partial class UserControlUDShow : UserControl
     {
-        public class UniversityDepartment
-        {
-            public string Id { get; set; }
-            public string Name { get; set; }
-
-            public UniversityDepartment() { }
-
-            public UniversityDepartment(string id, string name)
-            {
-                Id = id;
-                Name = name;
-            }
-        }
+        
 
         List<UniversityDepartment> _universities = new List<UniversityDepartment>();
         // Chuỗi kết nối SQLite

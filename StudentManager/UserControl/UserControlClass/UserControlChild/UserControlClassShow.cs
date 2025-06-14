@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using StudentManager.model;
 using System.Data.SQLite;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+
 
 namespace StudentManager
 {
@@ -16,23 +9,7 @@ namespace StudentManager
         // Chuỗi kết nối SQLite
         string connectionString = "Data Source=mydb.sqlite;Version=3;";
 
-        public class Class
-        {
-            public string Id { get; set; }
-            public string Name { get; set; }
-            public string NameKhoa { get; set; }
-            public string nameNganh { get; set; }
-
-            public Class() { }
-
-            public Class(string id, string name, string nameNganh, string nameKhoa)
-            {
-                this.Id = id;
-                this.Name = name;
-                this.NameKhoa = nameKhoa;
-                this.nameNganh = nameNganh;
-            }
-        }
+        
         List<Class> classes = new List<Class>();
         int indexCurrentTable = 0;
         int indexMinTable = 0;

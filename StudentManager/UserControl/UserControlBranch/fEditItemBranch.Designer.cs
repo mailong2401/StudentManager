@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fEditItemBranch));
             parrotButton1 = new ReaLTaiizor.Controls.ParrotButton();
             btnConfirmOfUDAdd = new ReaLTaiizor.Controls.ParrotButton();
             cyberGroupBox1 = new ReaLTaiizor.Controls.CyberGroupBox();
@@ -48,7 +47,7 @@
             // parrotButton1
             // 
             parrotButton1.BackgroundColor = Color.DimGray;
-            parrotButton1.ButtonImage = (Image)resources.GetObject("parrotButton1.ButtonImage");
+            parrotButton1.ButtonImage = Properties.Resources.bin__1_;
             parrotButton1.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
             parrotButton1.ButtonText = "Xóa";
             parrotButton1.ClickBackColor = Color.Transparent;
@@ -72,7 +71,7 @@
             // btnConfirmOfUDAdd
             // 
             btnConfirmOfUDAdd.BackgroundColor = Color.DimGray;
-            btnConfirmOfUDAdd.ButtonImage = Properties.Resources.sort;
+            btnConfirmOfUDAdd.ButtonImage = Properties.Resources.pen;
             btnConfirmOfUDAdd.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
             btnConfirmOfUDAdd.ButtonText = "Sửa";
             btnConfirmOfUDAdd.ClickBackColor = Color.Transparent;

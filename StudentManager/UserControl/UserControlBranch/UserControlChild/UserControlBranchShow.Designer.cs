@@ -33,14 +33,6 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            cyberGroupBox1 = new ReaLTaiizor.Controls.CyberGroupBox();
-            inputidNganh = new TextBox();
-            lbCodeKhoa = new Label();
-            cyberGroupBox4 = new ReaLTaiizor.Controls.CyberGroupBox();
-            inputNameNganh = new TextBox();
-            lbNameNganh = new Label();
-            cyberGroupBox2 = new ReaLTaiizor.Controls.CyberGroupBox();
-            comboboxkhoa = new StudentManager.CustomControl.BorderlessComboBox();
             btnConfirmOfUDAdd = new ReaLTaiizor.Controls.ParrotButton();
             page6 = new ReaLTaiizor.Controls.ParrotButton();
             page5 = new ReaLTaiizor.Controls.ParrotButton();
@@ -50,16 +42,17 @@
             page1 = new ReaLTaiizor.Controls.ParrotButton();
             pageLeft = new ReaLTaiizor.Controls.ParrotButton();
             pageRight = new ReaLTaiizor.Controls.ParrotButton();
+            btnSearch = new ReaLTaiizor.Controls.ParrotButton();
+            cyberGroupBox1 = new ReaLTaiizor.Controls.CyberGroupBox();
+            inputidKhoa = new TextBox();
             cyberGroupBox1.SuspendLayout();
-            cyberGroupBox4.SuspendLayout();
-            cyberGroupBox2.SuspendLayout();
             SuspendLayout();
             // 
             // tbNganh
             // 
             tbNganh.ColumnCount = 1;
             tbNganh.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tbNganh.Location = new Point(47, 200);
+            tbNganh.Location = new Point(47, 184);
             tbNganh.Name = "tbNganh";
             tbNganh.RowCount = 12;
             tbNganh.RowStyles.Add(new RowStyle(SizeType.Percent, 8.333332F));
@@ -82,7 +75,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
             label1.ForeColor = SystemColors.ControlDark;
-            label1.Location = new Point(60, 157);
+            label1.Location = new Point(60, 151);
             label1.Name = "label1";
             label1.Size = new Size(117, 30);
             label1.TabIndex = 22;
@@ -93,7 +86,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
             label2.ForeColor = SystemColors.ControlDark;
-            label2.Location = new Point(210, 157);
+            label2.Location = new Point(342, 151);
             label2.Name = "label2";
             label2.Size = new Size(120, 30);
             label2.TabIndex = 23;
@@ -104,173 +97,11 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
             label3.ForeColor = SystemColors.ControlDark;
-            label3.Location = new Point(510, 157);
+            label3.Location = new Point(790, 151);
             label3.Name = "label3";
-            label3.Size = new Size(158, 30);
+            label3.Size = new Size(105, 30);
             label3.TabIndex = 24;
-            label3.Text = "Tên khoa/viện";
-            // 
-            // cyberGroupBox1
-            // 
-            cyberGroupBox1.Alpha = 20;
-            cyberGroupBox1.BackColor = Color.Transparent;
-            cyberGroupBox1.Background = true;
-            cyberGroupBox1.Background_WidthPen = 3F;
-            cyberGroupBox1.BackgroundPen = true;
-            cyberGroupBox1.ColorBackground = Color.FromArgb(37, 52, 68);
-            cyberGroupBox1.ColorBackground_1 = Color.FromArgb(37, 52, 68);
-            cyberGroupBox1.ColorBackground_2 = Color.FromArgb(41, 63, 86);
-            cyberGroupBox1.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
-            cyberGroupBox1.ColorLighting = Color.FromArgb(29, 200, 238);
-            cyberGroupBox1.ColorPen_1 = Color.FromArgb(37, 52, 68);
-            cyberGroupBox1.ColorPen_2 = Color.FromArgb(41, 63, 86);
-            cyberGroupBox1.Controls.Add(inputidNganh);
-            cyberGroupBox1.CyberGroupBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
-            cyberGroupBox1.ForeColor = Color.FromArgb(245, 245, 245);
-            cyberGroupBox1.Lighting = false;
-            cyberGroupBox1.LinearGradient_Background = false;
-            cyberGroupBox1.LinearGradientPen = false;
-            cyberGroupBox1.Location = new Point(220, 15);
-            cyberGroupBox1.Name = "cyberGroupBox1";
-            cyberGroupBox1.PenWidth = 15;
-            cyberGroupBox1.RGB = false;
-            cyberGroupBox1.Rounding = true;
-            cyberGroupBox1.RoundingInt = 60;
-            cyberGroupBox1.Size = new Size(300, 53);
-            cyberGroupBox1.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            cyberGroupBox1.TabIndex = 37;
-            cyberGroupBox1.Tag = "Cyber";
-            cyberGroupBox1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            cyberGroupBox1.Timer_RGB = 300;
-            // 
-            // inputidNganh
-            // 
-            inputidNganh.BackColor = Color.FromArgb(37, 52, 68);
-            inputidNganh.BorderStyle = BorderStyle.None;
-            inputidNganh.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
-            inputidNganh.ForeColor = Color.White;
-            inputidNganh.Location = new Point(12, 9);
-            inputidNganh.Margin = new Padding(3, 0, 3, 0);
-            inputidNganh.Name = "inputidNganh";
-            inputidNganh.PlaceholderText = "Nhập mã Ngành";
-            inputidNganh.Size = new Size(270, 32);
-            inputidNganh.TabIndex = 4;
-            // 
-            // lbCodeKhoa
-            // 
-            lbCodeKhoa.AutoSize = true;
-            lbCodeKhoa.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
-            lbCodeKhoa.ForeColor = SystemColors.Control;
-            lbCodeKhoa.Location = new Point(20, 15);
-            lbCodeKhoa.Name = "lbCodeKhoa";
-            lbCodeKhoa.Size = new Size(166, 41);
-            lbCodeKhoa.TabIndex = 38;
-            lbCodeKhoa.Text = "Mã Ngành";
-            // 
-            // cyberGroupBox4
-            // 
-            cyberGroupBox4.Alpha = 20;
-            cyberGroupBox4.BackColor = Color.Transparent;
-            cyberGroupBox4.Background = true;
-            cyberGroupBox4.Background_WidthPen = 3F;
-            cyberGroupBox4.BackgroundPen = true;
-            cyberGroupBox4.ColorBackground = Color.FromArgb(37, 52, 68);
-            cyberGroupBox4.ColorBackground_1 = Color.FromArgb(37, 52, 68);
-            cyberGroupBox4.ColorBackground_2 = Color.FromArgb(41, 63, 86);
-            cyberGroupBox4.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
-            cyberGroupBox4.ColorLighting = Color.FromArgb(29, 200, 238);
-            cyberGroupBox4.ColorPen_1 = Color.FromArgb(37, 52, 68);
-            cyberGroupBox4.ColorPen_2 = Color.FromArgb(41, 63, 86);
-            cyberGroupBox4.Controls.Add(inputNameNganh);
-            cyberGroupBox4.CyberGroupBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
-            cyberGroupBox4.ForeColor = Color.FromArgb(245, 245, 245);
-            cyberGroupBox4.Lighting = false;
-            cyberGroupBox4.LinearGradient_Background = false;
-            cyberGroupBox4.LinearGradientPen = false;
-            cyberGroupBox4.Location = new Point(760, 15);
-            cyberGroupBox4.Name = "cyberGroupBox4";
-            cyberGroupBox4.PenWidth = 15;
-            cyberGroupBox4.RGB = false;
-            cyberGroupBox4.Rounding = true;
-            cyberGroupBox4.RoundingInt = 60;
-            cyberGroupBox4.Size = new Size(300, 53);
-            cyberGroupBox4.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            cyberGroupBox4.TabIndex = 35;
-            cyberGroupBox4.Tag = "Cyber";
-            cyberGroupBox4.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            cyberGroupBox4.Timer_RGB = 300;
-            // 
-            // inputNameNganh
-            // 
-            inputNameNganh.BackColor = Color.FromArgb(37, 52, 68);
-            inputNameNganh.BorderStyle = BorderStyle.None;
-            inputNameNganh.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
-            inputNameNganh.ForeColor = Color.White;
-            inputNameNganh.Location = new Point(15, 6);
-            inputNameNganh.Margin = new Padding(3, 0, 3, 0);
-            inputNameNganh.Name = "inputNameNganh";
-            inputNameNganh.PlaceholderText = "Nhập tên Ngành";
-            inputNameNganh.Size = new Size(270, 32);
-            inputNameNganh.TabIndex = 4;
-            // 
-            // lbNameNganh
-            // 
-            lbNameNganh.AutoSize = true;
-            lbNameNganh.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
-            lbNameNganh.ForeColor = SystemColors.Control;
-            lbNameNganh.Location = new Point(560, 15);
-            lbNameNganh.Name = "lbNameNganh";
-            lbNameNganh.Size = new Size(170, 41);
-            lbNameNganh.TabIndex = 36;
-            lbNameNganh.Text = "Tên Ngành";
-            // 
-            // cyberGroupBox2
-            // 
-            cyberGroupBox2.Alpha = 20;
-            cyberGroupBox2.BackColor = Color.Transparent;
-            cyberGroupBox2.Background = true;
-            cyberGroupBox2.Background_WidthPen = 3F;
-            cyberGroupBox2.BackgroundPen = true;
-            cyberGroupBox2.ColorBackground = Color.FromArgb(37, 52, 68);
-            cyberGroupBox2.ColorBackground_1 = Color.FromArgb(37, 52, 68);
-            cyberGroupBox2.ColorBackground_2 = Color.FromArgb(41, 63, 86);
-            cyberGroupBox2.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
-            cyberGroupBox2.ColorLighting = Color.FromArgb(29, 200, 238);
-            cyberGroupBox2.ColorPen_1 = Color.FromArgb(37, 52, 68);
-            cyberGroupBox2.ColorPen_2 = Color.FromArgb(41, 63, 86);
-            cyberGroupBox2.Controls.Add(comboboxkhoa);
-            cyberGroupBox2.CyberGroupBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
-            cyberGroupBox2.ForeColor = Color.FromArgb(245, 245, 245);
-            cyberGroupBox2.Lighting = false;
-            cyberGroupBox2.LinearGradient_Background = false;
-            cyberGroupBox2.LinearGradientPen = false;
-            cyberGroupBox2.Location = new Point(1235, 15);
-            cyberGroupBox2.Name = "cyberGroupBox2";
-            cyberGroupBox2.PenWidth = 15;
-            cyberGroupBox2.RGB = false;
-            cyberGroupBox2.Rounding = true;
-            cyberGroupBox2.RoundingInt = 60;
-            cyberGroupBox2.Size = new Size(310, 53);
-            cyberGroupBox2.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            cyberGroupBox2.TabIndex = 37;
-            cyberGroupBox2.Tag = "Cyber";
-            cyberGroupBox2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            cyberGroupBox2.Timer_RGB = 300;
-            // 
-            // comboboxkhoa
-            // 
-            comboboxkhoa.BackColor = Color.FromArgb(37, 52, 68);
-            comboboxkhoa.DrawMode = DrawMode.OwnerDrawFixed;
-            comboboxkhoa.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboboxkhoa.FlatStyle = FlatStyle.Flat;
-            comboboxkhoa.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            comboboxkhoa.ForeColor = Color.White;
-            comboboxkhoa.FormattingEnabled = true;
-            comboboxkhoa.Location = new Point(18, 6);
-            comboboxkhoa.Name = "comboboxkhoa";
-            comboboxkhoa.Placeholder = "Chọn một mục...";
-            comboboxkhoa.Size = new Size(277, 37);
-            comboboxkhoa.TabIndex = 39;
+            label3.Text = "Tên khoa";
             // 
             // btnConfirmOfUDAdd
             // 
@@ -286,7 +117,7 @@
             btnConfirmOfUDAdd.HoverBackgroundColor = Color.Lime;
             btnConfirmOfUDAdd.HoverTextColor = Color.White;
             btnConfirmOfUDAdd.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            btnConfirmOfUDAdd.Location = new Point(34, 83);
+            btnConfirmOfUDAdd.Location = new Point(1239, 24);
             btnConfirmOfUDAdd.Name = "btnConfirmOfUDAdd";
             btnConfirmOfUDAdd.RightToLeft = RightToLeft.No;
             btnConfirmOfUDAdd.Size = new Size(159, 50);
@@ -455,7 +286,7 @@
             pageLeft.HoverBackgroundColor = Color.FromArgb(225, 225, 225);
             pageLeft.HoverTextColor = Color.DodgerBlue;
             pageLeft.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            pageLeft.Location = new Point(595, 767);
+            pageLeft.Location = new Point(600, 767);
             pageLeft.Name = "pageLeft";
             pageLeft.Size = new Size(32, 32);
             pageLeft.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
@@ -479,7 +310,7 @@
             pageRight.HoverBackgroundColor = Color.FromArgb(225, 225, 225);
             pageRight.HoverTextColor = Color.DodgerBlue;
             pageRight.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            pageRight.Location = new Point(872, 767);
+            pageRight.Location = new Point(866, 767);
             pageRight.Name = "pageRight";
             pageRight.Size = new Size(32, 32);
             pageRight.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
@@ -489,11 +320,83 @@
             pageRight.Vertical_Alignment = StringAlignment.Center;
             pageRight.Click += pageRight_Click;
             // 
+            // btnSearch
+            // 
+            btnSearch.BackgroundColor = Color.DimGray;
+            btnSearch.ButtonImage = Properties.Resources.loupe;
+            btnSearch.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
+            btnSearch.ButtonText = "Tìm kiếm";
+            btnSearch.ClickBackColor = Color.Transparent;
+            btnSearch.ClickTextColor = Color.White;
+            btnSearch.CornerRadius = 25;
+            btnSearch.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            btnSearch.Horizontal_Alignment = StringAlignment.Center;
+            btnSearch.HoverBackgroundColor = Color.Lime;
+            btnSearch.HoverTextColor = Color.White;
+            btnSearch.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
+            btnSearch.Location = new Point(655, 90);
+            btnSearch.Name = "btnSearch";
+            btnSearch.RightToLeft = RightToLeft.No;
+            btnSearch.Size = new Size(185, 50);
+            btnSearch.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            btnSearch.TabIndex = 76;
+            btnSearch.TextColor = Color.White;
+            btnSearch.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            btnSearch.Vertical_Alignment = StringAlignment.Center;
+            // 
+            // cyberGroupBox1
+            // 
+            cyberGroupBox1.Alpha = 20;
+            cyberGroupBox1.BackColor = Color.Transparent;
+            cyberGroupBox1.Background = true;
+            cyberGroupBox1.Background_WidthPen = 3F;
+            cyberGroupBox1.BackgroundPen = true;
+            cyberGroupBox1.ColorBackground = Color.FromArgb(37, 52, 68);
+            cyberGroupBox1.ColorBackground_1 = Color.FromArgb(37, 52, 68);
+            cyberGroupBox1.ColorBackground_2 = Color.FromArgb(41, 63, 86);
+            cyberGroupBox1.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
+            cyberGroupBox1.ColorLighting = Color.FromArgb(29, 200, 238);
+            cyberGroupBox1.ColorPen_1 = Color.FromArgb(37, 52, 68);
+            cyberGroupBox1.ColorPen_2 = Color.FromArgb(41, 63, 86);
+            cyberGroupBox1.Controls.Add(inputidKhoa);
+            cyberGroupBox1.CyberGroupBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
+            cyberGroupBox1.ForeColor = Color.FromArgb(245, 245, 245);
+            cyberGroupBox1.Lighting = false;
+            cyberGroupBox1.LinearGradient_Background = false;
+            cyberGroupBox1.LinearGradientPen = false;
+            cyberGroupBox1.Location = new Point(566, 11);
+            cyberGroupBox1.Name = "cyberGroupBox1";
+            cyberGroupBox1.PenWidth = 15;
+            cyberGroupBox1.RGB = false;
+            cyberGroupBox1.Rounding = true;
+            cyberGroupBox1.RoundingInt = 60;
+            cyberGroupBox1.Size = new Size(377, 63);
+            cyberGroupBox1.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            cyberGroupBox1.TabIndex = 75;
+            cyberGroupBox1.Tag = "Cyber";
+            cyberGroupBox1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            cyberGroupBox1.Timer_RGB = 300;
+            // 
+            // inputidKhoa
+            // 
+            inputidKhoa.BackColor = Color.FromArgb(37, 52, 68);
+            inputidKhoa.BorderStyle = BorderStyle.None;
+            inputidKhoa.Font = new Font("Segoe UI", 17F, FontStyle.Bold);
+            inputidKhoa.ForeColor = Color.White;
+            inputidKhoa.Location = new Point(16, 11);
+            inputidKhoa.Margin = new Padding(3, 0, 3, 0);
+            inputidKhoa.Name = "inputidKhoa";
+            inputidKhoa.PlaceholderText = "Nhập tên ngành";
+            inputidKhoa.Size = new Size(339, 38);
+            inputidKhoa.TabIndex = 4;
+            // 
             // UserControlBranchShow
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(41, 44, 61);
+            Controls.Add(btnSearch);
+            Controls.Add(cyberGroupBox1);
             Controls.Add(page6);
             Controls.Add(page5);
             Controls.Add(page4);
@@ -503,11 +406,6 @@
             Controls.Add(pageLeft);
             Controls.Add(pageRight);
             Controls.Add(btnConfirmOfUDAdd);
-            Controls.Add(cyberGroupBox2);
-            Controls.Add(cyberGroupBox1);
-            Controls.Add(lbCodeKhoa);
-            Controls.Add(cyberGroupBox4);
-            Controls.Add(lbNameNganh);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -516,9 +414,6 @@
             Size = new Size(1575, 813);
             cyberGroupBox1.ResumeLayout(false);
             cyberGroupBox1.PerformLayout();
-            cyberGroupBox4.ResumeLayout(false);
-            cyberGroupBox4.PerformLayout();
-            cyberGroupBox2.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -529,14 +424,6 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private ReaLTaiizor.Controls.CyberGroupBox cyberGroupBox1;
-        private TextBox inputidNganh;
-        private Label lbCodeKhoa;
-        private ReaLTaiizor.Controls.CyberGroupBox cyberGroupBox4;
-        private TextBox inputNameNganh;
-        private Label lbNameNganh;
-        private ReaLTaiizor.Controls.CyberGroupBox cyberGroupBox2;
-        private CustomControl.BorderlessComboBox comboboxkhoa;
         private ReaLTaiizor.Controls.ParrotButton btnConfirmOfUDAdd;
         private ReaLTaiizor.Controls.ParrotButton page6;
         private ReaLTaiizor.Controls.ParrotButton page5;
@@ -546,5 +433,8 @@
         private ReaLTaiizor.Controls.ParrotButton page1;
         private ReaLTaiizor.Controls.ParrotButton pageLeft;
         private ReaLTaiizor.Controls.ParrotButton pageRight;
+        private ReaLTaiizor.Controls.ParrotButton btnSearch;
+        private ReaLTaiizor.Controls.CyberGroupBox cyberGroupBox1;
+        private TextBox inputidKhoa;
     }
 }

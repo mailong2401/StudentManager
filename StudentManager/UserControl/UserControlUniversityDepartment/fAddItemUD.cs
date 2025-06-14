@@ -52,6 +52,7 @@ namespace StudentManager
                     inputidKhoa.Text = "";
                     inputNameKhoa.Text = "";
                     _parent.LoadAllUD(""); // Gọi lại phương thức của đối tượng cha
+                    this.Close();
                 }
                 catch (SQLiteException ex)
                 {

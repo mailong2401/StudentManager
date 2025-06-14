@@ -44,9 +44,9 @@
             // btnexit
             // 
             btnexit.BackgroundColor = Color.DimGray;
-            btnexit.ButtonImage = (Image)resources.GetObject("btnexit.ButtonImage");
+            btnexit.ButtonImage = Properties.Resources.bin__1_;
             btnexit.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
-            btnexit.ButtonText = "Thoát";
+            btnexit.ButtonText = "Xóa trắng";
             btnexit.ClickBackColor = Color.Transparent;
             btnexit.ClickTextColor = Color.White;
             btnexit.CornerRadius = 25;
@@ -58,7 +58,7 @@
             btnexit.Location = new Point(127, 316);
             btnexit.Name = "btnexit";
             btnexit.RightToLeft = RightToLeft.No;
-            btnexit.Size = new Size(168, 57);
+            btnexit.Size = new Size(227, 57);
             btnexit.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             btnexit.TabIndex = 45;
             btnexit.TextColor = Color.White;
@@ -80,10 +80,10 @@
             btnConfirmOfUDAdd.HoverBackgroundColor = Color.Lime;
             btnConfirmOfUDAdd.HoverTextColor = Color.White;
             btnConfirmOfUDAdd.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
-            btnConfirmOfUDAdd.Location = new Point(505, 316);
+            btnConfirmOfUDAdd.Location = new Point(446, 316);
             btnConfirmOfUDAdd.Name = "btnConfirmOfUDAdd";
             btnConfirmOfUDAdd.RightToLeft = RightToLeft.No;
-            btnConfirmOfUDAdd.Size = new Size(168, 57);
+            btnConfirmOfUDAdd.Size = new Size(227, 57);
             btnConfirmOfUDAdd.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             btnConfirmOfUDAdd.TabIndex = 41;
             btnConfirmOfUDAdd.TextColor = Color.White;

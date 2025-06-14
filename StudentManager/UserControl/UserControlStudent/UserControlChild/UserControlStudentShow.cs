@@ -1,67 +1,53 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Windows.Forms;
-using StudentManager.Data;
+﻿using StudentManager.DAO;
+using StudentManager.model;
 
 namespace StudentManager
 {
     public partial class UserControlStudentShow : UserControl
     {
-        
-        private List<Student> students = new List<Student>();
+
+        private List<Student> students;
+        int indexCurrentTable;
 
         public UserControlStudentShow()
         {
             InitializeComponent();
-            LoadTable();
+            students = StudentDAO.GetAll();
+            createTable();
+            indexCurrentTable = 0;
         }
 
-        private void GetStudentsFromDatabase()
+        private void createTable()
         {
-            //string connectionString = "Data Source=WINDOWS-PC\\SQLEXPRESS;Initial Catalog=QuanLySinhVien;Integrated Security=True;";
-            string connectionString = "Server=localhost;Database=qlsv;Integrated Security=True;";
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            tableStudent.Controls.Clear();
+
+            if (students.Count == 0)
             {
-                conn.Open();
-                using (SqlCommand cmd = new SqlCommand("SELECT MSSV, HoTen, NgaySinh, GioiTinh, DiaChi, SoDienThoai, MaLop FROM SinhVien", conn))
+                tableStudent.Controls.Add(new Label
                 {
-                    using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            var student = new Student
-                            {
-                                MSSV = reader["MSSV"].ToString(),
-                                HoTen = reader["HoTen"].ToString(),
-                                NgaySinh = Convert.ToDateTime(reader["NgaySinh"]),
-                                GioiTinh = reader["GioiTinh"].ToString(),
-                                DiaChi = reader["DiaChi"].ToString(),
-                                SoDienThoai = reader["SoDienThoai"].ToString(),
-                                MaLop = reader["MaLop"].ToString()
-                            };
-                            students.Add(student);
-                        }
-                    }
-                }
+                    Text = "Chưa có sinh viên nào.",
+                    Dock = DockStyle.Top,
+                    AutoSize = true
+                });
+                return;
             }
-        }
 
-        private void LoadTable()
-        {
-            foreach (var student in students)
+            int startIndex = indexCurrentTable * 12;
+            int endIndex = Math.Min(startIndex + 11, students.Count - 1);
+
+            for (int i = endIndex; i >= startIndex; i--)
             {
-                AddTable(student.MSSV, student.HoTen, student.NgaySinh.ToString("dd/MM/yyyy"),
-                         student.GioiTinh, student.DiaChi, student.SoDienThoai, student.MaLop);
-            }
-        }
+                var student = students[i];
 
-        private void AddTable(string id, string name, string date, string gender, string address, string phone, string className)
-        {
-            UIitemStudent it = new UIitemStudent();
-            it.Dock = DockStyle.Top;
-            it.setItem(id, name, date, gender, address, phone, className);
-            tableLayoutPanel1.Controls.Add(it);
+                var item = new UIitemStudent
+                {
+                    Dock = DockStyle.Top
+                };
+                item.setItem(student);
+
+                tableStudent.Controls.Add(item);
+                item.BringToFront(); // Đảm bảo hiển thị đúng thứ tự từ trên xuống
+            }
         }
     }
 }

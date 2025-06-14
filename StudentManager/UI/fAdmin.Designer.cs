@@ -119,7 +119,7 @@
             btnKhoa.BackgroundColor = Color.Transparent;
             btnKhoa.ButtonImage = Properties.Resources.university;
             btnKhoa.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.Material;
-            btnKhoa.ButtonText = "Khoa/Viện";
+            btnKhoa.ButtonText = "Khoa";
             btnKhoa.ClickBackColor = Color.FromArgb(15, 40, 45);
             btnKhoa.ClickTextColor = Color.DodgerBlue;
             btnKhoa.CornerRadius = 0;
