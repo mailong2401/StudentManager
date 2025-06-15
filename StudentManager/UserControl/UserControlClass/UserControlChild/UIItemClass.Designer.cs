@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             exampleBox = new ReaLTaiizor.Controls.CyberGroupBox();
-            lbnameKhoa = new Label();
             lbnameNganh = new Label();
             lbnamelop = new Label();
             lbmalop = new Label();
@@ -54,7 +53,6 @@
             exampleBox.ColorLighting = Color.FromArgb(29, 200, 238);
             exampleBox.ColorPen_1 = Color.FromArgb(37, 52, 68);
             exampleBox.ColorPen_2 = Color.FromArgb(41, 63, 86);
-            exampleBox.Controls.Add(lbnameKhoa);
             exampleBox.Controls.Add(lbnameNganh);
             exampleBox.Controls.Add(lbnamelop);
             exampleBox.Controls.Add(lbmalop);
@@ -77,21 +75,11 @@
             exampleBox.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             exampleBox.Timer_RGB = 300;
             // 
-            // lbnameKhoa
-            // 
-            lbnameKhoa.AutoSize = true;
-            lbnameKhoa.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            lbnameKhoa.Location = new Point(1000, 5);
-            lbnameKhoa.Name = "lbnameKhoa";
-            lbnameKhoa.Size = new Size(227, 30);
-            lbnameKhoa.TabIndex = 3;
-            lbnameKhoa.Text = "Công nghệ thông tin";
-            // 
             // lbnameNganh
             // 
             lbnameNganh.AutoSize = true;
             lbnameNganh.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            lbnameNganh.Location = new Point(700, 5);
+            lbnameNganh.Location = new Point(906, 5);
             lbnameNganh.Name = "lbnameNganh";
             lbnameNganh.Size = new Size(282, 30);
             lbnameNganh.TabIndex = 2;
@@ -101,7 +89,7 @@
             // 
             lbnamelop.AutoSize = true;
             lbnamelop.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            lbnamelop.Location = new Point(350, 5);
+            lbnamelop.Location = new Point(407, 5);
             lbnamelop.Name = "lbnamelop";
             lbnamelop.Size = new Size(246, 30);
             lbnamelop.TabIndex = 1;
@@ -170,6 +158,5 @@
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
         private Label lbnameNganh;
-        private Label lbnameKhoa;
     }
 }

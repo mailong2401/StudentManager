@@ -31,5 +31,59 @@ namespace StudentManager.DAO
 
             return list;
         }
+
+        public static bool Insert(Subject monHoc)
+        {
+            using (var conn = Database.GetConnection())
+            {
+                Database.OpenConnection(conn);
+                string sql = @"INSERT INTO MonHoc (maMon, tenMon, SoTinChi) VALUES (@maMon, @tenMon, @SoTinChi)";
+                var cmd = new SQLiteCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@maMon", monHoc.MaMon);
+                cmd.Parameters.AddWithValue("@tenMon", monHoc.TenMon);
+                cmd.Parameters.AddWithValue("@SoTinChi", monHoc.SoTinChi);
+
+                int rowsAffected = cmd.ExecuteNonQuery();
+                Database.CloseConnection(conn);
+                return rowsAffected > 0;
+            }
+        }
+
+        public static bool Delete(string maMon)
+        {
+            using (var conn = Database.GetConnection())
+            {
+                Database.OpenConnection(conn);
+                string sql = "DELETE FROM MonHoc WHERE maMon = @maMon";
+                var cmd = new SQLiteCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@maMon", maMon);
+
+                int rowsAffected = cmd.ExecuteNonQuery();
+                Database.CloseConnection(conn);
+                return rowsAffected > 0;
+            }
+        }
+
+        public static bool Update(Subject monHoc)
+        {
+            using (var conn = Database.GetConnection())
+            {
+                Database.OpenConnection(conn);
+                string sql = @"UPDATE MonHoc 
+                       SET tenMon = @tenMon, SoTinChi = @SoTinChi 
+                       WHERE maMon = @maMon";
+
+                var cmd = new SQLiteCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@tenMon", monHoc.TenMon);
+                cmd.Parameters.AddWithValue("@SoTinChi", monHoc.SoTinChi);
+                cmd.Parameters.AddWithValue("@maMon", monHoc.MaMon); // Khóa chính
+
+                int rowsAffected = cmd.ExecuteNonQuery();
+                Database.CloseConnection(conn);
+                return rowsAffected > 0;
+            }
+        }
+
+
     }
 }

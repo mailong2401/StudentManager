@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fAddSubject));
             lbCodeMon = new Label();
             cyberGroupBox4 = new ReaLTaiizor.Controls.CyberGroupBox();
             inputNameMon = new TextBox();
@@ -35,8 +36,10 @@
             inputidMon = new TextBox();
             lbNameMon = new Label();
             cyberGroupBox2 = new ReaLTaiizor.Controls.CyberGroupBox();
-            textBox1 = new TextBox();
+            inputSoTinChi = new TextBox();
             label1 = new Label();
+            btnexit = new ReaLTaiizor.Controls.ParrotButton();
+            btnConfirmOfUDAdd = new ReaLTaiizor.Controls.ParrotButton();
             cyberGroupBox4.SuspendLayout();
             cyberGroupBox1.SuspendLayout();
             cyberGroupBox2.SuspendLayout();
@@ -170,7 +173,7 @@
             cyberGroupBox2.ColorLighting = Color.FromArgb(29, 200, 238);
             cyberGroupBox2.ColorPen_1 = Color.FromArgb(37, 52, 68);
             cyberGroupBox2.ColorPen_2 = Color.FromArgb(41, 63, 86);
-            cyberGroupBox2.Controls.Add(textBox1);
+            cyberGroupBox2.Controls.Add(inputSoTinChi);
             cyberGroupBox2.CyberGroupBoxStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
             cyberGroupBox2.ForeColor = Color.FromArgb(245, 245, 245);
             cyberGroupBox2.Lighting = false;
@@ -189,18 +192,18 @@
             cyberGroupBox2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             cyberGroupBox2.Timer_RGB = 300;
             // 
-            // textBox1
+            // inputSoTinChi
             // 
-            textBox1.BackColor = Color.FromArgb(37, 52, 68);
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
-            textBox1.ForeColor = Color.White;
-            textBox1.Location = new Point(12, 9);
-            textBox1.Margin = new Padding(3, 0, 3, 0);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Nhập tín chỉ";
-            textBox1.Size = new Size(270, 32);
-            textBox1.TabIndex = 4;
+            inputSoTinChi.BackColor = Color.FromArgb(37, 52, 68);
+            inputSoTinChi.BorderStyle = BorderStyle.None;
+            inputSoTinChi.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            inputSoTinChi.ForeColor = Color.White;
+            inputSoTinChi.Location = new Point(12, 9);
+            inputSoTinChi.Margin = new Padding(3, 0, 3, 0);
+            inputSoTinChi.Name = "inputSoTinChi";
+            inputSoTinChi.PlaceholderText = "Nhập tín chỉ";
+            inputSoTinChi.Size = new Size(270, 32);
+            inputSoTinChi.TabIndex = 4;
             // 
             // label1
             // 
@@ -213,12 +216,63 @@
             label1.TabIndex = 88;
             label1.Text = "Tín chỉ";
             // 
+            // btnexit
+            // 
+            btnexit.BackgroundColor = Color.DimGray;
+            btnexit.ButtonImage = Properties.Resources.bin__1_;
+            btnexit.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
+            btnexit.ButtonText = "Xóa trắng";
+            btnexit.ClickBackColor = Color.Transparent;
+            btnexit.ClickTextColor = Color.White;
+            btnexit.CornerRadius = 25;
+            btnexit.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnexit.Horizontal_Alignment = StringAlignment.Center;
+            btnexit.HoverBackgroundColor = Color.Lime;
+            btnexit.HoverTextColor = Color.White;
+            btnexit.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
+            btnexit.Location = new Point(107, 354);
+            btnexit.Name = "btnexit";
+            btnexit.RightToLeft = RightToLeft.No;
+            btnexit.Size = new Size(227, 57);
+            btnexit.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            btnexit.TabIndex = 90;
+            btnexit.TextColor = Color.White;
+            btnexit.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            btnexit.Vertical_Alignment = StringAlignment.Center;
+            // 
+            // btnConfirmOfUDAdd
+            // 
+            btnConfirmOfUDAdd.BackgroundColor = Color.DimGray;
+            btnConfirmOfUDAdd.ButtonImage = (Image)resources.GetObject("btnConfirmOfUDAdd.ButtonImage");
+            btnConfirmOfUDAdd.ButtonStyle = ReaLTaiizor.Controls.ParrotButton.Style.MaterialRounded;
+            btnConfirmOfUDAdd.ButtonText = "Thêm";
+            btnConfirmOfUDAdd.ClickBackColor = Color.Transparent;
+            btnConfirmOfUDAdd.ClickTextColor = Color.White;
+            btnConfirmOfUDAdd.CornerRadius = 25;
+            btnConfirmOfUDAdd.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnConfirmOfUDAdd.Horizontal_Alignment = StringAlignment.Center;
+            btnConfirmOfUDAdd.HoverBackgroundColor = Color.Lime;
+            btnConfirmOfUDAdd.HoverTextColor = Color.White;
+            btnConfirmOfUDAdd.ImagePosition = ReaLTaiizor.Controls.ParrotButton.ImgPosition.Left;
+            btnConfirmOfUDAdd.Location = new Point(510, 354);
+            btnConfirmOfUDAdd.Name = "btnConfirmOfUDAdd";
+            btnConfirmOfUDAdd.RightToLeft = RightToLeft.No;
+            btnConfirmOfUDAdd.Size = new Size(227, 57);
+            btnConfirmOfUDAdd.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            btnConfirmOfUDAdd.TabIndex = 89;
+            btnConfirmOfUDAdd.TextColor = Color.White;
+            btnConfirmOfUDAdd.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            btnConfirmOfUDAdd.Vertical_Alignment = StringAlignment.Center;
+            btnConfirmOfUDAdd.Click += btnConfirmOfUDAdd_Click;
+            // 
             // fAddSubject
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(41, 44, 61);
             ClientSize = new Size(800, 450);
+            Controls.Add(btnexit);
+            Controls.Add(btnConfirmOfUDAdd);
             Controls.Add(cyberGroupBox2);
             Controls.Add(label1);
             Controls.Add(lbCodeMon);
@@ -246,7 +300,9 @@
         private TextBox inputidMon;
         private Label lbNameMon;
         private ReaLTaiizor.Controls.CyberGroupBox cyberGroupBox2;
-        private TextBox textBox1;
+        private TextBox inputSoTinChi;
         private Label label1;
+        private ReaLTaiizor.Controls.ParrotButton btnexit;
+        private ReaLTaiizor.Controls.ParrotButton btnConfirmOfUDAdd;
     }
 }

@@ -10,16 +10,14 @@ namespace StudentManager.model
     {
         public string Id { get; set; }
         public string Name { get; set; }
-        public string NameKhoa { get; set; }
         public string nameNganh { get; set; }
 
         public Class() { }
 
-        public Class(string id, string name, string nameNganh, string nameKhoa)
+        public Class(string id, string name, string nameNganh)
         {
             this.Id = id;
             this.Name = name;
-            this.NameKhoa = nameKhoa;
             this.nameNganh = nameNganh;
         }
     }

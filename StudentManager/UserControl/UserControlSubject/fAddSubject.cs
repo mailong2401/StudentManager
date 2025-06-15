@@ -1,4 +1,6 @@
-﻿using System;
+﻿using StudentManager.DAO;
+using StudentManager.model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,23 +15,71 @@ namespace StudentManager
 {
     public partial class fAddSubject : Form
     {
+        UserControlSubjectShow _parent;
         public fAddSubject()
         {
             InitializeComponent();
         }
-        public void InsertDiem(string maKhoa, string tenKhoa)
+
+        public fAddSubject(UserControlSubjectShow parent)
         {
-            using (SQLiteConnection conn = new SQLiteConnection("Data Source=mydb.sqlite;Version=3;"))
+            InitializeComponent();
+            _parent = parent;
+        }
+
+        public void addSubject()
+        {
+            if (!int.TryParse(inputSoTinChi.Text.Trim(), out int soTinChi))
             {
-                conn.Open();
-                string query = "INSERT INTO Diem (maKhoa, tenKhoa) VALUES (@maKhoa, @tenKhoa)";
-                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@maKhoa", maKhoa);
-                    cmd.Parameters.AddWithValue("@tenKhoa", tenKhoa);
-                    cmd.ExecuteNonQuery();
-                }
+                ShowError("Số tín chỉ không hợp lệ!");
+                return;
             }
+
+            string tenMon = inputNameMon.Text.Trim();
+            if (string.IsNullOrWhiteSpace(tenMon))
+            {
+                ShowError("Vui lòng nhập tên môn học!");
+                return;
+            }
+
+            string maMon = inputidMon.Text.Trim();
+            if (string.IsNullOrWhiteSpace(maMon))
+            {
+                ShowError("Vui lòng nhập mã môn học!");
+                return;
+            }
+
+            // Tạo đối tượng môn học đúng cách
+            Subject subject = new Subject
+            {
+                MaMon = maMon,
+                TenMon = tenMon,
+                SoTinChi = soTinChi
+            };
+
+            try
+            {
+                SubjectDao.Insert(subject);
+                _parent.loadTable(); // cập nhật lại danh sách
+                MessageBox.Show("Thêm môn học thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close(); // đóng form sau khi thành công
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi thêm môn học:\n" + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+        // Hàm hiển thị thông báo lỗi
+        private void ShowError(string message)
+        {
+            MessageBox.Show(message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void btnConfirmOfUDAdd_Click(object sender, EventArgs e)
+        {
+            addSubject();
         }
     }
 }

@@ -71,6 +71,7 @@
             btnConfirmOfSubjectAdd.TextColor = Color.White;
             btnConfirmOfSubjectAdd.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             btnConfirmOfSubjectAdd.Vertical_Alignment = StringAlignment.Center;
+            btnConfirmOfSubjectAdd.Click += btnConfirmOfSubjectAdd_Click;
             // 
             // page6
             // 

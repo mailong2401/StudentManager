@@ -1,4 +1,5 @@
-﻿using StudentManager.model;
+﻿using StudentManager.DAO;
+using StudentManager.model;
 using System.Data.SQLite;
 
 
@@ -10,50 +11,22 @@ namespace StudentManager
         string connectionString = "Data Source=mydb.sqlite;Version=3;";
 
         
-        List<Class> classes = new List<Class>();
+        List<Class> classes;
         int indexCurrentTable = 0;
         int indexMinTable = 0;
         public UserControlClassShow()
         {
             InitializeComponent();
-            LoadAllCall();
-            ChangePage(0);
+            classes = ClassDao.GetAll();
+            ChangePage(indexCurrentTable);
         }
-        private void LoadAllCall()
+
+        public void loadTable()
         {
-            using (SQLiteConnection conn = new SQLiteConnection(connectionString))
-            {
-                conn.Open();
-                // Bật foreign key support
-                using (var command = new SQLiteCommand("PRAGMA foreign_keys = ON;", conn))
-                {
-                    command.ExecuteNonQuery();
-                }
-
-                // Truy vấn kết hợp bảng Nganh và Khoa
-                string query = @"
-                SELECT Lop.maLop, Lop.tenLop, Nganh.tenNganh, Khoa.tenKhoa
-                FROM Lop
-                JOIN Nganh ON Lop.maNganh = Nganh.maNganh
-                JOIN Khoa ON Nganh.maKhoa = Khoa.maKhoa;";
-
-                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
-                using (SQLiteDataReader reader = cmd.ExecuteReader())
-                {
-                    classes.Clear();
-                    while (reader.Read())
-                    {
-                        string maLop = reader["maLop"].ToString();
-                        string tenLop = reader["tenLop"].ToString();
-                        string tenNganh = reader["tenNganh"].ToString();
-                        string tenKhoa = reader["tenKhoa"].ToString(); // Thay vì maKhoa, lấy tenKhoa
-                        Class temp = new Class(maLop, tenLop, tenNganh, tenKhoa);
-                        classes.Add(temp);
-                    }
-                }
-            }
-            createTable();
+            classes = ClassDao.GetAll();
+            ChangePage(indexCurrentTable);
         }
+
         private void createTable()
         {
             if (classes.Count == 0)
@@ -77,11 +50,11 @@ namespace StudentManager
 
                 var classi = classes[i];
                 // Tạo control UIItemUniversityDepartment
-                UIItemClass uIItemClass = new UIItemClass();
+                UIItemClass uIItemClass = new UIItemClass(this);
                 uIItemClass.Dock = DockStyle.Top;
 
                 // Thiết lập dữ liệu
-                uIItemClass.setitem(classi.Id, classi.Name, classi.nameNganh, classi.NameKhoa);
+                uIItemClass.setitem(classi);
 
                 // Thêm vào Panel (hoặc FlowLayoutPanel)
                 tbClassac.Controls.Add(uIItemClass);

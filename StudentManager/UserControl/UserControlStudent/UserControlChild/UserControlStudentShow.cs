@@ -14,6 +14,11 @@ namespace StudentManager
         {
             InitializeComponent();
 
+            btnConfirmOfUDAdd.Click += (s, e) =>
+            {
+                fAddStudent fAddStudent = new fAddStudent(this);
+                fAddStudent.ShowDialog();
+            };
 
             // Gán sự kiện click cho các nút phân trang
             page1.Click += (s, e) => ChangePage(indexMinTable + 0);
@@ -48,6 +53,12 @@ namespace StudentManager
             ChangePage(indexCurrentTable);
         }
 
+        public void LoadTable()
+        {
+            students = StudentDAO.GetAll();
+            ChangePage(indexCurrentTable);
+        }
+
         private void createTable()
         {
             tableStudent.Controls.Clear();
@@ -70,7 +81,7 @@ namespace StudentManager
             {
                 var student = students[i];
 
-                var item = new UIitemStudent
+                var item = new UIitemStudent(this)
                 {
                     Dock = DockStyle.Top
                 };

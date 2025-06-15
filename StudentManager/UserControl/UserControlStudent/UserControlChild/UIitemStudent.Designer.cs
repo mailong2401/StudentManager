@@ -36,11 +36,11 @@
             lbdate = new Label();
             lbname = new Label();
             lbid = new Label();
-            pictureBox2 = new PictureBox();
-            pictureBox1 = new PictureBox();
+            pic_delete = new PictureBox();
+            pic_edit = new PictureBox();
             exampleBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pic_delete).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pic_edit).BeginInit();
             SuspendLayout();
             // 
             // exampleBox
@@ -153,40 +153,40 @@
             lbid.TabIndex = 0;
             lbid.Text = "2380601236";
             // 
-            // pictureBox2
+            // pic_delete
             // 
-            pictureBox2.Image = Properties.Resources.remove;
-            pictureBox2.Location = new Point(1444, 5);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(30, 30);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 31;
-            pictureBox2.TabStop = false;
+            pic_delete.Image = Properties.Resources.remove;
+            pic_delete.Location = new Point(1444, 5);
+            pic_delete.Name = "pic_delete";
+            pic_delete.Size = new Size(30, 30);
+            pic_delete.SizeMode = PictureBoxSizeMode.Zoom;
+            pic_delete.TabIndex = 31;
+            pic_delete.TabStop = false;
             // 
-            // pictureBox1
+            // pic_edit
             // 
-            pictureBox1.Image = Properties.Resources.pen;
-            pictureBox1.Location = new Point(1408, 4);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(30, 30);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 30;
-            pictureBox1.TabStop = false;
+            pic_edit.Image = Properties.Resources.pen;
+            pic_edit.Location = new Point(1408, 4);
+            pic_edit.Name = "pic_edit";
+            pic_edit.Size = new Size(30, 30);
+            pic_edit.SizeMode = PictureBoxSizeMode.Zoom;
+            pic_edit.TabIndex = 30;
+            pic_edit.TabStop = false;
             // 
             // UIitemStudent
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Transparent;
-            Controls.Add(pictureBox2);
-            Controls.Add(pictureBox1);
+            Controls.Add(pic_delete);
+            Controls.Add(pic_edit);
             Controls.Add(exampleBox);
             Name = "UIitemStudent";
             Size = new Size(1477, 41);
             exampleBox.ResumeLayout(false);
             exampleBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pic_delete).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pic_edit).EndInit();
             ResumeLayout(false);
         }
 
@@ -206,8 +206,8 @@
         private Label lbdate;
         private Label lbname;
         private Label lbid;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox1;
+        private PictureBox pic_delete;
+        private PictureBox pic_edit;
         private Label lbclass;
     }
 }

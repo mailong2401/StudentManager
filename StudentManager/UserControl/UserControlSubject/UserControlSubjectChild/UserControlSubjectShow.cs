@@ -48,6 +48,12 @@ namespace StudentManager
 
         }
 
+        public void loadTable()
+        {
+            subjects = SubjectDao.GetAll();
+            ChangePage(indexCurrentTable);
+        }
+
         private void createTable()
         {
             tb_Subject.Controls.Clear();
@@ -70,7 +76,7 @@ namespace StudentManager
             {
                 var subject = subjects[i];
 
-                var item = new UIItemSubject
+                var item = new UIItemSubject(this)
                 {
                     Dock = DockStyle.Top
                 };
@@ -120,6 +126,12 @@ namespace StudentManager
 
             indexCurrentTable = pageIndex;
             createTable();
+        }
+
+        private void btnConfirmOfSubjectAdd_Click(object sender, EventArgs e)
+        {
+            fAddSubject fAddSubject = new fAddSubject(this);
+            fAddSubject.ShowDialog();
         }
     }
 }
