@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StudentManager.DAO
 {
-    internal class KhoaDao
+    public class KhoaDao
     {
     }
 }

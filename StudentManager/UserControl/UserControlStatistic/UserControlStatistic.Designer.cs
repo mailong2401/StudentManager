@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlStatistic));
             panelUserControlChild = new Panel();
-            label10 = new Label();
-            label9 = new Label();
-            label8 = new Label();
+            labelNu = new Label();
+            labelNam = new Label();
+            labelTong = new Label();
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
@@ -43,16 +43,15 @@
             label1 = new Label();
             label7 = new Label();
             parrotPieGraph1 = new ReaLTaiizor.Controls.ParrotPieGraph();
-            parrotBarGraph1 = new ReaLTaiizor.Controls.ParrotBarGraph();
             panelUserControlChild.SuspendLayout();
             SuspendLayout();
             // 
             // panelUserControlChild
             // 
             panelUserControlChild.BackColor = Color.FromArgb(41, 44, 61);
-            panelUserControlChild.Controls.Add(label10);
-            panelUserControlChild.Controls.Add(label9);
-            panelUserControlChild.Controls.Add(label8);
+            panelUserControlChild.Controls.Add(labelNu);
+            panelUserControlChild.Controls.Add(labelNam);
+            panelUserControlChild.Controls.Add(labelTong);
             panelUserControlChild.Controls.Add(label6);
             panelUserControlChild.Controls.Add(label5);
             panelUserControlChild.Controls.Add(label4);
@@ -63,45 +62,44 @@
             panelUserControlChild.Controls.Add(label1);
             panelUserControlChild.Controls.Add(label7);
             panelUserControlChild.Controls.Add(parrotPieGraph1);
-            panelUserControlChild.Controls.Add(parrotBarGraph1);
             panelUserControlChild.Dock = DockStyle.Fill;
             panelUserControlChild.Location = new Point(0, 0);
             panelUserControlChild.Name = "panelUserControlChild";
             panelUserControlChild.Size = new Size(1575, 900);
             panelUserControlChild.TabIndex = 2;
             // 
-            // label10
+            // labelNu
             // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 24F, FontStyle.Bold);
-            label10.ForeColor = Color.White;
-            label10.Location = new Point(1093, 394);
-            label10.Name = "label10";
-            label10.Size = new Size(92, 54);
-            label10.TabIndex = 51;
-            label10.Text = "124";
+            labelNu.AutoSize = true;
+            labelNu.Font = new Font("Segoe UI", 24F, FontStyle.Bold);
+            labelNu.ForeColor = Color.White;
+            labelNu.Location = new Point(1093, 394);
+            labelNu.Name = "labelNu";
+            labelNu.Size = new Size(92, 54);
+            labelNu.TabIndex = 51;
+            labelNu.Text = "124";
             // 
-            // label9
+            // labelNam
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 24F, FontStyle.Bold);
-            label9.ForeColor = Color.White;
-            label9.Location = new Point(1093, 284);
-            label9.Name = "label9";
-            label9.Size = new Size(92, 54);
-            label9.TabIndex = 50;
-            label9.Text = "120";
+            labelNam.AutoSize = true;
+            labelNam.Font = new Font("Segoe UI", 24F, FontStyle.Bold);
+            labelNam.ForeColor = Color.White;
+            labelNam.Location = new Point(1093, 297);
+            labelNam.Name = "labelNam";
+            labelNam.Size = new Size(92, 54);
+            labelNam.TabIndex = 50;
+            labelNam.Text = "120";
             // 
-            // label8
+            // labelTong
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 24F, FontStyle.Bold);
-            label8.ForeColor = Color.White;
-            label8.Location = new Point(1093, 197);
-            label8.Name = "label8";
-            label8.Size = new Size(92, 54);
-            label8.TabIndex = 49;
-            label8.Text = "244";
+            labelTong.AutoSize = true;
+            labelTong.Font = new Font("Segoe UI", 24F, FontStyle.Bold);
+            labelTong.ForeColor = Color.White;
+            labelTong.Location = new Point(1093, 197);
+            labelTong.Name = "labelTong";
+            labelTong.Size = new Size(92, 54);
+            labelTong.TabIndex = 49;
+            labelTong.Text = "244";
             // 
             // label6
             // 
@@ -208,27 +206,6 @@
             parrotPieGraph1.TabIndex = 2;
             parrotPieGraph1.Text = "parrotPieGraph1";
             // 
-            // parrotBarGraph1
-            // 
-            parrotBarGraph1.BackgroundImageLayout = ImageLayout.None;
-            parrotBarGraph1.FilledColor = Color.FromArgb(41, 44, 61);
-            parrotBarGraph1.GraphOrientation = ReaLTaiizor.Controls.ParrotBarGraph.Orientation.Vertical;
-            parrotBarGraph1.GraphStyle = ReaLTaiizor.Controls.ParrotBarGraph.Style.Material;
-            parrotBarGraph1.Items = (List<int>)resources.GetObject("parrotBarGraph1.Items");
-            parrotBarGraph1.Location = new Point(135, 540);
-            parrotBarGraph1.Name = "parrotBarGraph1";
-            parrotBarGraph1.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
-            parrotBarGraph1.ShowGrid = false;
-            parrotBarGraph1.Size = new Size(565, 250);
-            parrotBarGraph1.Sorting = ReaLTaiizor.Controls.ParrotBarGraph.SortStyle.Normal;
-            parrotBarGraph1.SplitterColor = Color.FromArgb(41, 44, 61);
-            parrotBarGraph1.TabIndex = 0;
-            parrotBarGraph1.Text = "parrotBarGraph1";
-            parrotBarGraph1.TextAlignment = ReaLTaiizor.Controls.ParrotBarGraph.Aligning.Far;
-            parrotBarGraph1.TextColor = Color.FromArgb(41, 44, 61);
-            parrotBarGraph1.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            parrotBarGraph1.UnfilledColor = Color.FromArgb(41, 44, 61);
-            // 
             // UserControlStatistic
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -246,7 +223,6 @@
 
         private Panel panelUserControlChild;
         private ReaLTaiizor.Controls.ParrotPieGraph parrotPieGraph1;
-        private ReaLTaiizor.Controls.ParrotBarGraph parrotBarGraph1;
         private Label label1;
         private Label label7;
         private Panel panel1;
@@ -254,9 +230,9 @@
         private Label label3;
         private Panel panel2;
         private Label label2;
-        private Label label10;
-        private Label label9;
-        private Label label8;
+        private Label labelNu;
+        private Label labelNam;
+        private Label labelTong;
         private Label label6;
         private Label label5;
     }

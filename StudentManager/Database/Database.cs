@@ -4,18 +4,35 @@ using System.IO;
     {
         private static string dbFile = "mydb.sqlite";
         private static string connectionString = $"Data Source={dbFile};Version=3;";
-        public static SQLiteConnection GetConnection()
+    public static SQLiteConnection GetConnection()
+    {
+        string sourceFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "temple", "mydb.sqlite");
+
+        try
         {
-            // Tạo file nếu chưa tồn tại
             if (!File.Exists(dbFile))
             {
-                SQLiteConnection.CreateFile(dbFile);
+                if (File.Exists(sourceFile))
+                {
+                    File.Copy(sourceFile, dbFile);
+                }
+                else
+                {
+                    SQLiteConnection.CreateFile(dbFile);
+                }
             }
-
-            return new SQLiteConnection(connectionString);
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show($"Lỗi khi chuẩn bị database: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        public static void OpenConnection(SQLiteConnection conn)
+        return new SQLiteConnection(connectionString);
+    }
+
+
+
+    public static void OpenConnection(SQLiteConnection conn)
         {
             if (conn.State != System.Data.ConnectionState.Open)
             {

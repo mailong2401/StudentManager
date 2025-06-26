@@ -1,4 +1,6 @@
-﻿using System;
+﻿using StudentManager.DAO;
+using StudentManager.model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,11 +17,29 @@ namespace StudentManager
         public UserControlStatistic()
         {
             InitializeComponent();
+            loadThongKe();
         }
 
-        private void btnStatisticAdd_Click(object sender, EventArgs e)
+        void loadThongKe()
         {
+            // Lấy danh sách tất cả sinh viên từ CSDL
+            List<Student> students = StudentDAO.GetAll();
 
+            // Tính tổng số sinh viên
+            int tongSoSV = students.Count;
+
+            // Đếm số sinh viên nữ
+            int tongSoNu = students.Count(sv => sv.GioiTinh == "Nữ");
+
+            // Đếm số sinh viên nam
+            int tongSoNam = students.Count(sv => sv.GioiTinh == "Nam");
+
+            // Gán dữ liệu lên các Label
+            labelNam.Text = tongSoNam.ToString();
+            labelNu.Text = tongSoNu.ToString();
+            labelTong.Text = tongSoSV.ToString();
+            // Vẽ biểu đồ tròn (pie chart) với số lượng Nam và Nữ
+            parrotPieGraph1.Numbers = new List<int> { tongSoNam, tongSoNu };
         }
     }
 }
